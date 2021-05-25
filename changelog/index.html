@@ -1,0 +1,649 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
+    
+    
+      
+        <title>Change Log - HANA HotSpots</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#v20-future" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="HANA HotSpots" class="md-header__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HANA HotSpots
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Change Log
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="HANA HotSpots" class="md-nav__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    HANA HotSpots
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Manual
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        Download
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Change Log
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Change Log
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v20-future" class="md-nav__link">
+    V2.0 Future
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20210329-v19" class="md-nav__link">
+    2021/03/29 V1.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20210302-v18" class="md-nav__link">
+    2021/03/02: V1.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20210120-v17" class="md-nav__link">
+    2021/01/20: V1.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20201130-v16" class="md-nav__link">
+    2020/11/30: V1.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20201015-v15" class="md-nav__link">
+    2020/10/15: V1.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200915-v14" class="md-nav__link">
+    2020/09/15: V1.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200718-v13" class="md-nav__link">
+    2020/07/18: V1.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200623-v12" class="md-nav__link">
+    2020/06/23: V1.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200515-v11" class="md-nav__link">
+    2020/05/15: V1.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200512-v10" class="md-nav__link">
+    2020/05/12: V1.0
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v20-future" class="md-nav__link">
+    V2.0 Future
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20210329-v19" class="md-nav__link">
+    2021/03/29 V1.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20210302-v18" class="md-nav__link">
+    2021/03/02: V1.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20210120-v17" class="md-nav__link">
+    2021/01/20: V1.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20201130-v16" class="md-nav__link">
+    2020/11/30: V1.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20201015-v15" class="md-nav__link">
+    2020/10/15: V1.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200915-v14" class="md-nav__link">
+    2020/09/15: V1.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200718-v13" class="md-nav__link">
+    2020/07/18: V1.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200623-v12" class="md-nav__link">
+    2020/06/23: V1.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200515-v11" class="md-nav__link">
+    2020/05/15: V1.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20200512-v10" class="md-nav__link">
+    2020/05/12: V1.0
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Change Log</h1>
+                
+                <h4 id="v20-future">V2.0 Future<a class="headerlink" href="#v20-future" title="Permanent link">&para;</a></h4>
+<h4 id="20210329-v19">2021/03/29 V1.9<a class="headerlink" href="#20210329-v19" title="Permanent link">&para;</a></h4>
+<ul>
+<li>+ <strong>[Single SQL Report]</strong> is added to show detailed information of one particular SQL statement, see <a href="/index.md#single-sql-report-1">here</a> 
+                         for detailed information</li>
+<li># [General Report] 'Thread Sample' is redesigned to limit the '-- Others --' portion so that the output shows more meaningful
+                      information</li>
+<li># [General Report] 'Thread Sample' -&gt; 'Client IP' is changed to 'Client Host' so that the client host name instead of 
+                      the client ip is shown</li>
+<li>+ [General Report] 'Space' -&gt; 'Row Table with Most Rows'/'Row Table with Largest Memory Size'/'Row Table with Largest Fragmented Size'
+                      are added</li>
+</ul>
+<h4 id="20210302-v18">2021/03/02: V1.8<a class="headerlink" href="#20210302-v18" title="Permanent link">&para;</a></h4>
+<ul>
+<li>+ After connect to HANA database, basic HANA configuration such as Scale-out, HSR, Timezone will be displayed</li>
+<li>+ [General Report] 'Space' -&gt; 'Data Page' added to show the history of shadow page size</li>
+<li>+ [General Report] 'CPU' -&gt; 'CPU vs. Threads' now shows the KPI aggregated by AVG and MAX separately </li>
+<li>+ [General Report] Section 'SQL' -&gt; 'SQL with Top Elapsed Time': shows also the key KPI of the SQL statement such as
+                      elapsed time per execution, elapsed time per row, etc.</li>
+<li>+ [General Report] Section 'Space' -&gt; 'Log Volume and Merge' added to show which tables are mainly responsible for
+                      high merged rows and log volume generated, i.e. high DML executed on these tables</li>
+<li>+ [General Report] In section 'CPU' -&gt; 'Application Source with Most Running Thread': Sunburst figure is added
+                      to show the distribution of SQL statements triggered by each application source</li>
+<li>+ [General Report] Pie and sunburst figures are added to figures under 'Memory' section to show the summary of 
+                      memory consumption</li>
+<li>+ [General Report] Option -&gt; General Report Option -&gt; 'Complete Summary' added. If this option is checked: the summary
+                      will contain information of one area even if no issue is detected      </li>
+<li>+ [General Report] Option -&gt; General Report Option -&gt; 'Include Link to Raw Data' added. If this option is checked: 
+                      link to the raw data will be included above each figure                           </li>
+<li>+ [General Report] In section 'CPU' -&gt; 'Thread Workload', if workload class is configured, the information will be shown</li>
+<li>- bug fix: R/3 connection not working well when using Belize Theme</li>
+</ul>
+<h4 id="20210120-v17">2021/01/20: V1.7<a class="headerlink" href="#20210120-v17" title="Permanent link">&para;</a></h4>
+<ul>
+<li># Option menu is completely reworked: <ul>
+<li>- "R/3 Style Output" is removed, in the future both csv and R/3 style output are always provided</li>
+<li># <strong>"Top Issue" is officially released</strong>, most critical issues will be listed at the beginning of the 
+general report to highlight the HotSpots on the system</li>
+<li>+ "General Report Option" -&gt; "Include Static Info" added, see manual above for detailed information</li>
+<li>+ <strong>"General Report Option" -&gt; "Select Sections"</strong> added, see manual above for detailed information</li>
+<li>The option will be saved as config file hh.ini so that its status will be remembered</li>
+</ul>
+</li>
+<li>+ <strong>SSL connection supported</strong>: checkbox 'SSL' is added in the GUI version and option '-ssl' is added in hscmd    </li>
+<li># Time selection is reworked, combo box for start and end time are added with 2 extra options:<ul>
+<li>Since start of M_SERVICE_THREAD_SAMPLES: this is to focus on the most recent history, normally within the last
+2 hours and the result will show with higher granularity of 10 seconds per sample</li>
+<li>Since last startup: set the begin time to the most recent HANA startup time   </li>
+</ul>
+</li>
+<li>+ [General Report] Persistent memory is considered in section "Memory-&gt;Top consumer" and
+                    section "Space-&gt;Table with largest memory size" </li>
+<li>+ [General Report] 'Thread Sample' -&gt; 'SQL Hierarchy' added to show the relationship between SQL HASH and 
+                    Root HASH, especially when Procedure/AMDP is used, it is helpful to find which SQL is 
+                    responsible for most of the run time</li>
+<li># [General Report] Time duration in various place has been changed from seconds to human friendly format,
+                    e.g. 3800 sec is now shown as '1 hour 3 minute 20 second'    </li>
+<li># [General Report] 'Space' -&gt; 'Table with Most Rows' also shows 1.5 billion / 2 billion threshold</li>
+<li># 'GeneralCheck' is renamed to 'General Report'; 'SQLCheck' is renamed to 'Top SQL Report'</li>
+</ul>
+<h4 id="20201130-v16">2020/11/30: V1.6<a class="headerlink" href="#20201130-v16" title="Permanent link">&para;</a></h4>
+<ul>
+<li>+ [General Report] Combination of waiting SQL/table/lock holder sql and lock holder status has been added, this can be used to 
+                    identify locking caused by parallel DML</li>
+<li>+ Mouse cursor will change into hourglass after analysis is started</li>
+<li>+ [General Report] SQL Cache overview history added</li>
+<li># Default output has been changed to: .\Report\&lt;DBID>_\&lt;SID>_\&lt;Topic>_\&lt;Date>_\&lt;Time>\HANAHotSpots_\&lt;DBID>_\&lt;SID>_\&lt;Topic>_\&lt;StartTime>_\&lt;EndTime>.html </li>
+<li>+ [General Report] SQL with most running threads and most threads added </li>
+<li>+ [General Report] Thread sample history aggregated by SQL/lock name and SQL/Thread method added </li>
+<li>+ [General Report] Active/Waiting thread number added to thread sample history figures</li>
+<li># [General Report] Pie charts are showing the category text instead of the value, the size is increased for better reading</li>
+<li>+ [General Report] 'CPU' -&gt; 'Thread workload' added</li>
+<li>+ [General Report] Host type and role added (i.e. Primary/Secondary for HSR and Master/Slave for scale-out)</li>
+<li># [General Report] "Top issue" improved: issues are listed according to topic and priority. 
+                    Top SQLs are also listed if they have big impact to the system.</li>
+<li>- bug fix: GC blocker history is showing wrong timestamp</li>
+</ul>
+<h4 id="20201015-v15">2020/10/15: V1.5<a class="headerlink" href="#20201015-v15" title="Permanent link">&para;</a></h4>
+<ul>
+<li># [General Report] The report structure is completely reorganized. Results are now presented according to
+                    topics. Such change simplifies future enhancement of extra check results</li>
+<li>+ [General Report] <strong>SQL texts are now included in all figures related to SQLs</strong>. When hovering the mouse on
+                    the graph, SQL text will be shown. Due to the screen size limitation, if the SQL text
+                    is too long, only part of it is shown
+                    The complete SQL text is saved in file "SQL Texts.txt"</li>
+<li># [General Report] For memory and table size history, 2 buttons are added so that the figure can be toggled between
+                    <strong>stacked and non-stacked</strong> format. The non-stacked format is better to spot sudden change of the
+                    KPI</li>
+<li>+ [General Report] General configuration of CPU, memory, hardware, disk, HSR added</li>
+<li>+ [General Report] CPU NUMA Load history added</li>
+<li>+ [General Report] If wait for lock time is high during save point, the ConsistentChangeLock holder history is shown</li>
+<li>+ [General Report] SQL causing OOM added</li>
+<li>+ [General Report] Memory component history added</li>
+<li>+ [General Report] Thread sample history aggregated by db user, app user and client ip added</li>
+<li>+ [General Report] Table with largest disk size history added</li>
+<li>+ [General Report] Disk size and general information added</li>
+<li>+ [General Report] Backup history added</li>
+<li>+ [General Report] Garbage collection blocker history added</li>
+<li># If the tool crashed, the detailed error is logged for troubleshooting</li>
+<li>- bug fix: various bugs that cause the tool to crash</li>
+</ul>
+<h4 id="20200915-v14">2020/09/15: V1.4<a class="headerlink" href="#20200915-v14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>+ <strong>SAPGUI connection is supported</strong>, please read the instruction in the manual above</li>
+<li># HANA server time is taken into account, e.g. when "last 24 hours" is chosen for the analysis time frame, the end time will be set to the current timestamp on the HANA server rather than the local timestamp of the laptop where the tool is started</li>
+<li>+ [General Report] Data volume added to I/O KPIs</li>
+<li>+ [General Report] Combination of waiting SQL/table/lock holder application source has been added. SQL text is also shown when hovering the mouse on the figure</li>
+<li>- bug fix: [Top SQL Report] Top sql is duplicated in scale out system</li>
+<li>- bug fix: Note link in the generated report replaced from relative link to absolute link</li>
+</ul>
+<h4 id="20200718-v13">2020/07/18: V1.3<a class="headerlink" href="#20200718-v13" title="Permanent link">&para;</a></h4>
+<ul>
+<li>+ <strong>hscmd (HANA HotSpots CMD) command line version released with V1.3</strong></li>
+<li>+ hdbuserstore key is supported to connect</li>
+<li>+ SSO is supported to connect</li>
+<li>+ [General Report] Parameter change history</li>
+<li>+ [General Report] Network intrahost receive latency</li>
+<li>+ [General Report] Memory service history</li>
+<li>+ [General Report] Commit IO history</li>
+<li>+ [Top SQL Report] plan_id added in the SQL KPI History, so it is easier to see the plan change impact on the SQL performance</li>
+<li>- bug fix: Crash when application lock history is empty</li>
+<li>- bug fix: Crash when load history is empty</li>
+</ul>
+<h4 id="20200623-v12">2020/06/23: V1.2<a class="headerlink" href="#20200623-v12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>+ Menu "Option"</li>
+<li>+ Automatically identify most crtical issues and provided in the "Summary" section</li>
+<li>+ Topic "MiniCheck"</li>
+<li>+ Parameter check </li>
+<li>+ Annotation of good value added to I/O figures</li>
+</ul>
+<h4 id="20200515-v11">2020/05/15: V1.1<a class="headerlink" href="#20200515-v11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Information regarding top heap area is shown in GeneralCheck Report (info read from Note 1999997)</li>
+<li>Information regarding top thread state / lock is shown in GeneralCheck Report (info read from Note 1999998)</li>
+<li>Information regarding top thread type / method is shown in GeneralCheck Report (info read from Note 2114710)</li>
+</ul>
+<h4 id="20200512-v10">2020/05/12: V1.0<a class="headerlink" href="#20200512-v10" title="Permanent link">&para;</a></h4>
+<ul>
+<li>First version released</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../links/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Links
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a1609d9a.min.js"></script>
+      
+    
+  </body>
+</html>

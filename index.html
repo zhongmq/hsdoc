@@ -1,0 +1,1221 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
+    
+    
+      
+        <title>HANA HotSpots</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="HANA HotSpots" class="md-header__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+      
+  <img src="logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HANA HotSpots
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manual
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="HANA HotSpots" class="md-nav__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+      
+  <img src="logo.png" alt="logo">
+
+    </a>
+    HANA HotSpots
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Manual
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Manual
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlook" class="md-nav__link">
+    Outlook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-the-tool" class="md-nav__link">
+    How to use the tool?
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use the tool?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-connect-to-a-hana-database" class="md-nav__link">
+    1. Connect to a HANA Database:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-select-topic" class="md-nav__link">
+    2. Select Topic:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-select-time-frame" class="md-nav__link">
+    3. Select Time frame:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-start-analysis" class="md-nav__link">
+    4. Start Analysis:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-log-file" class="md-nav__link">
+    5. Log File:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-what-kind-of-authorization-is-required-to-use-the-tool" class="md-nav__link">
+    6. What kind of authorization is required to use the tool?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-the-generated-report" class="md-nav__link">
+    How to read the generated report?
+  </a>
+  
+    <nav class="md-nav" aria-label="How to read the generated report?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-functions" class="md-nav__link">
+    General functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-report" class="md-nav__link">
+    General Report
+  </a>
+  
+    <nav class="md-nav" aria-label="General Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    Memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity" class="md-nav__link">
+    Activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-sample" class="md-nav__link">
+    Thread Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#space" class="md-nav__link">
+    Space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk" class="md-nav__link">
+    Disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    Backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#garbage-collection" class="md-nav__link">
+    Garbage Collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-lock" class="md-nav__link">
+    Application Lock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-replication" class="md-nav__link">
+    System Replication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-sql-report" class="md-nav__link">
+    Single SQL Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Single SQL Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-information" class="md-nav__link">
+    General Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi" class="md-nav__link">
+    KPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    Objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-helper" class="md-nav__link">
+    Optimization Helper
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback" class="md-nav__link">
+    Feedback?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="download/" class="md-nav__link">
+        Download
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="changelog/" class="md-nav__link">
+        Change Log
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlook" class="md-nav__link">
+    Outlook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-the-tool" class="md-nav__link">
+    How to use the tool?
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use the tool?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-connect-to-a-hana-database" class="md-nav__link">
+    1. Connect to a HANA Database:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-select-topic" class="md-nav__link">
+    2. Select Topic:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-select-time-frame" class="md-nav__link">
+    3. Select Time frame:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-start-analysis" class="md-nav__link">
+    4. Start Analysis:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-log-file" class="md-nav__link">
+    5. Log File:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-what-kind-of-authorization-is-required-to-use-the-tool" class="md-nav__link">
+    6. What kind of authorization is required to use the tool?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-the-generated-report" class="md-nav__link">
+    How to read the generated report?
+  </a>
+  
+    <nav class="md-nav" aria-label="How to read the generated report?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-functions" class="md-nav__link">
+    General functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-report" class="md-nav__link">
+    General Report
+  </a>
+  
+    <nav class="md-nav" aria-label="General Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    Memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity" class="md-nav__link">
+    Activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-sample" class="md-nav__link">
+    Thread Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#space" class="md-nav__link">
+    Space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk" class="md-nav__link">
+    Disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    Backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#garbage-collection" class="md-nav__link">
+    Garbage Collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-lock" class="md-nav__link">
+    Application Lock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-replication" class="md-nav__link">
+    System Replication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-sql-report" class="md-nav__link">
+    Single SQL Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Single SQL Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-information" class="md-nav__link">
+    General Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi" class="md-nav__link">
+    KPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    Objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-helper" class="md-nav__link">
+    Optimization Helper
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback" class="md-nav__link">
+    Feedback?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Manual</h1>
+                
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><strong>HANA HotSpots</strong> is an automation tool to capture HANA Database KPIs and present the result in an <strong>interactive</strong> report 
+so that all stake holders (Support, System Administrator, etc) can understand the status of the HANA system <strong>intuitively</strong>.</p>
+<p><strong>hscmd</strong> (HANA HotSpots CMD) is the command line version of the same tool. To understand how to use it please run </p>
+<pre><code>hscmd -h
+</code></pre>
+<h2 id="outlook">Outlook<a class="headerlink" href="#outlook" title="Permanent link">&para;</a></h2>
+<p><img src="./ui19.jpg"></p>
+<h2 id="how-to-use-the-tool">How to use the tool?<a class="headerlink" href="#how-to-use-the-tool" title="Permanent link">&para;</a></h2>
+<p>The user interface (see above) is straightforward  including 3 steps:</p>
+<h3 id="1-connect-to-a-hana-database">1. Connect to a HANA Database:<a class="headerlink" href="#1-connect-to-a-hana-database" title="Permanent link">&para;</a></h3>
+<p>There are 4 ways to connect to a HANA database:</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Custom System via SAP Proxy</label><div class="tabbed-content">
+<ul>
+<li>If SAP HANA Database connection is open from the customer side, it is possible to connect to "localhost" after saptcpproxy is started.
+  Please make sure that the port used is matching the saptcpproxy port, the default port is 5000.</li>
+</ul>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">SAPGUI Connection</label><div class="tabbed-content">
+<p>As of V1.4, it is possible to connect to HANA database through SAPGUI. The prerequisite is as following:</p>
+<ul>
+<li>Transaction ST04 -&gt; Diagnostics -&gt; SQL Editor has been started on an SAP system running on HANA. HANA HotSpots will always try to connect to the last valid SAPGUI session.</li>
+<li>
+<p>SAPGUI scripting is enabled in the SAPGUI options as below, it is important to <strong>uncheck</strong> the two "Notify"
+   sub-options to suppress the annoying warning message.
+   <br/><br/>
+   <img src="./sapguiconfig.png"></p>
+</li>
+<li>
+<p>ABAP parameter <code>sapgui/user_scripting</code> must be set to TRUE on the SAP system. Please check this <a href="https://help.sap.com/viewer/8ecea00c1f854fd0a433c4aef5da1ea2/Cloud/en-US/001675913cc54719930aa8197478dcde.html" target="_blank">link</a> for detailed 
+  instructions. If the highlighted icon in the SAPGUI status bar <img src="./scriptactive.png"> is visible, then it means this parameter is set to TRUE. Otherwise please ask the customer for the permission to change it. This parameter can be changed online. </p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note that when using SAPGUI connection, the tool needs to access clipboard often, therefore please <strong>do not make "copy/paste" operation in parallel</strong> as otherwise the conflict may cause the tool to fail.</p>
+</div>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Self Defined System</label><div class="tabbed-content">
+<p>Define the Host/Port of any HANA system on the network for direct access.</p>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Use hdbuserstore Key</label><div class="tabbed-content">
+<p>If key is generated and stored via hdbuserstore, it is also possible to connect to HANA system via the key.</p>
+</div>
+</div>
+<p>Furthermore, if SSO check box is flagged, the password can be omitted to connect to HANA system via SSO. If SSL check box is flagged, the secure connection will be used to connect to HANA system. (e.g. should be used when connecting to HANA Cloud System)</p>
+<h3 id="2-select-topic">2. Select Topic:<a class="headerlink" href="#2-select-topic" title="Permanent link">&para;</a></h3>
+<p>Once the database connection is successful, select a <strong>Topic</strong> to start the analysis. Topic is a collection of <strong>Checks</strong> that is 
+   focusing on particular area of HANA Database. Currently there are 4 Checks provided:</p>
+<div class="tabbed-set" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">General Report</label><div class="tabbed-content">
+<p>Focusing on most important HANA KPIs such as CPU, Memory, Thread Samples, 
+Main Activities, etc. The analysis output would immediately show the <strong>HotSpots</strong> (i.e. When and what was the most significant bottleneck) 
+of the HANA Database. At the beginning of the report, a summary section is provided to automatically detect the most critical issues (if any) 
+identified on the HANA database.</p>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Top SQL Report</label><div class="tabbed-content">
+<p>Focusing on most expensive SQL statements based on several criteria: <strong>Total Elapsed Time</strong>, <strong>Number of Thread Samples</strong>, 
+<strong>Average memory consumption</strong>, etc. The analysis output would show the overview and detailed information of all these top SQL statements including 
+SQL text, heatmap, KPI history, etc.</p>
+</div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Single SQL Report</label><div class="tabbed-content">
+<p>Most important information of one SQL statement is shown: KPI history, all objects accessed, etc.</p>
+</div>
+<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">MiniCheck</label><div class="tabbed-content">
+<p>Run the scripts related to chapter "General Overview" from the TPO report template. The output will be stored on disk in plain text and 
+can be easily copied to the final report.</p>
+</div>
+</div>
+<h3 id="3-select-time-frame">3. Select Time frame:<a class="headerlink" href="#3-select-time-frame" title="Permanent link">&para;</a></h3>
+<p>The next step is to select the <strong>Timeframe</strong> of the analysis, by default, the analysis is focusing on the last 24 hours. 
+   The HANA server time will be used automatically, therefore do not be surprised if the appearing time is not the same as the local time.
+   Some shortcuts are provided in the interface so that it is easier to select the "Start Time" and "End Time " 
+   of the analysis.</p>
+<p>e.g. the combo box beside the Start Time label can be used to choose the baseline of the start time:</p>
+<ul>
+<li>Current time -&gt; set the start time to the current HANA server time.</li>
+<li>End time -&gt; set the start time to be the same as the End Time.</li>
+<li>Start of M_SERVICE_THREAD_SAMPLES -&gt; set the start time to the beginning of M_SERVICE_THREAD_SAMPLES,
+     when this is selected, the analysis will focus on the recent thread sample history that has a higher granularity.</li>
+<li>Most recent HANA startup time -&gt; set the start time to the last HANA startup time.</li>
+</ul>
+<p>The "+" and "-" button together with the 'Hour'/'6 Hour' radio button can be used to quickly change the
+   start/end time.
+   The "0" button will set the time to zero, i.e. the midnight of the date.</p>
+<h3 id="4-start-analysis">4. Start Analysis:<a class="headerlink" href="#4-start-analysis" title="Permanent link">&para;</a></h3>
+<p>After the Topic and Timeframe are selected, click the "Start Analysis" button to launch the analysis. 
+   Depending on the workload of the system and the timeframe length selected, 
+   the <strong>analysis time</strong> may vary between less than one minute to more than 15 minutes. 
+   (Please have some patience : ) )
+   Finally "Show Result" button would open the report in your default browser. 
+   <strong>The report is a single HTML file</strong> located under the working directory with interactive embedded 
+   figures to show the HANA Database information. It is possible to zoom in/out and filter different KPIs 
+   for better understanding of the system status. Depending on the analysis choice, 
+   the report size ranges from a few MB to more than 20MB. 
+   Also note that it takes a while in the browser for the report to be fully rendered. </p>
+<h3 id="5-log-file">5. Log File:<a class="headerlink" href="#5-log-file" title="Permanent link">&para;</a></h3>
+<p>A log file with name <code>hsgui.log</code> or <code>hscmd.log</code> (depending on the version) is generated under the same
+   directory where the tool is located. If error occurs, more information can be seen in the log file.</p>
+<h3 id="6-what-kind-of-authorization-is-required-to-use-the-tool">6. What kind of authorization is required to use the tool?<a class="headerlink" href="#6-what-kind-of-authorization-is-required-to-use-the-tool" title="Permanent link">&para;</a></h3>
+<p>The tool basically needs to access HANA monitoring views (<code>M_*</code>) and statistics server views (<code>_SYS_STATISTICS.HOST_*</code>).
+   Therefore the HANA database user used in the tool need the privilege to access these views. i.e. the user
+   should have the standard catalog role <code>MONITORING</code> granted.</p>
+<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<p>The option menu will show options for different topics, at the moment mainly "General Report Option" is in place:</p>
+<ul>
+<li>Include Parameter Check: if checked, any topic including HANA parameter check will be carried out, otherwise it will be skipped to save time.</li>
+<li>Top Issue: if checked, the General Report will include a summary section at the beginning to show automatically detected top issues on the HANA database.</li>
+<li>Complete Summary: if checked, the summary section will show information of one area even if no issue has been detected.</li>
+<li>Include Static Info: if checked, <strong>static</strong> information is included in the general report, e.g. largest tables on the system. 
+  In the future more static information that does not change often along time line will be included.</li>
+<li>Include Link to Raw Data: if checked, link to the raw data will be included above each figure.</li>
+<li>Select Sections: it is possible to choose which section would be included in the generated General Report.</li>
+</ul>
+<p>When the tool is closed, the option will be saved as configuration file <code>hs.ini</code> and 
+restored automatically next time it starts.</p>
+<h2 id="how-to-read-the-generated-report">How to read the generated report?<a class="headerlink" href="#how-to-read-the-generated-report" title="Permanent link">&para;</a></h2>
+<h3 id="general-functions">General functions<a class="headerlink" href="#general-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use the menu to jump to each section and sub-section (e.g. [CPU] -&gt; ‘Thread Workload’)</li>
+<li>All the figures are interactive: <ul>
+<li>Mouse drag on the center of the figure can zoom in; The ‘house’ icon can reset the scale.</li>
+<li>Mouse drag at the corner of the figure can zoom in along different axis.</li>
+<li>Mouse drag on the axis can pan the figure.</li>
+<li>Mouse hover on the traces will show additional important information.</li>
+<li>Click on legend graph can toggle that trace; Double click on legend graph can focus on that trace.</li>
+<li>Click on legend word can be used to select the content (e.g. copy SQL HASH).</li>
+<li>Click on 'camera' icon can download the figure as png file.</li>
+</ul>
+</li>
+</ul>
+<p>There are 3 types of reports that can be generated, they are explained in detail below:</p>
+<h3 id="general-report">General Report<a class="headerlink" href="#general-report" title="Permanent link">&para;</a></h3>
+<p>General report consists of following sections and sub-sections: </p>
+<h4 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Top Issues: most critical issues identified are shown in a table. The columns of the summary tables have the following
+  meaning:<ul>
+<li>Area: area of the issue</li>
+<li>Priority: Very High / High / Medium / Info</li>
+<li>Description: describe the issue, if option "Complete Summary" is checked, then 'No issues Detected' will be shown
+here</li>
+<li>Host: on which host the issue occurs</li>
+<li>Time: The critical timestamp when the issue occurs</li>
+<li>Section: Link to the section </li>
+</ul>
+</li>
+</ul>
+<h4 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Check Result: if option "Include Parameter Check" is checked, the HANA parameter check result is shown</li>
+<li>Change History: parameter change history is shown (available as of HANA 2.00.030)</li>
+</ul>
+<h4 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
+<ul>
+<li>General Configuration: hardware model, CPU type, Number of CPU, etc are shown
+  Detailed NUMA info is shown as of HANA 2.00.010</li>
+<li>CPU vs. Threads: CPU load aggregated by MAX and AVG are shown. The time interval depends on the time range selected:<ul>
+<li>Time range &gt;= 6 hours: interval = 10 mins</li>
+<li>Time range &lt; 6 hour: interval = 2 mins</li>
+</ul>
+</li>
+<li>Thread Workload: Workload related parameters are shown. If workload class are defined, they will be shown.
+  In the graph, 'session number' stands for the number of sessions connected to HANA, i.e. number of active 
+  work processes on SAP Application Servers</li>
+<li>SQL with Most Running Thread: SQL hash and text with thread state = 'Running' are shown. The data filter based on
+   thread sample history depends on the time range selected, the below rule apply to all figures involving 
+   thread sample history:<ul>
+<li>Time range &lt;= 6 hours: interval = 2 mins; Others percent = 0: i.e. all thread sample will be shown</li>
+<li>6 hours &lt; Time range &lt;= 2 days: interval = 10 mins; Others percent = 0.5: i.e. all threads that contribute to less
+than 0.5 percent in each time interval will be aggregated together into category '-- Others --' as shown in the figure</li>
+<li>Time range &gt; 2 days: interval =  1 hour; Other percent = 1, similarly, individual portion less than 1 percent will be aggregated 
+into category '-- Others -- '</li>
+</ul>
+</li>
+<li>SQL with Most Thread Sample: SQL hash and text with all threads, sometimes even if the thread state is not 'Running',
+  there is still a chance that this thread is busy with CPU</li>
+<li>Application Source with Most Running Thread: Click on the center of the 'Sunburst' figure would focus only on that 
+  application source and show the distribution of SQL related to this source</li>
+<li>NUMA Load: shows the distribution of thread samples related to each NUMA load</li>
+</ul>
+<h4 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h4>
+<ul>
+<li>General Configuration: memory configuration</li>
+<li>Memory and Unloads: memory consumption from HOST_RESOURCE_UTILIZATION_STATISTICS and HOST_LOAD_HISTORY_SERVICE</li>
+<li>Top Consumer by Component: memory consumption from HOST_SERVICE_COMPONENT_MEMORY</li>
+<li>Top Consumer by Area / Subarea / Objects: memory consumption from script HANA_Memory_TopConsumers, aggregated by
+  different granularity</li>
+<li>Top Consumer of Heap Area: top consumer of Heap Areas, information from SAP Note 1999997 is shown below the figure
+  to show detailed information of the top heap areas</li>
+<li>Service Memory:  memory consumption from HOST_SERVICE_MEMORY</li>
+<li>Expensive SQL with Top Used Memory: SQL with most memory consumption from expensive SQL trace are shown.</li>
+<li>SQL with Top Avg Memory Allocation: SQL with most allocated memory from SQL plan cache is shown, note that these
+  figures are the allocated memory, not the peak memory foot print. Use it as reference only and it is not reliable to
+  decide SQL with most memory consumption in this figure</li>
+</ul>
+<h4 id="activity">Activity<a class="headerlink" href="#activity" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Important Activities: activities that last longer than 1 minute are shown: Indexserver down / Backup / Merge / 
+  Consistency Check / Savepoint</li>
+<li>Tables with High Merge Time: all table/partitions with merge running time longer than 1 minute are shown</li>
+<li>Savepoint Duration and Throughput: Savepoints that last longer than 1 minute are shown</li>
+<li>ConsistentChangeLock Holder - SQL Hash: if block time of any savepoint is longer than 10 sec, than the SQL 
+    that is holding the CCL is shown</li>
+<li>ConsistentChangeLock Holder - Thread State and Lock Name: similarly, if the lock holder of CCL is waiting for another
+    lock, such lock information is shown</li>
+</ul>
+<h4 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Sessions and SQL Executed per Second</li>
+<li>SQL Workload</li>
+<li>SQL Cache Overview: if the SQL cache is undersized, the figure will show the issue</li>
+<li>SQL Avg Request Time</li>
+<li>SQL with Top Elapsed Time: SQL with most total elapsed time is shown, the mouse hover information will also show
+    the elapsed time per execution, elapsed time per row, etc.</li>
+<li>Expensive SQL with Top Elapsed Time: since the retention time of Expensive SQL trace depends on the system workload,
+    it is normal that majority part of the history information is empty</li>
+</ul>
+<h4 id="thread-sample">Thread Sample<a class="headerlink" href="#thread-sample" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Thread State and Lock Name: information from SAP Note 1999998 is shown below the figure
+  to show detailed information</li>
+<li>Thread Type and Thread Method: information from SAP Note 2114710 is shown below the figure
+  to show detailed information</li>
+<li>SQL and Lock Name: top SQL and its waiting lock type is shown. If the lock type is '?', it means the
+    SQL is likely to be busy on CPU</li>
+<li>SQL and Thread Method: top SQL and its thread method is shown.</li>
+<li>SQL Hierarchy: the figure shows the SQL Hierarchy where SQL HASH is different from the Root HASH.
+    Such graph will show e.g. which individual SQL triggered by a procedure call is dominant.</li>
+<li>DB User</li>
+<li>Application User</li>
+<li>Client Host</li>
+</ul>
+<h4 id="space">Space<a class="headerlink" href="#space" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Volume, Backup and Memory Size</li>
+<li>Log Volume and Merge: the figure shows the hourly generated log size in comparison with the tables 
+    with most merged rows, these top tables are in general responsible for most of the log volumes</li>
+<li>Table with Largest Disk Size: the history information is recorded every 6 hours, so it is normal if
+    the result is empty when the analysis time range is less than 6 hours. Both column table and 
+    row table are considered</li>
+<li>Column Table with Largest Memory Size: the result is aggregated by table</li>
+<li>Column Table with Most Rows: the result is aggregated by partition</li>
+<li>Row Table with Largest Memory Size</li>
+<li>Row Table with Largest Fragmented Size</li>
+<li>Row Table with Most Rows</li>
+</ul>
+<h4 id="disk">Disk<a class="headerlink" href="#disk" title="Permanent link">&para;</a></h4>
+<ul>
+<li>General Configuration: host, usage type, path, file system type, total size and used size are shown</li>
+<li>Disk Size: the history usage of disk size is sampled once per day</li>
+<li>DATA Volume Read</li>
+<li>DATA Volume Write</li>
+<li>LOG Volume Write</li>
+<li>Commit Frequency and Latency</li>
+</ul>
+<h4 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Data Backup History: the backup status can be seen with mouse hover</li>
+<li>Log Backup History</li>
+</ul>
+<h4 id="garbage-collection">Garbage Collection<a class="headerlink" href="#garbage-collection" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Versions and Commit Range</li>
+<li>Garbage Collection Blocker History: the information shown is only for reference and might not be reliable</li>
+</ul>
+<h4 id="application-lock">Application Lock<a class="headerlink" href="#application-lock" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Transactions and Blocked Transactions</li>
+<li>Waiting SQL HASH: top SQL waiting for application lock</li>
+<li>Waiting Table: top tables on which SQL is waiting for application lock</li>
+<li>Lock Holder Application Source: top application source holding the lock</li>
+<li>Waiting SQL / Waiting Table / Lock Holder Status: shows the lock holder status that blocks the waiting SQL/Table, 
+    Status = 'ACTIVE' means the lock holder is busy with another SQL; Status = 'IDLE' means the lock holder is busy
+    on the SAP side</li>
+<li>Waiting SQL / Waiting Table / Lock Holder SQL: if the lock holder status is 'ACTIVE', this figure shows these 
+    SQLs that is holding the lock</li>
+<li>Waiting SQL / Waiting Table / Lock Holder Source: shows the lock holder application source that holds the lock</li>
+</ul>
+<h4 id="system-replication">System Replication<a class="headerlink" href="#system-replication" title="Permanent link">&para;</a></h4>
+<ul>
+<li>General Configuration: shows the HANA System Replication configuration</li>
+<li>Log Shipping Throughput and Latency</li>
+<li>Log Shipping Delay and Backlog</li>
+<li>Log Replay Delay and Backlog</li>
+</ul>
+<h3 id="single-sql-report">Single SQL Report<a class="headerlink" href="#single-sql-report" title="Permanent link">&para;</a></h3>
+<p>Single SQL report is designed to show detailed information of one particular SQL statement based
+on its statement hash. The report consists of following sections/sub-sections:</p>
+<h4 id="general-information">General Information<a class="headerlink" href="#general-information" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SQL HASH and Text</li>
+<li>Bind Value: top 10 bind values in the expensive statement trace will be shown</li>
+<li>Execution Plan: execution plan with existing plan_id is shown, different plan levels are 
+    shown with different colors</li>
+</ul>
+<h4 id="kpi">KPI<a class="headerlink" href="#kpi" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Summary: most important KPI of the SQL statement is shown</li>
+<li>SQL Cache History: average run time of different plan_id are shown with different colors</li>
+<li>SQL Cache History Heatmap: the figure shows the KPI distribution in terms of day of the
+    week and hour of the day based on 4 different criteria: total elapsed time/total number of execution/
+    average time per execution/average row per execution</li>
+<li>Thread Workload: the figure shows the parallel degree history of the SQL statement</li>
+<li>Merge: table merge history is shown together with SQL average run time </li>
+<li>TSH (Thread State/Lock): thread sample history aggregated by thread state and lock name</li>
+<li>TSH (Thread Type/Method/Detail): thread sample history aggregated by thread type, thread method
+    and thread detail</li>
+<li>TSH (DB User/App Name/Client IP): thread sample history aggregated by database user, application
+    name and client IP</li>
+<li>TSH (App User/App Source): thread sample history aggregated by application user and application
+    source</li>
+<li>Expensive SQL: KPI from expensive statement trace is shown</li>
+<li>SQL Hierarchy (as Parent): all child SQL with root statement hash equals the current SQL is shown,
+    this figure helps to identify the dominant contributor if the SQL in question has child</li>
+<li>Application Lock (as Holder): the figure shows the lock waiter SQL / lock waiter table / 
+    lock waiter application source distribution that is blocked by the current SQL statement</li>
+</ul>
+<h4 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Accessed Objects: the table shows all objects accessed by the SQL statement, click on the
+    object name will jump to the detailed information of that object</li>
+<li>Object Hierarchy: if the SQL statement is accessing e.g. a procedure, the hierarchy of the
+    accessed objects including sub procedures, functions, views, etc is shown. Different 
+    hierarchy levels are shown with different colors. Click on the object name will jump to the 
+    detailed information of the object</li>
+<li>View Definitions: all the normal view (i.e. excluding Calculation View, OLAP View, etc) 
+    definition is shown</li>
+<li>Translation Table: if a join is performed, the translation table is shown</li>
+<li>Table Overview: first a table list with all involved tables are shown.<ul>
+<li>click on the 'table name' will jump to the 'Table Detail' sub-section of the table</li>
+<li>click on the '#column' will jump to the 'Column Info' sub-section of the table</li>
+<li>click on the '#partition' or 'partition type' will jump to the 'Partition Definition'
+  sub-section of the table</li>
+<li>click on the '#records' will jump to sub-section 'Table Size History (Row Number)'</li>
+<li>click on the '#index' will jump to the 'Index List' sub-section of the table </li>
+<li>click on the '#lob' will jump to the 'LOB Info' sub-section of the table</li>
+<li>click on the '#trigger' will jump to the 'Trigger Info' sub-section of the table </li>
+<li>click on the 'Total Memory Size(GB)' will jump to sub-section 'Table Size History (Memory)'</li>
+<li>click on the 'Disk Size(GB)' will jump to sub-section 'Table Size History (Disk)'</li>
+<li>click on the 'Last Merge Time' will jump to sub-section KPI -&gt; 'Merge'</li>
+<li>click on '<table_name> - Table Detail' will jump to the table overview</li>
+<li>click on '<table_name> - Index List' or any other detailed info sub-section title will jump back to the 
+  'Table Detail' sub-section</li>
+</ul>
+</li>
+<li>Table Size History (Memory): table memory size history is shown together with the SQL average run time</li>
+<li>Table Size History (Row Number): table row size history is shown together with the SQL average run time</li>
+<li>Table Size History (Disk): table disk size history is shown together with the SQL average run time</li>
+</ul>
+<h4 id="optimization-helper">Optimization Helper<a class="headerlink" href="#optimization-helper" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SQL Text with Bind Value: SQL texts with bind variable replaced by bind value is shown. </li>
+</ul>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>Please click this link: <a href="/SampleReport.html" target="_blank">Example Report</a> to see an example General Report.</p>
+<h2 id="feedback">Feedback?<a class="headerlink" href="#feedback" title="Permanent link">&para;</a></h2>
+<p>Author: Mingqian Zhong (Please contact me via <a href="mailto:mingqian.zhong@sap.com">mingqian.zhong@sap.com</a>) / Sponsor: Ramu Vidadala</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        <a href="download/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Download
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.a1609d9a.min.js"></script>
+      
+    
+  </body>
+</html>
