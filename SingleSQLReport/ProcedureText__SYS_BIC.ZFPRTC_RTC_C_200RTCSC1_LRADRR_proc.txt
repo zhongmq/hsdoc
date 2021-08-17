@@ -1,0 +1,14 @@
+_SYS_BIC.ZFPRTC/RTC_C_200RTCSC1_LRADRR/proc
+
+create procedure "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_LRADRR/proc" ( OUT var_out "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_LRADRR/proc/tabletype/VAR_OUT" ) language sqlscriptsql security definer reads sql data as  /********* Begin Procedure Script************/ BEGIN
+ VAR_OUT = SELECT
+ FYEAR
+ ,MANDT
+ ,MODEL
+ ,BPC_CATG
+ ,RTIME
+,FPERI
+ ,ENTITY
+  FROM "_SYS_BIC"."sap.erp.sfin.rtc/RTC_C_LRADRR"
+  where MANDT= '200' and MODEL = 'RTCSC1'
+ ;END /********* End Procedure Script ************/

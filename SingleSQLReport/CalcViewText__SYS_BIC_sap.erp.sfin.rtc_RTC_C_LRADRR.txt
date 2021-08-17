@@ -1,0 +1,673 @@
+_SYS_BIC:sap.erp.sfin.rtc/RTC_C_LRADRR
+
+[
+    {
+        "__CalculationNode__": true,
+        "name": "RTC_DRR",
+        "operation": {
+            "__TableDSNodeData__": true,
+            "source": {
+                "__IndexName__": true,
+                "schema": "SAPABAP1",
+                "name": "RTC_DRR"
+            },
+            "dataSourceFlags": 0
+        },
+        "attributeVec": [
+            {
+                "__Attribute__": true,
+                "name": "MANDT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "PRUUID",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 82,
+                    "sqlType": 38,
+                    "sqlLength": 16
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "MODEL",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 6
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "VERID",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 5
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "BPC_CATG",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 10
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "RTC_CATG",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 10
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "RTC_ACCTP",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 4
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "RTC_RVERS",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FYEAR",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 4
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FPERI",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "ENTITY",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 32
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "DR_METHOD",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 5
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "DR_PKG",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCYEARPER",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 7
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "DRR_TYPE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 73,
+                    "sqlType": 41,
+                    "sqlLength": 2
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "RTIME",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 66,
+                    "length": 15,
+                    "sqlType": 34,
+                    "sqlLength": 15
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "USTATUS",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 73,
+                    "sqlType": 41,
+                    "sqlLength": 2
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "SSTATUS",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 73,
+                    "sqlType": 41,
+                    "sqlLength": 2
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "DEFLG",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 1
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "CREATEDBY",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 12
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "CREATEDAT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 66,
+                    "length": 15,
+                    "sqlType": 34,
+                    "sqlLength": 15
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "CHANGEDBY",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 12
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "CHANGEDAT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 66,
+                    "length": 15,
+                    "sqlType": 34,
+                    "sqlLength": 15
+                },
+                "attributeType": 0
+            }
+        ]
+    },
+    {
+        "__CalculationNode__": true,
+        "name": "Projection_1",
+        "inputVec": [
+            {
+                "__Input__": true,
+                "name": "RTC_DRR",
+                "mappingVec": [
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "MANDT",
+                        "source": "MANDT",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "MODEL",
+                        "source": "MODEL",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "BPC_CATG",
+                        "source": "BPC_CATG",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "FYEAR",
+                        "source": "FYEAR",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "FPERI",
+                        "source": "FPERI",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "ENTITY",
+                        "source": "ENTITY",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "RTIME",
+                        "source": "RTIME",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "USTATUS",
+                        "source": "USTATUS",
+                        "length": 0
+                    }
+                ]
+            }
+        ],
+        "operation": {
+            "__ProjectionOpNodeData__": true
+        },
+        "attributeVec": [
+            {
+                "__Attribute__": true,
+                "name": "MANDT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "MODEL",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 6
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "BPC_CATG",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 10
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FYEAR",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 4
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FPERI",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "ENTITY",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 32
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "RTIME",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 66,
+                    "length": 15,
+                    "sqlType": 34,
+                    "sqlLength": 15
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "USTATUS",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 73,
+                    "sqlType": 41,
+                    "sqlLength": 2
+                },
+                "attributeType": 0
+            }
+        ],
+        "filterObject": {
+            "__Filter__": true,
+            "type": 0,
+            "expression": "(\"USTATUS\" >=50)"
+        },
+        "debugNodeDataInfo": {
+            "__DebugNodeDataInfo__": true,
+            "nodeName": "Projection_1"
+        }
+    },
+    {
+        "__CalculationNode__": true,
+        "name": "finalAggregation",
+        "isDefaultNode": true,
+        "inputVec": [
+            {
+                "__Input__": true,
+                "name": "Projection_1",
+                "mappingVec": [
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "MANDT",
+                        "source": "MANDT",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "MODEL",
+                        "source": "MODEL",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "BPC_CATG",
+                        "source": "BPC_CATG",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "FYEAR",
+                        "source": "FYEAR",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "FPERI",
+                        "source": "FPERI",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "ENTITY",
+                        "source": "ENTITY",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "RTIME",
+                        "source": "RTIME",
+                        "length": 0
+                    }
+                ]
+            }
+        ],
+        "operation": {
+            "__AggregationOpNodeData__": true
+        },
+        "attributeVec": [
+            {
+                "__Attribute__": true,
+                "name": "MANDT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "description": "Client",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "MODEL",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 6
+                },
+                "description": "Consolidation Model",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "BPC_CATG",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 10
+                },
+                "description": "BPC Category",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FYEAR",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 4
+                },
+                "description": "Fiscal Year",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FPERI",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "description": "Fiscal Period",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "ENTITY",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 32
+                },
+                "description": "ConsolidationEntity",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "RTIME",
+                "role": 2,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 66,
+                    "length": 15,
+                    "sqlType": 34,
+                    "sqlLength": 15
+                },
+                "description": "Release Time",
+                "kfAggregationType": 8,
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "row.count",
+                "role": 2,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 66,
+                    "length": 18
+                },
+                "isVisible": false,
+                "kfAggregationType": 2,
+                "attributeType": 4,
+                "specialAttrType": 4
+            }
+        ],
+        "debugNodeDataInfo": {
+            "__DebugNodeDataInfo__": true,
+            "nodeName": "Aggregation"
+        }
+    },
+    {
+        "__Variable__": true,
+        "name": "$$language$$",
+        "typeMask": 512,
+        "usage": 0,
+        "isGlobal": true
+    },
+    {
+        "__Variable__": true,
+        "name": "$$client$$",
+        "typeMask": 512,
+        "usage": 0,
+        "isGlobal": true
+    },
+    {
+        "__CalcScenarioMetaData__": true,
+        "externalScenarioName": "sap.erp.sfin.rtc::RTC_C_LRADRR"
+    }
+]

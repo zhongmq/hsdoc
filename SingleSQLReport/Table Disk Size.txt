@@ -1,0 +1,28 @@
+---------------------------------------------------------------------------------------------------------
+|SNAPSHOT_TIME      |HOST                                   |TABLE_NAME     |PART_CNT|DISK_GB|PAGE_COUNT|
+---------------------------------------------------------------------------------------------------------
+|2021/07/10 18:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|  54.65|     54.65|
+|2021/07/10 18:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/11 00:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|  54.65|     54.65|
+|2021/07/11 00:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/11 06:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|  54.65|     54.65|
+|2021/07/11 06:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/11 12:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|  54.65|     54.65|
+|2021/07/11 12:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/11 18:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|  54.65|     54.65|
+|2021/07/11 18:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/12 00:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|  54.65|     54.65|
+|2021/07/12 00:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/12 06:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|  54.65|     54.65|
+|2021/07/12 06:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/12 12:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|  54.65|     54.65|
+|2021/07/12 12:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/12 18:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|   51.9|      51.9|
+|2021/07/12 18:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/13 00:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|   51.9|      51.9|
+|2021/07/13 00:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/13 06:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|   51.9|      51.9|
+|2021/07/13 06:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.35|      7.35|
+|2021/07/13 12:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCA|      33|   51.9|      51.9|
+|2021/07/13 12:00:00|sg11scbh1rrd0.hec.standardchartered.com|SAPABAP1.ACDOCC|       1|   7.36|      7.36|
+---------------------------------------------------------------------------------------------------------

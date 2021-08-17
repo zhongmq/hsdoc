@@ -1,0 +1,71 @@
+_SYS_BIC.ZFPRTC/RTC_C_200RTCSC1_C/proc
+
+create procedure "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_C/proc" ( OUT var_out "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_C/proc/tabletype/VAR_OUT" ) language sqlscript sqlsecurity definer reads sql data as  /********* Begin Procedure Script ************/BEGIN
+ VAR_OUT = SELECT
+ C.ENTITY
+ ,cast (COALESCE( D.ENTITY, 'NONE') as NVARCHAR(32))as PENTITY
+ ,B.ACCTP
+ , A.RCLNT
+ , A.MODEL
+ , A.RTC_CATG
+ , A.RVERS
+, A.RCONGR1
+ , A.AUDIT_TRA
+ , A.PLEVL
+ , A.RTFLG
+ , A.PERIV
+ , A.RYEAR
+ , A.POPER
+, A.FISCYEARPER
+ , A.KTOPL
+ , A.RACCT
+ , A.CONS_CUR
+ , A.CONS_SL
+ , A.RWCUR
+, A.PRCTR
+ , A.SCNTR
+ , A.RKCUR
+ , A.PSEGMENT
+ , A.RMVCT
+ , A.SBUSA
+ , A.ZZPROD
+, A.SEGMENT
+ , A.ANBWA
+ , A.RBUSA
+ , A.PBUKRS
+ , A.KDGRP
+ , A.RUNIT
+ , A.KOKRS
+, A.HSL
+ , A.VTWEG
+ , A.RHCUR
+ , A.RFAREA
+ , A.PPRCTR
+ , A.MATKL
+ , A.PS_PSPID
+, A.SPART
+ , A.ZZCUSTOM4
+ , A.KSL
+ , A.RCNTR
+ , A.VKORG
+ , A.PS_POSID
+ , A.SFAREA
+, A.ANLN1
+ , A.ZZCUSTOM1
+ , A.ZZCUSTOM2
+ , A.ZZCUSTOM3
+ , A.ZZCUSTOM5
+ , A.ZZTECHDIM
+, A.ZZCUSTOM6
+ , A.WSL
+ , A.MSL
+ , A.TIMESTAMP
+  FROM ACDOCC AS A
+ leftouter join RTC_LEDGER_GROUP as B
+ on A.RLDNR = B.RLDNR and B.MODEL = 'RTCSC1'and B.MANDT = '200'
+ join "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_ENTITY" as C
+ on A.RCOMP= C.RCOMP
+ left join "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_ENTITY" as D
+ on A.RASSC= D.RCOMP
+ WHERE A.RCLNT ='200' and A.DELFLG = '' and A.MODEL = 'RTCSC1'
+;END /********* End Procedure Script ************/

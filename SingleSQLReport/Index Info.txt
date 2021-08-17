@@ -1,0 +1,89 @@
+----------------------------------------------------------------------------------------------------------------------------------
+|SCHEMA_NAME|TABLE_NAME      |INDEX_NAME        |CONSTRAINT|INDEX_TYPE           |COLUMN_NAME        |SPAN|MEMORY_MB|NUM_DISTINCT|
+----------------------------------------------------------------------------------------------------------------------------------
+|SAPABAP1   |ACDOCA          |ACDOCA~ANL        |          |INVERTED VALUE       |ANLN1              |   1|    13.39|           2|
+|SAPABAP1   |ACDOCA          |ACDOCA~AWR        |          |INVERTED VALUE       |AWREF              |   1|  1239.29|      169191|
+|SAPABAP1   |ACDOCA          |ACDOCA~BEL        |          |INVERTED VALUE       |BELNR              |   1| 25158.44|      775057|
+|SAPABAP1   |ACDOCA          |ACDOCA~ONR        |          |INVERTED VALUE       |OBJNR              |   1|   393.18|       19414|
+|SAPABAP1   |ACDOCA          |ACDOCA~POB        |          |INVERTED VALUE       |PAROB1             |   1|    13.39|           1|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |ACCAS              |   1|      0.0|       15645|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |BLDAT              |   1|      0.0|         287|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |BSCHL              |   1|      0.0|           2|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |BUDAT              |   1|     2.28|         353|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |BUKRS_SENDER       |   1|    20.44|         264|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |CO_BEKNZ           |   1|      0.0|           3|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |DRCRK              |   1|    14.25|           3|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |FISCYEARPER        |   1|     1.24|          31|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |GKONT              |   1|     32.1|        1578|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |HRKFT              |   1|     4.84|          18|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |KTOSL              |   1|      0.0|           2|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |LINETYPE           |   1|      0.0|           4|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |PERIV              |   1|     0.29|           5|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |POPER              |   1|     1.24|         353|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |PRCTR              |   1|   329.38|        4273|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RACCT              |   1|   309.55|        2105|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RACCT_SENDER       |   1|    36.08|        1960|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RASSC              |   1|    29.34|         320|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RBUKRS             |   1|   207.36|         343|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RCNTR              |   1|     0.01|       33553|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RHCUR              |   1|   128.86|          50|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RHOART             |   1|      0.0|           3|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RLDNR              |   1|    47.76|           5|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |ROCUR              |   1|     5.52|          48|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RTCUR              |   1|   227.74|         172|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |RWCUR              |   1|   227.27|         163|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |SEGMENT            |   1|   161.52|          19|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |ZZOPLOC            |   1|     0.06|        4016|
+|SAPABAP1   |ACDOCA          |implicit          |          |INVERTED VALUE       |ZZPROD             |   1|   358.34|         138|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |AUDIT_TRA          |   1|     6.75|         389|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |CONS_CUR           |   1|     1.33|          46|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |DRCRK              |   1|      0.0|          -1|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |RCONGR1            |   1|     4.83|         163|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |RMVCT              |   1|     3.35|         150|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |SEGMENT            |   1|     5.13|          20|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |ZZCUSTOM1          |   1|     1.25|         136|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |ZZCUSTOM3          |   1|     1.81|         240|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |ZZCUSTOM5          |   1|     1.38|         388|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |ZZCUSTOM6          |   1|     1.32|          35|
+|SAPABAP1   |ACDOCC          |implicit          |          |INVERTED VALUE       |ZZPROD             |   1|    11.99|         140|
+|SAPABAP1   |FINSC_FISC_DATE |FINSC_FISC_DATE~0 |Primary   |INVERTED VALUE UNIQUE|CLIENT             |   3|     0.27|           1|
+|SAPABAP1   |FINSC_FISC_DATE |FINSC_FISC_DATE~0 |Primary   |INVERTED VALUE UNIQUE|FISCAL_YEAR_VARIANT|   0|      0.0|           4|
+|SAPABAP1   |FINSC_FISC_DATE |FINSC_FISC_DATE~0 |Primary   |INVERTED VALUE UNIQUE|CALENDAR_DATE      |   0|      0.0|       12144|
+|SAPABAP1   |FINSC_FISC_DATE |implicit          |          |INVERTED VALUE       |CALENDAR_DATE      |   1|     0.04|       12144|
+|SAPABAP1   |FINSC_FISC_DATE |implicit          |          |INVERTED VALUE       |CLIENT             |   1|      0.0|           1|
+|SAPABAP1   |FINSC_FISC_DATE |implicit          |          |INVERTED VALUE       |FISCAL_YEAR_VARIANT|   1|      0.0|           4|
+|SAPABAP1   |RTC_DRR         |RTC_DRR~0         |Primary   |INVERTED VALUE UNIQUE|MANDT              |   2|     0.27|           1|
+|SAPABAP1   |RTC_DRR         |RTC_DRR~0         |Primary   |INVERTED VALUE UNIQUE|PRUUID             |   0|      0.0|       28209|
+|SAPABAP1   |RTC_DRR         |implicit          |          |INVERTED VALUE       |MANDT              |   1|      0.0|           1|
+|SAPABAP1   |RTC_DRR         |implicit          |          |INVERTED VALUE       |PRUUID             |   1|     0.05|       28209|
+|SAPABAP1   |RTC_ENTITY_M    |RTC_ENTITY_M~0    |Primary   |INVERTED VALUE UNIQUE|MANDT              |   3|      0.0|           2|
+|SAPABAP1   |RTC_ENTITY_M    |RTC_ENTITY_M~0    |Primary   |INVERTED VALUE UNIQUE|DIM                |   0|      0.0|           2|
+|SAPABAP1   |RTC_ENTITY_M    |RTC_ENTITY_M~0    |Primary   |INVERTED VALUE UNIQUE|ENTITY             |   0|      0.0|         463|
+|SAPABAP1   |RTC_ENTITY_M    |implicit          |          |INVERTED VALUE       |DIM                |   1|      0.0|           2|
+|SAPABAP1   |RTC_ENTITY_M    |implicit          |          |INVERTED VALUE       |ENTITY             |   1|      0.0|         463|
+|SAPABAP1   |RTC_ENTITY_M    |implicit          |          |INVERTED VALUE       |MANDT              |   1|      0.0|           2|
+|SAPABAP1   |RTC_LEDGER_GROUP|RTC_LEDGER_GROUP~0|Primary   |INVERTED VALUE UNIQUE|MANDT              |   4|      0.0|           1|
+|SAPABAP1   |RTC_LEDGER_GROUP|RTC_LEDGER_GROUP~0|Primary   |INVERTED VALUE UNIQUE|MODEL              |   0|      0.0|           2|
+|SAPABAP1   |RTC_LEDGER_GROUP|RTC_LEDGER_GROUP~0|Primary   |INVERTED VALUE UNIQUE|ACCTP              |   0|      0.0|           2|
+|SAPABAP1   |RTC_LEDGER_GROUP|RTC_LEDGER_GROUP~0|Primary   |INVERTED VALUE UNIQUE|RLDNR              |   0|      0.0|           2|
+|SAPABAP1   |RTC_LEDGER_GROUP|implicit          |          |INVERTED VALUE       |ACCTP              |   1|      0.0|           2|
+|SAPABAP1   |RTC_LEDGER_GROUP|implicit          |          |INVERTED VALUE       |MANDT              |   1|      0.0|           1|
+|SAPABAP1   |RTC_LEDGER_GROUP|implicit          |          |INVERTED VALUE       |MODEL              |   1|      0.0|           2|
+|SAPABAP1   |RTC_LEDGER_GROUP|implicit          |          |INVERTED VALUE       |RLDNR              |   1|      0.0|           2|
+|SAPABAP1   |SKA1            |SKA1~0            |Primary   |INVERTED VALUE UNIQUE|MANDT              |   3|     0.27|           2|
+|SAPABAP1   |SKA1            |SKA1~0            |Primary   |INVERTED VALUE UNIQUE|KTOPL              |   0|      0.0|          40|
+|SAPABAP1   |SKA1            |SKA1~0            |Primary   |INVERTED VALUE UNIQUE|SAKNR              |   0|      0.0|       18764|
+|SAPABAP1   |SKA1            |implicit          |          |INVERTED VALUE       |KTOPL              |   1|      0.0|          40|
+|SAPABAP1   |SKA1            |implicit          |          |INVERTED VALUE       |MANDT              |   1|      0.0|           2|
+|SAPABAP1   |SKA1            |implicit          |          |INVERTED VALUE       |SAKNR              |   1|     0.08|       18764|
+|SAPABAP1   |T001            |T001~0            |Primary   |INVERTED VALUE UNIQUE|MANDT              |   2|      0.0|           3|
+|SAPABAP1   |T001            |T001~0            |Primary   |INVERTED VALUE UNIQUE|BUKRS              |   0|      0.0|         528|
+|SAPABAP1   |T001            |T001~FTD          |          |FULLTEXT             |BUTXT              |   1|     0.21|         528|
+|SAPABAP1   |T001            |implicit          |          |INVERTED VALUE       |BUKRS              |   1|      0.0|         528|
+|SAPABAP1   |T001            |implicit          |          |INVERTED VALUE       |MANDT              |   1|      0.0|           3|
+|SAPABAP1   |T004            |T004~0            |Primary   |INVERTED VALUE UNIQUE|MANDT              |   2|      0.0|           2|
+|SAPABAP1   |T004            |T004~0            |Primary   |INVERTED VALUE UNIQUE|KTOPL              |   0|      0.0|          42|
+|SAPABAP1   |T004            |implicit          |          |INVERTED VALUE       |KTOPL              |   1|      0.0|          42|
+|SAPABAP1   |T004            |implicit          |          |INVERTED VALUE       |MANDT              |   1|      0.0|           2|
+|SAPABAP1   |TCURX           |TCURX~0           |Primary   |INVERTED VALUE UNIQUE|CURRKEY            |   1|      0.0|          62|
+----------------------------------------------------------------------------------------------------------------------------------

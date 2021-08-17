@@ -1,0 +1,451 @@
+_SYS_BIC:sap.erp.sfin.rtc/RTC_C_FISCMAP
+
+[
+    {
+        "__CalculationNode__": true,
+        "name": "FINSC_FISC_DATE",
+        "operation": {
+            "__TableDSNodeData__": true,
+            "source": {
+                "__IndexName__": true,
+                "schema": "SAPABAP1",
+                "name": "FINSC_FISC_DATE"
+            },
+            "dataSourceFlags": 0
+        },
+        "attributeVec": [
+            {
+                "__Attribute__": true,
+                "name": "CLIENT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_VARIANT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 2
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "CALENDAR_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 4
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_PERIOD",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_PERIOD_START_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_PERIOD_END_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_QUARTER",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 5
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_START_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_END_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_QUARTER_START_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_QUARTER_END_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_PERIOD",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 7
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_QUARTER",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 1
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_WEEK",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 2
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_WEEK_START_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_WEEK_END_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_WEEK",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 6
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_PERIOD_INT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 73,
+                    "sqlType": 42,
+                    "sqlLength": 4
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_QUARTER_INT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 73,
+                    "sqlType": 42,
+                    "sqlLength": 4
+                },
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_WEEK_INT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 73,
+                    "sqlType": 42,
+                    "sqlLength": 4
+                },
+                "attributeType": 0
+            }
+        ]
+    },
+    {
+        "__CalculationNode__": true,
+        "name": "finalProjection",
+        "isDefaultNode": true,
+        "inputVec": [
+            {
+                "__Input__": true,
+                "name": "FINSC_FISC_DATE",
+                "mappingVec": [
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "CLIENT",
+                        "source": "CLIENT",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "FISCAL_YEAR_VARIANT",
+                        "source": "FISCAL_YEAR_VARIANT",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "CALENDAR_DATE",
+                        "source": "CALENDAR_DATE",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "FISCAL_YEAR",
+                        "source": "FISCAL_YEAR",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "FISCAL_PERIOD",
+                        "source": "FISCAL_PERIOD",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "FISCAL_QUARTER",
+                        "source": "FISCAL_QUARTER",
+                        "length": 0
+                    },
+                    {
+                        "__Mapping__": true,
+                        "type": 1,
+                        "target": "FISCAL_YEAR_PERIOD",
+                        "source": "FISCAL_YEAR_PERIOD",
+                        "length": 0
+                    }
+                ]
+            }
+        ],
+        "operation": {
+            "__ProjectionOpNodeData__": true
+        },
+        "attributeVec": [
+            {
+                "__Attribute__": true,
+                "name": "CLIENT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "description": "CLIENT",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_VARIANT",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 2
+                },
+                "description": "FISCAL_YEAR_VARIANT",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "CALENDAR_DATE",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 8
+                },
+                "description": "CALENDAR_DATE",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 4
+                },
+                "description": "FISCAL_YEAR",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_PERIOD",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 3
+                },
+                "description": "FISCAL_PERIOD",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_QUARTER",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 1
+                },
+                "description": "FISCAL_QUARTER",
+                "attributeType": 0
+            },
+            {
+                "__Attribute__": true,
+                "name": "FISCAL_YEAR_PERIOD",
+                "role": 1,
+                "datatype": {
+                    "__DataType__": true,
+                    "type": 83,
+                    "sqlType": 37,
+                    "sqlLength": 7
+                },
+                "description": "FISCAL_YEAR_PERIOD",
+                "attributeType": 0
+            }
+        ],
+        "debugNodeDataInfo": {
+            "__DebugNodeDataInfo__": true,
+            "nodeName": "Projection"
+        }
+    },
+    {
+        "__Variable__": true,
+        "name": "$$language$$",
+        "typeMask": 512,
+        "usage": 0,
+        "isGlobal": true
+    },
+    {
+        "__Variable__": true,
+        "name": "$$client$$",
+        "typeMask": 512,
+        "usage": 0,
+        "isGlobal": true
+    },
+    {
+        "__CalcScenarioMetaData__": true,
+        "externalScenarioName": "sap.erp.sfin.rtc::RTC_C_FISCMAP"
+    }
+]

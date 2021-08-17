@@ -1,0 +1,12 @@
+_SYS_BIC.ZFPRTC/RTC_C_200RTCSC1_FSIM/proc
+
+create procedure "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_FSIM/proc" ( OUT var_out "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_FSIM/proc/tabletype/VAR_OUT" ) language sqlscriptsql security definer reads sql data as  /********* Begin Procedure Script ************/BEGIN
+ VAR_OUT = SELECT
+ MANDT,
+ KTOPL,
+ SAKNR,
+ KKTPL,
+ RACCT
+  FROM"_SYS_BIC"."ZFPRTC/RTC_C_CONS_ACCT_M"
+  WHERE mandt = '200' and kktpl = 'SCBG'
+;END /********* End Procedure Script ************/

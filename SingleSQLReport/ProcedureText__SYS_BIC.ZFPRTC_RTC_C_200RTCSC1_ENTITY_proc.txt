@@ -1,0 +1,23 @@
+_SYS_BIC.ZFPRTC/RTC_C_200RTCSC1_ENTITY/proc
+
+create procedure "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_ENTITY/proc" ( OUT var_out "_SYS_BIC"."ZFPRTC/RTC_C_200RTCSC1_ENTITY/proc/tabletype/VAR_OUT" ) language sqlscriptsql security definer reads sql data as  /********* Begin Procedure Script************/ BEGIN
+ VAR_OUT = SELECT
+ MANDT,
+ DIM,
+ ENTITY,
+ RCOMP,
+ FLEXUP asISEXTERNAL,
+ CTRLL,
+ CCNLC,
+ DIMLS,
+ RELIM,
+ ENJNR,
+ FXTYP,
+ NAME,
+ LOCAL_CURRENCY,
+ZZOWNER,
+ ZZREVIEWER,
+ ZZTEAM
+ FROM "RTC_ENTITY_M"
+ WHERE mandt = '200' anddim = '100'
+ ;END /********* End Procedure Script ************/

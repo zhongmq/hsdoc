@@ -1,0 +1,96 @@
+_SYS_BIC.ZFPRTC/ZFV_RTC_GRP_A/proc
+
+create procedure "_SYS_BIC"."ZFPRTC/ZFV_RTC_GRP_A/proc" ( OUT var_out "_SYS_BIC"."ZFPRTC/ZFV_RTC_GRP_A/proc/tabletype/VAR_OUT" ) language sqlscript sql securityinvoker reads sql data as  
+ /********* Begin Procedure Script ************/ 
+BEGIN 
+ 	 var_out = SELECT 
+ 	 A.RCLNT,
+ 	 A.RLDNR,
+ 	 A.GJAHR,
+ 	 A.RBUKRS,
+ 	A.BELNR,
+ 	 B.RCOMP,
+/**  Commented because of Tech fix 	 
+ 	 case when A.RCNTR= ''
+ 	 then concat( 'C', A.RBUKRS)
+ 	 else A.RCNTR
+ 	 end as RCNTR,
+     case whenA.PRCTR = ''
+     then concat( 'P', A.RBUKRS)
+     else A.PRCTR
+     end asPRCTR,
+**/  
+     A.RCNTR,
+     A.PRCTR,   
+ 	 A.RFAREA,
+ 	 A.RBUSA,
+ 	 A.KOKRS,
+/** Commented because of tech fix 	 
+ 	 CASE WHEN A.SEGMENT = '' 
+ 	 THEN concat('S', A.RBUKRS)
+ 	 ELSE A.SEGMENT  
+ 	 END AS SEGMENT,
+**/
+     A.SEGMENT,
+ 	A.PBUKRS,
+ 	 A.RASSC,
+ 	 A.SCNTR,
+     A.PPRCTR,
+ 	 A.SFAREA,
+ 	 A.SBUSA,
+ 	 A.PSEGMENT,
+	 A.KTOPL,
+ 	 A.RACCT,
+ 	 A.RMVCT,
+ 	 A.WSL,
+/** Work around for scaling**/
+/**A.HSL,**/
+CASEWHEN C.CURRDEC IS NOT NULL 
+THEN A.HSL * POWER(10,(2-C.CURRDEC))
+ELSEA.HSL 
+END AS HSL,
+ 	 A.KSL,
+ 	 A.MSL,
+ 	 A.RWCUR,
+ 	 A.RHCUR,
+ 	A.RKCUR,
+ 	 A.RUNIT,
+ 	 A.PERIV,
+ 	 A.POPER,
+ 	 A.FISCYEARPER,
+ 	 A.BUDAT,
+ 	 A.TIMESTAMP,
+	 A.ANBWA,
+ 	 A.ANLN1,
+ 	 A.MATKL,
+ 	 A.KDGRP,
+ 	 A.VKORG,
+ 	 A.VTWEG,
+	 A.SPART,
+ 	 A.PS_PSPID,
+ 	 A.PS_POSID,
+ 	 '' as AUDIT_TRA,
+/**  Commentedbecause of tech fix 	 
+ 	 CASE WHEN  A.ZZPROD = '' 
+ 	 THEN '9999'
+ 	 ELSE A.ZZPROD
+ 	 END AS ZZPROD,
+**/
+     A.ZZPROD,
+ 	 'NONE' as ZZCUSTOM1,
+ 	 'NONE' asZZCUSTOM2, 	 
+ 	 'NONE' as ZZCUSTOM3,
+  	 'NONE' as ZZCUSTOM4,
+ 	 'NONE' as ZZCUSTOM5,
+	 'NONE' as ZZCUSTOM6,
+     concat(A.RBUKRS, concat(A.PRCTR, A.RCNTR)) asZZTECHDIM
+ 	 FROM ACDOCA AS A
+/** 	 JOIN T001 AS B (As per SAP recommendation)**/
+    LEFT OUTER JOIN T001 AS B
+ 	   ON A.RCLNT = B.MANDT
+ 	  AND A.RBUKRS =B.BUKRS
+/** Work around for scaling***/
+    left outer join TCURX as C
+      onA.RHCUR = C.CURRKEY
+    WHERE A.POPER > '000' and A.RLDNR = '0L';
+END /*********End Procedure Script ************/
