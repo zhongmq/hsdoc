@@ -944,7 +944,7 @@ so that all stake holders (Support, System Administrator, etc) can understand th
 </ul>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">SAPGUI Connection</label><div class="tabbed-content">
-<p>As of V1.4, it is possible to connect to HANA database through SAPGUI. The prerequisite is as following:</p>
+<p>As of V1.4 Windows version, it is possible to connect to HANA database through SAPGUI. The prerequisite is as following:</p>
 <ul>
 <li>Transaction ST04 -&gt; Diagnostics -&gt; SQL Editor has been started on an SAP system running on HANA. HANA HotSpots will always try to connect to the last valid SAPGUI session.</li>
 <li>
@@ -961,6 +961,11 @@ so that all stake holders (Support, System Administrator, etc) can understand th
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please note that when using SAPGUI connection, the tool needs to access clipboard often, therefore please <strong>do not make "copy/paste" operation in parallel</strong> as otherwise the conflict may cause the tool to fail.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>SAPGUI connection is only supported on windows (including GUI and CMD version). If you want to use SAPGUI connection on MAC, please use 
+<a href="https://access.co.sap.com/AccessPortal" target="_blank">WTS</a> </p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1172,6 +1177,7 @@ into category '-- Others -- '</li>
 <li>DB User</li>
 <li>Application User</li>
 <li>Client Host</li>
+<li>Callstack History: shows the historical distribution of dominant call stacks (maximum depth = 17)</li>
 </ul>
 <h4 id="space">Space<a class="headerlink" href="#space" title="Permanent link">&para;</a></h4>
 <ul>
