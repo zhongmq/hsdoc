@@ -1,0 +1,20 @@
+7e7a8751eb44e4b10d1380c2d2b22216
+
+
+                   <div class="column" style="margin-left:-12px;margin-right:32px">
+                        <p><font face="consolas">SQL HASH = 7e7a8751eb44e4b10d1380c2d2b22216</font></p>
+                        <br>
+                        <div class="box">
+                            <pre style="background-color:white">SELECT "SAPCLIENT", "MATDOCKEY", "MATERIALDOCUMENT", "MATERIALDOCUMENTYEAR", "MATERIALDOCUMENTITEM",
+       "PURCHASINGDOCUMENT", "INVENTORYTRANSACTIONTYPE", "VERSIONFORPRINTINGSLIP", "CREATIONUSERNAME",
+       "QUANTITYDEBITCREDITCODE", "GOODSRECEIPTISMOVEDTOBLKDSTOCK", "PLANT", "STORAGELOCATION", "GOODSMOVEMENTTYPE",
+       "NMBROFGRORGISLIPSTOPRINTQTY", "MATLDOCLATESTPOSTGDATE", "PRINTINGOFDOCUMENTITEM", "INDGOODSRECEIPTMESSAGE",
+       "OPERATIONISPRINTED", "COMPANYCODE", "SUPPLIER", "LABELFORM", "LABELTYPE"
+FROM "V_MMIM_OM_PARAM"
+WHERE "SAPCLIENT" = ?
+  AND "MATDOCKEY" = ?
+LIMIT 1 WITH RANGE_RESTRICTION('CURRENT')
+                            </pre>
+                        </div>
+                   </div>
+                   

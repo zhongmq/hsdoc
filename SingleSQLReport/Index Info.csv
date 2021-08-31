@@ -1,86 +1,125 @@
 SCHEMA_NAME;TABLE_NAME;INDEX_NAME;CONSTRAINT;INDEX_TYPE;COLUMN_NAME;SPAN;MEMORY_MB;NUM_DISTINCT
-SAPABAP1;ACDOCA;ACDOCA~ANL;;INVERTED VALUE;ANLN1;1;    13.39;           2
-SAPABAP1;ACDOCA;ACDOCA~AWR;;INVERTED VALUE;AWREF;1;  1239.29;      169191
-SAPABAP1;ACDOCA;ACDOCA~BEL;;INVERTED VALUE;BELNR;1; 25158.44;      775057
-SAPABAP1;ACDOCA;ACDOCA~ONR;;INVERTED VALUE;OBJNR;1;   393.18;       19414
-SAPABAP1;ACDOCA;ACDOCA~POB;;INVERTED VALUE;PAROB1;1;    13.39;           1
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;ACCAS;1;     0.00;       15645
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;BLDAT;1;     0.00;         287
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;BSCHL;1;     0.00;           2
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;BUDAT;1;     2.28;         353
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;BUKRS_SENDER;1;    20.44;         264
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;CO_BEKNZ;1;     0.00;           3
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;DRCRK;1;    14.25;           3
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;FISCYEARPER;1;     1.24;          31
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;GKONT;1;    32.10;        1578
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;HRKFT;1;     4.84;          18
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;KTOSL;1;     0.00;           2
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;LINETYPE;1;     0.00;           4
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;PERIV;1;     0.29;           5
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;POPER;1;     1.24;         353
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;PRCTR;1;   329.38;        4273
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RACCT;1;   309.55;        2105
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RACCT_SENDER;1;    36.08;        1960
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RASSC;1;    29.34;         320
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RBUKRS;1;   207.36;         343
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RCNTR;1;     0.01;       33553
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RHCUR;1;   128.86;          50
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RHOART;1;     0.00;           3
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RLDNR;1;    47.76;           5
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;ROCUR;1;     5.52;          48
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RTCUR;1;   227.74;         172
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;RWCUR;1;   227.27;         163
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;SEGMENT;1;   161.52;          19
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;ZZOPLOC;1;     0.06;        4016
-SAPABAP1;ACDOCA;implicit;;INVERTED VALUE;ZZPROD;1;   358.34;         138
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;AUDIT_TRA;1;     6.75;         389
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;CONS_CUR;1;     1.33;          46
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;DRCRK;1;     0.00;          -1
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;RCONGR1;1;     4.83;         163
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;RMVCT;1;     3.35;         150
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;SEGMENT;1;     5.13;          20
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;ZZCUSTOM1;1;     1.25;         136
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;ZZCUSTOM3;1;     1.81;         240
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;ZZCUSTOM5;1;     1.38;         388
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;ZZCUSTOM6;1;     1.32;          35
-SAPABAP1;ACDOCC;implicit;;INVERTED VALUE;ZZPROD;1;    11.99;         140
-SAPABAP1;FINSC_FISC_DATE;FINSC_FISC_DATE~0;Primary;INVERTED VALUE UNIQUE;CLIENT;3;     0.27;           1
-SAPABAP1;FINSC_FISC_DATE;FINSC_FISC_DATE~0;Primary;INVERTED VALUE UNIQUE;FISCAL_YEAR_VARIANT;0;0;           4
-SAPABAP1;FINSC_FISC_DATE;FINSC_FISC_DATE~0;Primary;INVERTED VALUE UNIQUE;CALENDAR_DATE;0;0;       12144
-SAPABAP1;FINSC_FISC_DATE;implicit;;INVERTED VALUE;CALENDAR_DATE;1;     0.04;       12144
-SAPABAP1;FINSC_FISC_DATE;implicit;;INVERTED VALUE;CLIENT;1;     0.00;           1
-SAPABAP1;FINSC_FISC_DATE;implicit;;INVERTED VALUE;FISCAL_YEAR_VARIANT;1;     0.00;           4
-SAPABAP1;RTC_DRR;RTC_DRR~0;Primary;INVERTED VALUE UNIQUE;MANDT;2;     0.27;           1
-SAPABAP1;RTC_DRR;RTC_DRR~0;Primary;INVERTED VALUE UNIQUE;PRUUID;0;0;       28209
-SAPABAP1;RTC_DRR;implicit;;INVERTED VALUE;MANDT;1;     0.00;           1
-SAPABAP1;RTC_DRR;implicit;;INVERTED VALUE;PRUUID;1;     0.05;       28209
-SAPABAP1;RTC_ENTITY_M;RTC_ENTITY_M~0;Primary;INVERTED VALUE UNIQUE;MANDT;3;     0.00;           2
-SAPABAP1;RTC_ENTITY_M;RTC_ENTITY_M~0;Primary;INVERTED VALUE UNIQUE;DIM;0;0;           2
-SAPABAP1;RTC_ENTITY_M;RTC_ENTITY_M~0;Primary;INVERTED VALUE UNIQUE;ENTITY;0;0;         463
-SAPABAP1;RTC_ENTITY_M;implicit;;INVERTED VALUE;DIM;1;     0.00;           2
-SAPABAP1;RTC_ENTITY_M;implicit;;INVERTED VALUE;ENTITY;1;     0.00;         463
-SAPABAP1;RTC_ENTITY_M;implicit;;INVERTED VALUE;MANDT;1;     0.00;           2
-SAPABAP1;RTC_LEDGER_GROUP;RTC_LEDGER_GROUP~0;Primary;INVERTED VALUE UNIQUE;MANDT;4;     0.00;           1
-SAPABAP1;RTC_LEDGER_GROUP;RTC_LEDGER_GROUP~0;Primary;INVERTED VALUE UNIQUE;MODEL;0;0;           2
-SAPABAP1;RTC_LEDGER_GROUP;RTC_LEDGER_GROUP~0;Primary;INVERTED VALUE UNIQUE;ACCTP;0;0;           2
-SAPABAP1;RTC_LEDGER_GROUP;RTC_LEDGER_GROUP~0;Primary;INVERTED VALUE UNIQUE;RLDNR;0;0;           2
-SAPABAP1;RTC_LEDGER_GROUP;implicit;;INVERTED VALUE;ACCTP;1;     0.00;           2
-SAPABAP1;RTC_LEDGER_GROUP;implicit;;INVERTED VALUE;MANDT;1;     0.00;           1
-SAPABAP1;RTC_LEDGER_GROUP;implicit;;INVERTED VALUE;MODEL;1;     0.00;           2
-SAPABAP1;RTC_LEDGER_GROUP;implicit;;INVERTED VALUE;RLDNR;1;     0.00;           2
-SAPABAP1;SKA1;SKA1~0;Primary;INVERTED VALUE UNIQUE;MANDT;3;     0.27;           2
-SAPABAP1;SKA1;SKA1~0;Primary;INVERTED VALUE UNIQUE;KTOPL;0;0;          40
-SAPABAP1;SKA1;SKA1~0;Primary;INVERTED VALUE UNIQUE;SAKNR;0;0;       18764
-SAPABAP1;SKA1;implicit;;INVERTED VALUE;KTOPL;1;     0.00;          40
-SAPABAP1;SKA1;implicit;;INVERTED VALUE;MANDT;1;     0.00;           2
-SAPABAP1;SKA1;implicit;;INVERTED VALUE;SAKNR;1;     0.08;       18764
-SAPABAP1;T001;T001~0;Primary;INVERTED VALUE UNIQUE;MANDT;2;     0.00;           3
-SAPABAP1;T001;T001~0;Primary;INVERTED VALUE UNIQUE;BUKRS;0;0;         528
-SAPABAP1;T001;T001~FTD;;FULLTEXT;BUTXT;1;     0.21;         528
-SAPABAP1;T001;implicit;;INVERTED VALUE;BUKRS;1;     0.00;         528
-SAPABAP1;T001;implicit;;INVERTED VALUE;MANDT;1;     0.00;           3
-SAPABAP1;T004;T004~0;Primary;INVERTED VALUE UNIQUE;MANDT;2;     0.00;           2
-SAPABAP1;T004;T004~0;Primary;INVERTED VALUE UNIQUE;KTOPL;0;0;          42
-SAPABAP1;T004;implicit;;INVERTED VALUE;KTOPL;1;     0.00;          42
-SAPABAP1;T004;implicit;;INVERTED VALUE;MANDT;1;     0.00;           2
-SAPABAP1;TCURX;TCURX~0;Primary;INVERTED VALUE UNIQUE;CURRKEY;1;     0.00;          62
+SAPS4D;EKKO;EKKO~0;Primary;INVERTED VALUE UNIQUE;MANDT;  2;     1.05;           2
+SAPS4D;EKKO;EKKO~0;Primary;INVERTED VALUE UNIQUE;EBELN;  0;0;      166088
+SAPS4D;EKKO;esh:ftx~saps4d~ekko~submi~001;;FULLTEXT;SUBMI;  1;     4.93;        4584
+SAPS4D;EKKO;EKKO~H4P;;INVERTED VALUE;SUBMI;  1;     0.01;        4580
+SAPS4D;EKKO;EKKO~H7Y;;INVERTED VALUE;LIFNR;  1;     0.18;        3933
+SAPS4D;EKKO;EKKO~HQ3;;INVERTED VALUE;ERNAM;  1;     0.15;         179
+SAPS4D;EKKO;CONCAT ATTRIBUTE<br>$esh:ca~id=1018b4c0c61a~ty=alph10~a=ebeln~t=ekko~cv=alphanum$;;INVERTED VALUE;esh:ca~id=1018b4c0c61a~ty=alph10~a=ebeln~t=ekko~cv=alphanum;  1;     0.03;
+SAPS4D;EKKO;CONCAT ATTRIBUTE<br>$esh:ca~id=1ac78ccf76d0~ty=date27~a=kdatb~t=ekko~cv=longdate$;;INVERTED VALUE;esh:ca~id=1ac78ccf76d0~ty=date27~a=kdatb~t=ekko~cv=longdate;  1;     0.01;
+SAPS4D;EKKO;CONCAT ATTRIBUTE<br>$esh:ca~id=3850471f2dec~ty=date27~a=ihran~t=ekko~cv=longdate$;;INVERTED VALUE;esh:ca~id=3850471f2dec~ty=date27~a=ihran~t=ekko~cv=longdate;  1;     0.01;
+SAPS4D;EKKO;CONCAT ATTRIBUTE<br>$esh:ca~id=6348b9f37870~ty=date27~a=aedat~t=ekko~cv=longdate$;;INVERTED VALUE;esh:ca~id=6348b9f37870~ty=date27~a=aedat~t=ekko~cv=longdate;  1;     0.01;
+SAPS4D;EKKO;CONCAT ATTRIBUTE<br>$esh:ca~id=87aa60cadc0f~ty=alph10~a=lifnr~t=ekko~cv=alphanum$;;INVERTED VALUE;esh:ca~id=87aa60cadc0f~ty=alph10~a=lifnr~t=ekko~cv=alphanum;  1;     0.02;
+SAPS4D;EKKO;CONCAT ATTRIBUTE<br>$esh:ca~id=ac076de0f393~ty=date27~a=kdate~t=ekko~cv=longdate$;;INVERTED VALUE;esh:ca~id=ac076de0f393~ty=date27~a=kdate~t=ekko~cv=longdate;  1;     0.01;
+SAPS4D;EKKO;CONCAT ATTRIBUTE<br>$esh:ca~id=d23ac419ff21~ty=date27~a=bedat~t=ekko~cv=longdate$;;INVERTED VALUE;esh:ca~id=d23ac419ff21~ty=date27~a=bedat~t=ekko~cv=longdate;  1;     0.01;
+SAPS4D;EKKO;CONCAT ATTRIBUTE<br>$esh:ca~id=d706a193b5e0~ty=date27~a=angdt~t=ekko~cv=longdate$;;INVERTED VALUE;esh:ca~id=d706a193b5e0~ty=date27~a=angdt~t=ekko~cv=longdate;  1;     0.01;
+SAPS4D;EKKO;CONCAT ATTRIBUTE<br>$esh:ca~id=e6c938d65226~ty=alph10~a=konnr~t=ekko~cv=alphanum$;;INVERTED VALUE;esh:ca~id=e6c938d65226~ty=alph10~a=konnr~t=ekko~cv=alphanum;  1;     0.00;
+SAPS4D;EKKO;implicit;;INVERTED VALUE;BSART;  1;     0.00;          12
+SAPS4D;EKKO;implicit;;INVERTED VALUE;EBELN;  1;     0.36;      166088
+SAPS4D;EKKO;implicit;;INVERTED VALUE;EKGRP;  1;     0.00;         184
+SAPS4D;EKKO;implicit;;INVERTED VALUE;FRGSX;  1;     0.00;          27
+SAPS4D;EKKO;implicit;;INVERTED VALUE;FRGZU;  1;     0.00;          15
+SAPS4D;EKKO;implicit;;INVERTED VALUE;LPONR;  1;     0.01;         562
+SAPS4D;EKKO;implicit;;INVERTED VALUE;MANDT;  1;     0.00;           2
+SAPS4D;EKKO;implicit;;INVERTED VALUE;RESWK;  1;     0.00;          32
+SAPS4D;EKKO;implicit;;INVERTED VALUE;VERKF;  1;     0.00;         546
+SAPS4D;EKKO;implicit;;INVERTED VALUE;ZBD1P;  1;     0.00;           9
+SAPS4D;EKKO;implicit;;INVERTED VALUE;ZBD1T;  1;     0.00;          12
+SAPS4D;EKKO;implicit;;INVERTED VALUE;ZBD2T;  1;     0.00;           8
+SAPS4D;EKKO;implicit;;INVERTED VALUE;ZTERM;  1;     0.00;          44
+SAPS4D;MARA;MARA~0;Primary;INVERTED VALUE UNIQUE;MANDT;  2;     0.89;           1
+SAPS4D;MARA;MARA~0;Primary;INVERTED VALUE UNIQUE;MATNR;  0;0;       61835
+SAPS4D;MARA;MARA~H61;;INVERTED VALUE;BMATN;  1;     0.00;           1
+SAPS4D;MARA;MARA~HSS;;INVERTED VALUE;BISMT;  1;     0.24;       61776
+SAPS4D;MARA;CONCAT ATTRIBUTE<br>$esh:ca~id=22a37a773137~ty=date27~a=ersda~t=mara~cv=longdate$;;INVERTED VALUE;esh:ca~id=22a37a773137~ty=date27~a=ersda~t=mara~cv=longdate;  1;     0.14;
+SAPS4D;MARA;CONCAT ATTRIBUTE<br>$esh:ca~id=458ad5bea9a1~ty=date27~a=mstde~t=mara~cv=longdate$;;INVERTED VALUE;esh:ca~id=458ad5bea9a1~ty=date27~a=mstde~t=mara~cv=longdate;  1;     0.11;
+SAPS4D;MARA;CONCAT ATTRIBUTE<br>$esh:ca~id=4d3bde4dc447~ty=alph10~a=mfrnr~t=mara~cv=alphanum$;;INVERTED VALUE;esh:ca~id=4d3bde4dc447~ty=alph10~a=mfrnr~t=mara~cv=alphanum;  1;     0.03;
+SAPS4D;MARA;CONCAT ATTRIBUTE<br>$esh:ca~id=87587ee1eef1~ty=date27~a=laeda~t=mara~cv=longdate$;;INVERTED VALUE;esh:ca~id=87587ee1eef1~ty=date27~a=laeda~t=mara~cv=longdate;  1;     0.09;
+SAPS4D;MARA;CONCAT ATTRIBUTE<br>$esh:ca~id=e52e064d5ad8~ty=date27~a=mstdv~t=mara~cv=longdate$;;INVERTED VALUE;esh:ca~id=e52e064d5ad8~ty=date27~a=mstdv~t=mara~cv=longdate;  1;     0.11;
+SAPS4D;MARA;implicit;;INVERTED VALUE;DISST;  1;     0.00;          11
+SAPS4D;MARA;implicit;;INVERTED VALUE;EKWSL;  1;     0.00;           5
+SAPS4D;MARA;implicit;;INVERTED VALUE;MANDT;  1;     0.00;           1
+SAPS4D;MARA;implicit;;INVERTED VALUE;MATNR;  1;     0.24;       61835
+SAPS4D;MARA;implicit;;INVERTED VALUE;MSTDE;  1;     0.00;         285
+SAPS4D;MARA;implicit;;INVERTED VALUE;MSTDV;  1;     0.00;         284
+SAPS4D;MARA;implicit;;INVERTED VALUE;SPART;  1;     0.00;           2
+SAPS4D;MARC;MARC~0;Primary;INVERTED VALUE UNIQUE;MANDT;  3;     5.19;           2
+SAPS4D;MARC;MARC~0;Primary;INVERTED VALUE UNIQUE;MATNR;  0;0;       46221
+SAPS4D;MARC;MARC~0;Primary;INVERTED VALUE UNIQUE;WERKS;  0;0;          45
+SAPS4D;MARC;MARC~HFV;;INVERTED VALUE;VRBMT;  1;     0.00;           2
+SAPS4D;MARC;MARC~HQ2;;INVERTED VALUE;STDPD;  1;     0.13;          24
+SAPS4D;MARC;MARC~HTR;;INVERTED VALUE;NFMAT;  1;     0.00;           2
+SAPS4D;MARC;CONCAT ATTRIBUTE<br>$esh:ca~id=fc2aefb0ca28~ty=date27~a=mmstd~t=marc~cv=longdate$;;INVERTED VALUE;esh:ca~id=fc2aefb0ca28~ty=date27~a=mmstd~t=marc~cv=longdate;  1;     0.92;
+SAPS4D;MARC;implicit;;INVERTED VALUE;ABCIN;  1;     0.00;           5
+SAPS4D;MARC;implicit;;INVERTED VALUE;BSTMI;  1;     0.01;        1375
+SAPS4D;MARC;implicit;;INVERTED VALUE;BSTRF;  1;     0.01;         810
+SAPS4D;MARC;implicit;;INVERTED VALUE;CCFIX;  1;     0.00;           3
+SAPS4D;MARC;implicit;;INVERTED VALUE;DISLS;  1;     0.00;          12
+SAPS4D;MARC;implicit;;INVERTED VALUE;DISPO;  1;     0.00;         255
+SAPS4D;MARC;implicit;;INVERTED VALUE;EKGRP;  1;     0.00;         183
+SAPS4D;MARC;implicit;;INVERTED VALUE;HERKL;  1;     0.00;          31
+SAPS4D;MARC;implicit;;INVERTED VALUE;KAUTB;  1;     0.00;           3
+SAPS4D;MARC;implicit;;INVERTED VALUE;MANDT;  1;     0.00;           2
+SAPS4D;MARC;implicit;;INVERTED VALUE;MATNR;  1;     1.06;       46221
+SAPS4D;MARC;implicit;;INVERTED VALUE;MFRGR;  1;     0.01;         156
+SAPS4D;MARC;implicit;;INVERTED VALUE;PLIFZ;  1;     0.00;         127
+SAPS4D;MARC;implicit;;INVERTED VALUE;PRCTR;  1;     0.00;         246
+SAPS4D;MARC;implicit;;INVERTED VALUE;SCM_GRPRT;  1;     0.00;           5
+SAPS4D;MARC;implicit;;INVERTED VALUE;UEETO;  1;     0.00;           5
+SAPS4D;MARC;implicit;;INVERTED VALUE;WEBAZ;  1;     0.00;           3
+SAPS4D;MARC;implicit;;INVERTED VALUE;WERKS;  1;     0.38;          45
+SAPS4D;MATDOC;MATDOC~MAT;;INVERTED VALUE;MATBF;  1;    39.92;       31369
+SAPS4D;MATDOC;MATDOC~MBL;;INVERTED VALUE;MBLNR;  1;    93.22;     7208362
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=050856fe6a92~ty=alph06~a=kdpos~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=050856fe6a92~ty=alph06~a=kdpos~t=matdoc~cv=alphanum;  1;     0.27;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=05ac680b6812~ty=alph10~a=ebeln~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=05ac680b6812~ty=alph10~a=ebeln~t=matdoc~cv=alphanum;  1;     0.43;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=095253e416ec~ty=alph10~a=prctr~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=095253e416ec~ty=alph10~a=prctr~t=matdoc~cv=alphanum;  1;     0.33;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=13de0f615b48~ty=alph10~a=kostl~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=13de0f615b48~ty=alph10~a=kostl~t=matdoc~cv=alphanum;  1;     0.27;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=1691ce54333b~ty=date27~a=cpudt~t=matdoc~cv=longdate$;;INVERTED VALUE;esh:ca~id=1691ce54333b~ty=date27~a=cpudt~t=matdoc~cv=longdate;  1;     0.31;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=379182e362e3~ty=alph06~a=mat_kdpos~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=379182e362e3~ty=alph06~a=mat_kdpos~t=matdoc~cv=alphanum;  1;     0.28;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=4eecc03ae409~ty=alph10~a=kdauf~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=4eecc03ae409~ty=alph10~a=kdauf~t=matdoc~cv=alphanum;  1;     0.30;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=50b7cade95e3~ty=alph05~a=ebelp~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=50b7cade95e3~ty=alph05~a=ebelp~t=matdoc~cv=alphanum;  1;     0.38;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=585b1976f418~ty=alph10~a=xabln~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=585b1976f418~ty=alph10~a=xabln~t=matdoc~cv=alphanum;  1;     0.22;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=5b470768a201~ty=alph10~a=kunnr~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=5b470768a201~ty=alph10~a=kunnr~t=matdoc~cv=alphanum;  1;     0.38;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=5c08d31583b8~ty=alph10~a=lifnr~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=5c08d31583b8~ty=alph10~a=lifnr~t=matdoc~cv=alphanum;  1;     0.31;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=6ea1e2eee943~ty=alph10~a=mat_kdauf~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=6ea1e2eee943~ty=alph10~a=mat_kdauf~t=matdoc~cv=alphanum;  1;     0.30;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=721e268809aa~ty=alph04~a=rspos~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=721e268809aa~ty=alph04~a=rspos~t=matdoc~cv=alphanum;  1;     0.28;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=7b995fd25fc0~ty=alph10~a=sakto~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=7b995fd25fc0~ty=alph10~a=sakto~t=matdoc~cv=alphanum;  1;     0.35;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=97f3abef3df2~ty=date27~a=bldat~t=matdoc~cv=longdate$;;INVERTED VALUE;esh:ca~id=97f3abef3df2~ty=date27~a=bldat~t=matdoc~cv=longdate;  1;     0.35;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=9eea086c4fb1~ty=date27~a=budat~t=matdoc~cv=longdate$;;INVERTED VALUE;esh:ca~id=9eea086c4fb1~ty=date27~a=budat~t=matdoc~cv=longdate;  1;     0.32;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=a0fc6ec67234~ty=alph10~a=le_vbeln~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=a0fc6ec67234~ty=alph10~a=le_vbeln~t=matdoc~cv=alphanum;  1;     0.53;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=a77a83f6c77d~ty=alph04~a=zeile~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=a77a83f6c77d~ty=alph04~a=zeile~t=matdoc~cv=alphanum;  1;     0.35;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=b34cb6ae86a3~ty=alph10~a=mblnr~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=b34cb6ae86a3~ty=alph10~a=mblnr~t=matdoc~cv=alphanum;  1;     0.96;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=bf81412a1a01~ty=alph10~a=rsnum~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=bf81412a1a01~ty=alph10~a=rsnum~t=matdoc~cv=alphanum;  1;     0.39;
+SAPS4D;MATDOC;CONCAT ATTRIBUTE<br>$esh:ca~id=e85c95269871~ty=alph04~a=mjahr~t=matdoc~cv=alphanum$;;INVERTED VALUE;esh:ca~id=e85c95269871~ty=alph04~a=mjahr~t=matdoc~cv=alphanum;  1;     0.22;
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;APLZL;  1;     0.11;         104
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;BERID;  1;     0.17;          37
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;BSTAUS_CG;  1;     0.07;          12
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;BSTAUS_SG;  1;     0.07;          12
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;ERFME;  1;     0.14;          47
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;HEADER_COUNTER;  1;     0.06;           2
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;LBBSA_CID;  1;     0.07;           9
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;LBBSA_SID;  1;     0.06;           9
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;LFPOS;  1;     0.16;        1433
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;LGNUM;  1;     0.33;          30
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;LGORT;  1;     0.51;         696
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;LGORT_CID;  1;     0.30;         690
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;LGORT_SID;  1;     0.51;         696
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;MAT_KDPOS;  1;     0.12;         584
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;MEINS;  1;     0.09;          14
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;PARENT_ID;  1;     0.34;         428
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;PPRCTR;  1;     1.10;         225
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;PRCTR;  1;     1.00;         179
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;RSPOS;  1;     0.14;          87
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;SAKTO;  1;     0.16;         137
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;SPE_BUDAT_ZONE;  1;     0.14;          15
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;TBPOS;  1;     0.17;         363
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;UMLGO;  1;     0.27;         690
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;UMWRK;  1;     0.20;          37
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;UMWRK_CID;  1;     0.22;          37
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;VPRSV;  1;     0.07;           3
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;WERKS;  1;     0.42;          42
+SAPS4D;MATDOC;implicit;;INVERTED VALUE;XPRINT;  1;     0.01;           5
+SAPS4D;T156;T156~0;Primary;INVERTED VALUE UNIQUE;MANDT;  2;     0.01;           3
+SAPS4D;T156;T156~0;Primary;INVERTED VALUE UNIQUE;BWART;  0;0;         321
+SAPS4D;T156;implicit;;INVERTED VALUE;BWART;  1;     0.00;         321
+SAPS4D;T156;implicit;;INVERTED VALUE;MANDT;  1;     0.00;           3

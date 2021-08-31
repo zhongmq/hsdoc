@@ -1,54 +1,12 @@
--------------------------------------------------------------------------------------------------------------------------------------------
-|SCHEMA_NAME|OBJECT_NAME                                                |OBJECT_TYPE|OBJECT_DETAIL|ROOT|IS_PARTITIONED|HAS_LOB|HAS_TRIGGER|
--------------------------------------------------------------------------------------------------------------------------------------------
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCUNION/proc                       |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_GRP_FA/proc                  |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_LCL_FA/proc                  |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_GRP_FC/proc                  |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_LCL_FC/proc                  |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_C/proc                              |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_FYVM/proc                           |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_LRADRR/proc                         |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_FSIM/proc                           |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_ENTITY/proc                         |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/ZFV_RTC_GRP_A/proc                                  |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/ZFV_RTC_LCL_A/proc                                  |PROCEDURE  |SQLSCRIPT2   |    |              |       |           |
-|SAPABAP1   |ACDOCA                                                     |TABLE      |COLUMN       |    |X             |       |           |
-|SAPABAP1   |ACDOCC                                                     |TABLE      |COLUMN       |    |              |       |           |
-|SAPABAP1   |FINSC_FISC_DATE                                            |TABLE      |COLUMN       |    |              |       |           |
-|SAPABAP1   |RTC_DRR                                                    |TABLE      |COLUMN       |    |              |       |           |
-|SAPABAP1   |RTC_ENTITY_M                                               |TABLE      |COLUMN       |    |              |       |           |
-|SAPABAP1   |RTC_LEDGER_GROUP                                           |TABLE      |COLUMN       |    |              |       |           |
-|SAPABAP1   |SKA1                                                       |TABLE      |COLUMN       |    |              |       |           |
-|SAPABAP1   |T001                                                       |TABLE      |COLUMN       |    |              |       |           |
-|SAPABAP1   |T004                                                       |TABLE      |COLUMN       |    |              |       |           |
-|SAPABAP1   |TCURX                                                      |TABLE      |COLUMN       |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_GRP_FA/proc/tabletype/VAR_OUT|TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_GRP_FC/proc/tabletype/VAR_OUT|TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_LCL_FA/proc/tabletype/VAR_OUT|TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_LCL_FC/proc/tabletype/VAR_OUT|TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCUNION/proc/tabletype/VAR_OUT     |TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_C/proc/tabletype/VAR_OUT            |TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_ENTITY/proc/tabletype/VAR_OUT       |TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_FSIM/proc/tabletype/VAR_OUT         |TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_FYVM/proc/tabletype/VAR_OUT         |TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_LRADRR/proc/tabletype/VAR_OUT       |TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/ZFV_RTC_GRP_A/proc/tabletype/VAR_OUT                |TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/ZFV_RTC_LCL_A/proc/tabletype/VAR_OUT                |TABLE      |ROW          |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/ZCV_RTCSC1_UNION                                    |VIEW       |CALC         |X   |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCUNION                            |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_GRP_FA                       |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_LCL_FA                       |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_GRP_FC                       |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_BPCACT_LCL_FC                       |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_C                                   |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_FYVM                                |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_LRADRR                              |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_FSIM                                |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_200RTCSC1_ENTITY                              |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/ZFV_RTC_GRP_A                                       |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/ZFV_RTC_LCL_A                                       |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |sap.erp.sfin.rtc/RTC_C_FISCMAP                             |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |ZFPRTC/RTC_C_CONS_ACCT_M                                   |VIEW       |CALC         |    |              |       |           |
-|_SYS_BIC   |sap.erp.sfin.rtc/RTC_C_LRADRR                              |VIEW       |CALC         |    |              |       |           |
--------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+|SCHEMA_NAME|OBJECT_NAME    |OBJECT_TYPE|OBJECT_DETAIL|ROOT|IS_PARTITIONED|HAS_LOB|HAS_TRIGGER|
+-----------------------------------------------------------------------------------------------
+|SAPS4D     |EKKO           |TABLE      |COLUMN       |    |              |       |           |
+|SAPS4D     |MARA           |TABLE      |COLUMN       |    |              |       |           |
+|SAPS4D     |MARC           |TABLE      |COLUMN       |    |              |       |           |
+|SAPS4D     |MATDOC         |TABLE      |COLUMN       |    |              |       |           |
+|SAPS4D     |T156           |TABLE      |COLUMN       |    |              |       |           |
+|SAPS4D     |V_MMIM_OM_PARAM|VIEW       |ROW          |X   |              |       |           |
+|SAPS4D     |V_MMIM_OM_BYPO |VIEW       |ROW          |    |              |       |           |
+|SAPS4D     |MA07V          |VIEW       |ROW          |    |              |       |           |
+-----------------------------------------------------------------------------------------------
