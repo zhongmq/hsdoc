@@ -237,35 +237,35 @@
         
           <li class="md-nav__item">
   <a href="#1-connect-to-a-hana-database" class="md-nav__link">
-    1. Connect to a HANA Database:
+    1. Connect to a HANA Database
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#2-select-topic" class="md-nav__link">
-    2. Select Topic:
+    2. Select Topic
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#3-select-time-frame" class="md-nav__link">
-    3. Select Time frame:
+    3. Select Time frame
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#4-start-analysis" class="md-nav__link">
-    4. Start Analysis:
+    4. Start Analysis
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#5-log-file" class="md-nav__link">
-    5. Log File:
+    5. Log File
   </a>
   
 </li>
@@ -671,35 +671,35 @@
         
           <li class="md-nav__item">
   <a href="#1-connect-to-a-hana-database" class="md-nav__link">
-    1. Connect to a HANA Database:
+    1. Connect to a HANA Database
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#2-select-topic" class="md-nav__link">
-    2. Select Topic:
+    2. Select Topic
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#3-select-time-frame" class="md-nav__link">
-    3. Select Time frame:
+    3. Select Time frame
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#4-start-analysis" class="md-nav__link">
-    4. Start Analysis:
+    4. Start Analysis
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#5-log-file" class="md-nav__link">
-    5. Log File:
+    5. Log File
   </a>
   
 </li>
@@ -1028,7 +1028,7 @@ so that all stake holders (Support, System Administrator, etc) can understand th
 <li><a href="GeneralReport.html" target="_blank">General Report Example</a></li>
 <li><a href="TopSQLReport.html" target="_blank">Top SQL Report Example</a></li>
 <li><a href="./SingleSQLReport/SingleSQLReport.html" target="_blank">Single SQL Report Example</a></li>
-<li><a href='ComparisonReport.html" target="_blank">Comparison Report Example</a></li>
+<li><a href="ComparisonReport.html" target="_blank">Comparison Report Example</a></li>
 </ul>
 <h2 id="usage-statistics">Usage Statistics<a class="headerlink" href="#usage-statistics" title="Permanent link">&para;</a></h2>
 <p>The usage statistics of HANA HotSpots can be seen in the below link. It shows how many reports have been
@@ -1038,7 +1038,7 @@ generated daily and weekly.</p>
 </ul>
 <h2 id="how-to-use-the-tool">How to use the tool?<a class="headerlink" href="#how-to-use-the-tool" title="Permanent link">&para;</a></h2>
 <p>The user interface (see above) is straightforward  including 3 steps:</p>
-<h3 id="1-connect-to-a-hana-database">1. Connect to a HANA Database:<a class="headerlink" href="#1-connect-to-a-hana-database" title="Permanent link">&para;</a></h3>
+<h3 id="1-connect-to-a-hana-database">1. Connect to a HANA Database<a class="headerlink" href="#1-connect-to-a-hana-database" title="Permanent link">&para;</a></h3>
 <p>There are 4 ways to connect to a HANA database:</p>
 <div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Custom System via SAP Proxy</label><div class="tabbed-content">
 <ul>
@@ -1089,7 +1089,7 @@ to see if the SAPGUI connection can be used. </p>
 <hr />
 <p>Furthermore, if SSO check box is flagged, the password can be omitted to connect to HANA system via Single-Sign-On.
 If SSL check box is flagged, the secure connection will be used to connect to HANA system. (e.g. should be used when connecting to HANA Cloud System)</p>
-<h3 id="2-select-topic">2. Select Topic:<a class="headerlink" href="#2-select-topic" title="Permanent link">&para;</a></h3>
+<h3 id="2-select-topic">2. Select Topic<a class="headerlink" href="#2-select-topic" title="Permanent link">&para;</a></h3>
 <p>Once the database connection is successful, select a <strong>Topic</strong> to start the analysis. Topic is a collection of <strong>Checks</strong> that is 
    focusing on particular area of HANA Database. Currently there are 4 Checks provided:</p>
 <div class="tabbed-set" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">General Report</label><div class="tabbed-content">
@@ -1116,23 +1116,35 @@ can be easily copied to the final report.</p>
 </div>
 </div>
 <hr />
-<h3 id="3-select-time-frame">3. Select Time frame:<a class="headerlink" href="#3-select-time-frame" title="Permanent link">&para;</a></h3>
-<p>The next step is to select the <strong>Timeframe</strong> of the analysis, by default, the analysis is focusing on the last 24 hours. 
-   The HANA server time will be used automatically, therefore do not be surprised if the appearing time is not the same as the local time.
-   Some shortcuts are provided in the interface so that it is easier to select the "Start Time" and "End Time " 
-   of the analysis.</p>
+<h3 id="3-select-time-frame">3. Select Time frame<a class="headerlink" href="#3-select-time-frame" title="Permanent link">&para;</a></h3>
+<p>The next step is to select the <strong>Timeframe</strong> of the analysis. The time frame selection is the same
+for all reports except 'Comparison Report', which requires 2 time frames to be selected:</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">General Report</label><div class="tabbed-content">
+<p>By default, the analysis is focusing on the last 24 hours. 
+The HANA server time will be used automatically, therefore do not be surprised if the appearing time is not the same as the local time.
+Some shortcuts are provided in the interface so that it is easier to select the "Start Time" and "End Time " 
+of the analysis.</p>
 <p>e.g. the combo box beside the Start Time label can be used to choose the baseline of the start time:</p>
 <ul>
 <li>Current time -&gt; set the start time to the current HANA server time.</li>
 <li>End time -&gt; set the start time to be the same as the End Time.</li>
 <li>Start of M_SERVICE_THREAD_SAMPLES -&gt; set the start time to the beginning of M_SERVICE_THREAD_SAMPLES,
-     when this is selected, the analysis will focus on the recent thread sample history that has a higher granularity.</li>
+  when this is selected, the analysis will focus on the recent thread sample history that has a higher granularity.</li>
 <li>Most recent HANA startup time -&gt; set the start time to the last HANA startup time.</li>
 </ul>
 <p>The "+" and "-" button together with the 'Hour'/'6 Hour' radio button can be used to quickly change the
-   start/end time.
-   The "0" button will set the time to zero, i.e. the midnight of the date.</p>
-<h3 id="4-start-analysis">4. Start Analysis:<a class="headerlink" href="#4-start-analysis" title="Permanent link">&para;</a></h3>
+start/end time.
+The "0" button will set the time to zero, i.e. the midnight of the date.</p>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Comparison Report</label><div class="tabbed-content">
+<p>Both Time Frame 1 and Time Frame 2 need to be filled.
+If the time length of time frame 1 equals the length of time frame 2, the 'Analysis Time Range' 
+label will be shown in green to imply that it is <strong>recommended to analyze with same time length
+for comparison report</strong>.</p>
+</div>
+</div>
+<hr />
+<h3 id="4-start-analysis">4. Start Analysis<a class="headerlink" href="#4-start-analysis" title="Permanent link">&para;</a></h3>
 <p>After the Topic and Timeframe are selected, click the "Start Analysis" button to launch the analysis. 
    Depending on the workload of the system and the timeframe length selected, 
    the <strong>analysis time</strong> may vary between less than one minute to more than 15 minutes. 
@@ -1143,7 +1155,7 @@ can be easily copied to the final report.</p>
    for better understanding of the system status. Depending on the analysis choice, 
    the report size ranges from a few MB to more than 20MB. 
    Also note that it takes a while in the browser for the report to be fully rendered. </p>
-<h3 id="5-log-file">5. Log File:<a class="headerlink" href="#5-log-file" title="Permanent link">&para;</a></h3>
+<h3 id="5-log-file">5. Log File<a class="headerlink" href="#5-log-file" title="Permanent link">&para;</a></h3>
 <p>A log file with name <code>hsgui.log</code> or <code>hscmd.log</code> (depending on the version) is generated under the same
    directory where the tool is located. If error occurs, more information can be seen in the log file.</p>
 <h3 id="6-what-kind-of-authorization-is-required-to-use-the-tool">6. What kind of authorization is required to use the tool?<a class="headerlink" href="#6-what-kind-of-authorization-is-required-to-use-the-tool" title="Permanent link">&para;</a></h3>
@@ -1152,7 +1164,7 @@ can be easily copied to the final report.</p>
    should have the standard catalog role <code>MONITORING</code> granted.</p>
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
 <p>The option menu will show options for different topics:</p>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">General Option</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">General Option</label><div class="tabbed-content">
 <ul>
 <li>Choose Output Folder: select the output folder where the generated report is saved</li>
 <li>Output Folder Naming Convention: the output folder can have 2 naming convention:</li>
@@ -1160,6 +1172,7 @@ can be easily copied to the final report.</p>
     current timestamp when the report is generated.</li>
 <li>Analaysis Time Frame: e.g. PRD_PRD_GeneralReport_2021.01.01_08.00_2021.01.02_08.00, where
     2021/01/01 08:00 - 2021/01/02 08:00 is the analysis time frame.</li>
+<li>Save Raw Data: if not ticked, no raw data (i.e. *.txt/csv) will be saved during report generation</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1167,7 +1180,7 @@ can be easily copied to the final report.</p>
 multiple check is carried out on the same system with different time frames.</p>
 </div>
 </div>
-<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">General Report Options</label><div class="tabbed-content">
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">General Report Options</label><div class="tabbed-content">
 <ul>
 <li>Include Parameter Check: if checked, any topic including HANA parameter check will be carried out, 
   otherwise it will be skipped to save time.</li>
@@ -1180,6 +1193,12 @@ multiple check is carried out on the same system with different time frames.</p>
   In the future more static information that does not change often along time line will be included.</li>
 <li>Include Link to Raw Data: if checked, link to the raw data will be included above each figure.</li>
 <li>Select Sections: it is possible to choose which section would be included in the generated General Report.</li>
+</ul>
+</div>
+<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">Comparison Report Options</label><div class="tabbed-content">
+<ul>
+<li>Select Sections: it is possible to choose which section would be included in the 
+generated Comparison Report.</li>
 </ul>
 </div>
 </div>
