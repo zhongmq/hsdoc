@@ -504,6 +504,47 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#comparison-report" class="md-nav__link">
+    Comparison Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu_2" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-sample_1" class="md-nav__link">
+    Thread Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk_1" class="md-nav__link">
+    Disk
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -897,6 +938,47 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#comparison-report" class="md-nav__link">
+    Comparison Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu_2" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-sample_1" class="md-nav__link">
+    Thread Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk_1" class="md-nav__link">
+    Disk
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -946,6 +1028,7 @@ so that all stake holders (Support, System Administrator, etc) can understand th
 <li><a href="GeneralReport.html" target="_blank">General Report Example</a></li>
 <li><a href="TopSQLReport.html" target="_blank">Top SQL Report Example</a></li>
 <li><a href="./SingleSQLReport/SingleSQLReport.html" target="_blank">Single SQL Report Example</a></li>
+<li><a href='ComparisonReport.html" target="_blank">Comparison Report Example</a></li>
 </ul>
 <h2 id="usage-statistics">Usage Statistics<a class="headerlink" href="#usage-statistics" title="Permanent link">&para;</a></h2>
 <p>The usage statistics of HANA HotSpots can be seen in the below link. It shows how many reports have been
@@ -1009,7 +1092,7 @@ If SSL check box is flagged, the secure connection will be used to connect to HA
 <h3 id="2-select-topic">2. Select Topic:<a class="headerlink" href="#2-select-topic" title="Permanent link">&para;</a></h3>
 <p>Once the database connection is successful, select a <strong>Topic</strong> to start the analysis. Topic is a collection of <strong>Checks</strong> that is 
    focusing on particular area of HANA Database. Currently there are 4 Checks provided:</p>
-<div class="tabbed-set" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">General Report</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">General Report</label><div class="tabbed-content">
 <p>Focusing on most important HANA KPIs such as CPU, Memory, Thread Samples, 
 Main Activities, etc. The analysis output would immediately show the <strong>HotSpots</strong> (i.e. When and what was the most significant bottleneck) 
 of the HANA Database. At the beginning of the report, a summary section is provided to automatically detect the most critical issues (if any) 
@@ -1023,7 +1106,11 @@ SQL text, heatmap, KPI history, etc.</p>
 <input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Single SQL Report</label><div class="tabbed-content">
 <p>Most important information of one SQL statement is shown: KPI history, all objects accessed, etc.</p>
 </div>
-<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">MiniCheck</label><div class="tabbed-content">
+<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Comparison Report</label><div class="tabbed-content">
+<p>Show the difference of most important HANA KPIs between two time frame selected.
+It is especially helpful to identify why HANA database behaviour suddenly changes.</p>
+</div>
+<input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">MiniCheck</label><div class="tabbed-content">
 <p>Run the scripts related to chapter "General Overview" from the TPO report template. The output will be stored on disk in plain text and 
 can be easily copied to the final report.</p>
 </div>
@@ -1121,7 +1208,7 @@ restored automatically next time it starts.</p>
 <h4 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Top Issues: most critical issues identified are shown in a table. The columns of the summary tables have the following
-  meaning:<ul>
+  meaning<ul>
 <li>Area: area of the issue</li>
 <li>Priority: Very High / High / Medium / Info</li>
 <li>Description: describe the issue, if option "Complete Summary" is checked, then 'No issues Detected' will be shown
@@ -1129,6 +1216,19 @@ here</li>
 <li>Host: on which host the issue occurs</li>
 <li>Time: The critical timestamp when the issue occurs</li>
 <li>Section: Link to the section </li>
+</ul>
+</li>
+<li>Top SQL: shows top SQL statements with different critiria, hovering over the SQL Hash will show
+    SQL text that can be copied to the clipboard<ul>
+<li>Most Running Thread: shows the top 5 SQL with most threads in status 'Running', i.e. consuming CPU</li>
+<li>Most Thread Sample: shows the top 5 SQL with most thread samples</li>
+<li>Most Avg Memory Allocation: shows the top 5 SQL with most average memory allocation based on 
+sql plan cache history</li>
+<li>Expensive SQL with Most Used Memory: shows the top 5 SQL with most used memory based on 
+expensive SQL trace</li>
+<li>Most Elapsed Time: shows the top 5 SQL with most total elapsed time based on sql plan cache history</li>
+<li>Expensive SQL with Most Elapsed Time: shows the top 5 SQL with most total elapsed time based on
+expensive SQL trace</li>
 </ul>
 </li>
 </ul>
@@ -1237,6 +1337,8 @@ into category '-- Others -- '</li>
     row table are considered</li>
 <li>Column Table with Largest Memory Size: the result is aggregated by table</li>
 <li>Column Table with Most Rows: the result is aggregated by partition</li>
+<li>Column Table with Most Read Count</li>
+<li>Column Table with Most Write Count</li>
 <li>Row Table with Largest Memory Size</li>
 <li>Row Table with Largest Fragmented Size</li>
 <li>Row Table with Most Rows</li>
@@ -1392,7 +1494,45 @@ on its statement hash. The report consists of following sections/sub-sections:
 </ul>
 <h4 id="optimization-helper">Optimization Helper<a class="headerlink" href="#optimization-helper" title="Permanent link">&para;</a></h4>
 <ul>
-<li>SQL Text with Bind Value: SQL texts with bind variable replaced by bind value is shown. </li>
+<li>SQL Text with Bind Value: SQL texts with bind variable replaced by bind value is shown</li>
+</ul>
+<h3 id="comparison-report">Comparison Report<a class="headerlink" href="#comparison-report" title="Permanent link">&para;</a></h3>
+<p>Comparison report (still in Beta mode) shows the KPI history from different timeframe in one figure
+so that it is easier to identify the KPI difference along timeline.
+It consists of following sections and sub-sections: (One sample 'Comparison Report'
+ can be seen <a href="ComparisonReport.html" target="_blank">here</a>)</p>
+<h4 id="cpu_2">CPU<a class="headerlink" href="#cpu_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>CPU vs. Threads: in general all info from time frame 1 is shown in blue and all info 
+  from time frame 2 is shown in red</li>
+<li>Thread Workload</li>
+<li>SQL with Most Running Thread Overview: The bar with '+' pattern is from time frame 1,
+  the same applies to all the overview figures in the comparison report</li>
+<li>SQL with Most Running Thread Detail</li>
+<li>SQL with Most Thread Sample Overview</li>
+<li>SQL with Most Thread Sample Detail</li>
+</ul>
+<h4 id="sql_1">SQL<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SQL Statements per Second</li>
+<li>SQL Avg Request Time</li>
+<li>SQL with Most Elapsed Time Overview</li>
+<li>SQL with Most Elapsed Time Detail</li>
+</ul>
+<h4 id="thread-sample_1">Thread Sample<a class="headerlink" href="#thread-sample_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Thread State and Lock Name Overview</li>
+<li>Thread State and Lock Name Detail</li>
+<li>Thread Type and Thread Method Overview</li>
+<li>Thread Type and Thread Method Detail</li>
+<li>SQL and Lock Name Overview</li>
+<li>SQL and Lock Name Detail</li>
+<li>SQL and Thread Method Overview</li>
+<li>SQL and Thread Method Detail</li>
+</ul>
+<h4 id="disk_1">Disk<a class="headerlink" href="#disk_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>DATA Volume Read</li>
 </ul>
 <h2 id="feedback">Feedback?<a class="headerlink" href="#feedback" title="Permanent link">&para;</a></h2>
 <p>Author: ZHONG, Mingqian (Tim) (Please contact me via <a href="mailto:mingqian.zhong@sap.com">mingqian.zhong@sap.com</a>) / Sponsor: Ramu Vidadala</p>
