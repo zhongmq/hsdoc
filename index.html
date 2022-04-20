@@ -251,7 +251,7 @@
         
           <li class="md-nav__item">
   <a href="#3-select-time-frame" class="md-nav__link">
-    3. Select Time frame
+    3. Select Time Frame
   </a>
   
 </li>
@@ -536,6 +536,26 @@
           <li class="md-nav__item">
   <a href="#disk_1" class="md-nav__link">
     Disk
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sap-workload-report" class="md-nav__link">
+    SAP Workload Report
+  </a>
+  
+    <nav class="md-nav" aria-label="SAP Workload Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#st03" class="md-nav__link">
+    ST03
   </a>
   
 </li>
@@ -685,7 +705,7 @@
         
           <li class="md-nav__item">
   <a href="#3-select-time-frame" class="md-nav__link">
-    3. Select Time frame
+    3. Select Time Frame
   </a>
   
 </li>
@@ -979,6 +999,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sap-workload-report" class="md-nav__link">
+    SAP Workload Report
+  </a>
+  
+    <nav class="md-nav" aria-label="SAP Workload Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#st03" class="md-nav__link">
+    ST03
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1029,12 +1069,13 @@ It can be used to analyze HANA Cloud system hosted on BTP. </p>
 <h2 id="outlook">Outlook<a class="headerlink" href="#outlook" title="Permanent link">&para;</a></h2>
 <p><img src="./ui20.jpg"></p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p>HANA HotSpots can generate different types of report for HANA troubleshooting, check the 4 types of example reports below:</p>
+<p>HANA HotSpots can generate different types of report for HANA troubleshooting, check the example reports below:</p>
 <ul>
 <li><a href="GeneralReport.html" target="_blank">General Report Example</a></li>
 <li><a href="TopSQLReport.html" target="_blank">Top SQL Report Example</a></li>
 <li><a href="./SingleSQLReport/SingleSQLReport.html" target="_blank">Single SQL Report Example</a></li>
 <li><a href="ComparisonReport.html" target="_blank">Comparison Report Example</a></li>
+<li><a href="SAPWorkloadReport.html" target="_blank">SAP Workload Report Example</a></li>
 </ul>
 <h2 id="usage-statistics">Usage Statistics<a class="headerlink" href="#usage-statistics" title="Permanent link">&para;</a></h2>
 <p>The usage statistics of HANA HotSpots can be seen in the below link. It shows how many reports have been
@@ -1097,7 +1138,7 @@ to see if the SAPGUI connection can be used. </p>
 If SSL check box is flagged, the secure connection will be used to connect to HANA system. (e.g. should be used when connecting to HANA Cloud System)</p>
 <h3 id="2-select-topic">2. Select Topic<a class="headerlink" href="#2-select-topic" title="Permanent link">&para;</a></h3>
 <p>Once the database connection is successful, select a <strong>Topic</strong> to start the analysis. Topic is a collection of <strong>Checks</strong> that is 
-   focusing on particular area of HANA Database. Currently there are 4 Checks provided:</p>
+   focusing on one particular area. Currently there are 5 Checks provided:</p>
 <div class="tabbed-set" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">General Report</label><div class="tabbed-content">
 <p>Focusing on most important HANA KPIs such as CPU, Memory, Thread Samples, 
 Main Activities, etc. The analysis output would immediately show the <strong>HotSpots</strong> (i.e. When and what was the most significant bottleneck) 
@@ -1116,16 +1157,15 @@ SQL text, heatmap, KPI history, etc.</p>
 <p>Show the difference of most important HANA KPIs between two time frame selected.
 It is especially helpful to identify why HANA database behaviour suddenly changes.</p>
 </div>
-<input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">MiniCheck</label><div class="tabbed-content">
-<p>Run the scripts related to chapter "General Overview" from the TPO report template. The output will be stored on disk in plain text and 
-can be easily copied to the final report.</p>
+<input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">SAP Workload Report</label><div class="tabbed-content">
+<p>Show the KPI on SAP appliation servers. e.g. KPI History from ST03.</p>
 </div>
 </div>
 <hr />
-<h3 id="3-select-time-frame">3. Select Time frame<a class="headerlink" href="#3-select-time-frame" title="Permanent link">&para;</a></h3>
-<p>The next step is to select the <strong>Timeframe</strong> of the analysis. The time frame selection is the same
-for all reports except 'Comparison Report', which requires 2 time frames to be selected:</p>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">General Report</label><div class="tabbed-content">
+<h3 id="3-select-time-frame">3. Select Time Frame<a class="headerlink" href="#3-select-time-frame" title="Permanent link">&para;</a></h3>
+<p>The next step is to select the <strong>Time Frame</strong> of the analysis. The time frame selection is the same
+for all reports except 'Comparison Report' and 'SAP Workload Report':</p>
+<div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">General Report</label><div class="tabbed-content">
 <p>By default, the analysis is focusing on the last 24 hours. 
 The HANA server time will be used automatically, therefore do not be surprised if the appearing time is not the same as the local time.
 Some shortcuts are provided in the interface so that it is easier to select the "Start Time" and "End Time " 
@@ -1147,6 +1187,10 @@ The "0" button will set the time to zero, i.e. the midnight of the date.</p>
 If the time length of time frame 1 equals the length of time frame 2, the 'Analysis Time Range' 
 label will be shown in green to imply that it is <strong>recommended to analyze with same time length
 for comparison report</strong>.</p>
+</div>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">SAP Workload Report</label><div class="tabbed-content">
+<p>Because the retention time is different on each system, therefore the <strong>time frame selection is ignored</strong>.
+The tool will fetch all the available data to generate the report.</p>
 </div>
 </div>
 <hr />
@@ -1560,6 +1604,33 @@ It consists of following sections and sub-sections: (One sample 'Comparison Repo
 <h4 id="disk_1">Disk<a class="headerlink" href="#disk_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>DATA Volume Read</li>
+</ul>
+<h3 id="sap-workload-report">SAP Workload Report<a class="headerlink" href="#sap-workload-report" title="Permanent link">&para;</a></h3>
+<p>SAP Workload report (still in Beta mode) shows the KPI history from SAP application servers.
+Such report can only be generated with SAPGUI connection.
+It consists of following sections and sub-sections: (One sample 'SAP Workload Report'
+ can be seen <a href="SAPWorkloadReport.html" target="_blank">here</a>)</p>
+<h4 id="st03">ST03<a class="headerlink" href="#st03" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Work Process Type History - Steps: shows the daily history of total work process steps aggregate by type</li>
+<li>Work Process Type History - Total Time: shows the daily history of total response time aggregate by work process type </li>
+<li>Daily History - All: shows the daily history of average response time of all work process types</li>
+<li>Daily History - Dialog: shows the daily history of average response time of Dialog work process</li>
+<li>Daily History - Background: shows the daily history of average response time of Background work process</li>
+<li>Daily History - RFC: shows the daily history of average response time of RFC</li>
+<li>
+<p>Hourly History - All: shows the Hourly history of average response time of all work process types</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Note that on old Netwearver systems the data in night hours (00-06 and 21--24) are aggregated so that the values
+shown are not accurate. Customer should apply Note 910897 so that the data in each hour is captured separately.</p>
+</div>
+</li>
+<li>
+<p>Hourly History - Dialog: shows the Hourly history of average response time of Dialog work process</p>
+</li>
+<li>Hourly History - Background: shows the Hourly history of average response time of Background work process</li>
+<li>Hourly History - RFC: shows the Hourly history of average response time of RFC</li>
 </ul>
 <h2 id="feedback">Feedback?<a class="headerlink" href="#feedback" title="Permanent link">&para;</a></h2>
 <p>Author: ZHONG, Mingqian (Tim) (Please contact me via <a href="mailto:mingqian.zhong@sap.com">mingqian.zhong@sap.com</a>) / Sponsor: Ramu Vidadala</p>
