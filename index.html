@@ -1096,7 +1096,8 @@ generated daily and weekly.</p>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">SAPGUI Connection</label><div class="tabbed-content">
 <p>As of V1.4 Windows version, it is possible to connect to HANA database through SAPGUI. The prerequisite is as following:</p>
 <ul>
-<li>Transaction ST04 -&gt; Diagnostics -&gt; SQL Editor has been started on an SAP system running on HANA. HANA HotSpots will always try to connect to the last valid SAPGUI session.</li>
+<li>Transaction ST04 -&gt; Diagnostics -&gt; SQL Editor has been started on an SAP system running on HANA. (Not required as of V2.2)</li>
+<li>HANA HotSpots will always try to connect to the last valid SAPGUI session.</li>
 <li>
 <p>SAPGUI scripting is enabled in the SAPGUI options as below, it is important to <strong>uncheck</strong> the two "Notify"
    sub-options to suppress the annoying warning message.
@@ -1104,10 +1105,50 @@ generated daily and weekly.</p>
    <img src="./sapguiconfig.png"></p>
 </li>
 <li>
-<p>ABAP parameter <code>sapgui/user_scripting</code> must be set to TRUE on the SAP system. Please check this <a href="https://help.sap.com/viewer/8ecea00c1f854fd0a433c4aef5da1ea2/Cloud/en-US/001675913cc54719930aa8197478dcde.html" target="_blank">link</a> for detailed 
-  instructions. If the highlighted icon in the SAPGUI status bar <img src="./scriptactive.png"> is visible, then it means this parameter is set to TRUE. Otherwise please ask the customer for the permission to change it. This parameter can be changed online.</p>
+<p>Following ABAP parameters should be set to the <strong>Required Value</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Default Value</th>
+<th>Required Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sapgui/user_scripting</code></td>
+<td>FALSE</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td><code>sapgui/user_scripting_disable_recording</code></td>
+<td>FALSE</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td><code>sapgui/user_scripting_force_notification</code></td>
+<td>FALSE</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td><code>sapgui/user_scripting_per_user</code></td>
+<td>FALSE</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td><code>sapgui/user_scripting_set_readonly</code></td>
+<td>FALSE</td>
+<td>FALSE</td>
+</tr>
+</tbody>
+</table>
+<p>Please check this <a href="https://help.sap.com/viewer/8ecea00c1f854fd0a433c4aef5da1ea2/Cloud/en-US/001675913cc54719930aa8197478dcde.html" target="_blank">link</a> for detailed 
+instructions. If the highlighted icon in the SAPGUI status bar <img src="./scriptactive.png"> is visible, then it means SAPGUI scripting is allowed. 
+Otherwise please ask the customer for the permission to change them. All these parameters can be changed online.</p>
 </li>
-<li>The SAP BASIS version should be higher or equal to 7.02 SP16 / 7.30 SP12 / 7.31 SP12 / 7.40 SP07 </li>
+<li>
+<p>The SAP BASIS version should be higher or equal to 7.02 SP16 / 7.30 SP12 / 7.31 SP12 / 7.40 SP07 </p>
+</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
