@@ -1608,6 +1608,11 @@ on its statement hash. The report consists of following sections/sub-sections:
 <ul>
 <li>SQL Text with Bind Value: SQL texts with bind variable replaced by bind value is shown</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The SQL text with bind value is used for further troubleshooting. It does <strong>NOT</strong> mean
+that the SQL text with bind value is better than the original SQL with ? in terms of performance</p>
+</div>
 <h3 id="comparison-report">Comparison Report<a class="headerlink" href="#comparison-report" title="Permanent link">&para;</a></h3>
 <p>Comparison report (still in Beta mode) shows the KPI history from different timeframe in one figure
 so that it is easier to identify the KPI difference along timeline.
@@ -1659,17 +1664,15 @@ It consists of following sections and sub-sections: (One sample 'SAP Workload Re
 <li>Daily History - Dialog: shows the daily history of average response time of Dialog work process</li>
 <li>Daily History - Background: shows the daily history of average response time of Background work process</li>
 <li>Daily History - RFC: shows the daily history of average response time of RFC</li>
-<li>
-<p>Hourly History - All: shows the Hourly history of average response time of all work process types</p>
+<li>Hourly History - All: shows the Hourly history of average response time of all work process types</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Note that on old Netwearver systems the data in night hours (00-06 and 21--24) are aggregated so that the values
 shown are not accurate. Customer should apply Note 910897 so that the data in each hour is captured separately.</p>
 </div>
-</li>
-<li>
-<p>Hourly History - Dialog: shows the Hourly history of average response time of Dialog work process</p>
-</li>
+<ul>
+<li>Hourly History - Dialog: shows the Hourly history of average response time of Dialog work process</li>
 <li>Hourly History - Background: shows the Hourly history of average response time of Background work process</li>
 <li>Hourly History - RFC: shows the Hourly history of average response time of RFC</li>
 </ul>
