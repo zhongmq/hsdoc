@@ -560,8 +560,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sdfsmon" class="md-nav__link">
+    /SDF/SMON
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hsic-data" class="md-nav__link">
+    Read HSIC Data
+  </a>
   
 </li>
         
@@ -1014,8 +1028,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sdfsmon" class="md-nav__link">
+    /SDF/SMON
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-hsic-data" class="md-nav__link">
+    Read HSIC Data
+  </a>
   
 </li>
         
@@ -1179,8 +1207,8 @@ to see if the SAPGUI connection can be used. </p>
 If SSL check box is flagged, the secure connection will be used to connect to HANA system. (e.g. should be used when connecting to HANA Cloud System)</p>
 <h3 id="2-select-topic">2. Select Topic<a class="headerlink" href="#2-select-topic" title="Permanent link">&para;</a></h3>
 <p>Once the database connection is successful, select a <strong>Topic</strong> to start the analysis. Topic is a collection of <strong>Checks</strong> that is 
-   focusing on one particular area. Currently there are 5 Checks provided:</p>
-<div class="tabbed-set" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">General Report</label><div class="tabbed-content">
+   focusing on one particular area. Currently, following Topics are provided:</p>
+<div class="tabbed-set" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">General Report</label><div class="tabbed-content">
 <p>Focusing on most important HANA KPIs such as CPU, Memory, Thread Samples, 
 Main Activities, etc. The analysis output would immediately show the <strong>HotSpots</strong> (i.e. When and what was the most significant bottleneck) 
 of the HANA Database. At the beginning of the report, a summary section is provided to automatically detect the most critical issues (if any) 
@@ -1203,8 +1231,13 @@ It is especially helpful to identify why HANA database behaviour suddenly change
 <p>Please see the <a href="#comparison-report">Comparison Report</a> for further details.</p>
 </div>
 <input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">SAP Workload Report</label><div class="tabbed-content">
-<p>Show the KPI on SAP appliation servers. e.g. KPI History from ST03.</p>
+<p>Show the KPI on SAP appliation servers. e.g. KPI History from ST03 and /SDF/SMON</p>
 <p>Please see the <a href="#sap-workload-report">SAP Workload Report</a> for further details.</p>
+</div>
+<input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><label for="__tabbed_2_6">Read HSIC Data</label><div class="tabbed-content">
+<p>Read data collected by HSIC (HANA HotSpots Information Collector) or from old general report
+raw data and generate a report.     </p>
+<p>Please see the <a href="#read-hsic-data">Read HSIC Data</a> for further details.</p>
 </div>
 </div>
 <hr />
@@ -1290,6 +1323,10 @@ multiple check is carried out on the same system with different time frames.</p>
 <li>Include Link to Raw Data: if checked, link to the raw data will be included above each figure.</li>
 <li>Select Sections: it is possible to choose which section would be included in the generated General Report.</li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>"General Report Options" are also used for "Read HSIC Data"</p>
+</div>
 </div>
 <input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">Comparison Report Options</label><div class="tabbed-content">
 <ul>
@@ -1696,6 +1733,24 @@ shown are not accurate. Customer should apply Note 910897 so that the data in ea
 <li>Hourly History - Background: shows the Hourly history of average response time of Background work process</li>
 <li>Hourly History - RFC: shows the Hourly history of average response time of RFC</li>
 </ul>
+<h4 id="sdfsmon">/SDF/SMON<a class="headerlink" href="#sdfsmon" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Application Server CPU - Each AS: shows the CPU utilization of each SAP Application Servers </li>
+<li>Work Process Number - All AS: shows the Active WP number of all SAP AS</li>
+<li>Work Process Number - Each AS: shows the Active WP number of each SAP AS</li>
+<li>Application Server Memory - Each AS: shows the Extended Memory, Heap Memory usage of each SAP AS</li>
+<li>Queue Length - Each AS: shows the Dialog/Update/Enqueue length of each SAP AS</li>
+<li>Users - All AS: shows the logins/session of all SAP AS</li>
+<li>Users - Each AS: shows the logins/session of each SAP AS</li>
+</ul>
+<h3 id="read-hsic-data">Read HSIC Data<a class="headerlink" href="#read-hsic-data" title="Permanent link">&para;</a></h3>
+<p>Select either the HSIC (HANA HotSpots Information Collector) file (normally in <code>tar.gz</code> format) or 
+raw data from old General Report folder.
+A General Report can be generated via such offline data.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Only General Report folder as of v2.2 is supported because file <code>hsmeta.json</code> is required.</p>
+</div>
 <h2 id="feedback">Feedback?<a class="headerlink" href="#feedback" title="Permanent link">&para;</a></h2>
 <p>Author: ZHONG, Mingqian (Tim) (Please contact me via <a href="mailto:mingqian.zhong@sap.com">mingqian.zhong@sap.com</a>) / Sponsor: Ramu Vidadala</p>
 <p><img alt="visitors" src="https://visitor-badge.glitch.me/badge?page_id=d053841.hsdoc" /></p>
