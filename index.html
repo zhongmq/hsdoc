@@ -1408,26 +1408,39 @@ expensive SQL trace</li>
 <ul>
 <li>CPU Configuration: CPU type, Number of CPU, etc are shown
   Detailed NUMA info is shown as of HANA 2.00.010</li>
-<li>CPU vs. Threads: CPU load aggregated by MAX and AVG are shown. The time interval depends on the time range selected:<ul>
+<li>CPU vs. Threads: CPU load aggregated by MAX and AVG are shown.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The time interval depends on the time range selected:</p>
+<ul>
 <li>Time range &gt;= 6 hours: interval = 10 mins</li>
 <li>Time range &lt; 6 hour: interval = 2 mins</li>
 </ul>
-</li>
+</div>
+<ul>
 <li>Thread Workload: Workload related parameters are shown. If workload class are defined, they will be shown.
   In the graph, 'session number' stands for the number of sessions connected to HANA, i.e. number of active 
   work processes on SAP Application Servers</li>
-<li>SQL with Most Running Thread: SQL hash and text with thread state = 'Running' are shown. The data filter based on
-   thread sample history depends on the time range selected, the below rule apply to all figures involving 
-   thread sample history:<ul>
+<li>SQL with Most Running Thread: SQL hash and text with thread state = 'Running' are shown. 
+    Click the button 'Only SQL' will show threads only with SQL statement hash available</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The data filter based on thread sample history depends on the time range selected, the below rule 
+apply to all figures involving thread sample history:</p>
+<ul>
 <li>Time range &lt;= 6 hours: interval = 2 mins; Others percent = 0: i.e. all thread sample will be shown</li>
 <li>6 hours &lt; Time range &lt;= 2 days: interval = 10 mins; Others percent = 0.5: i.e. all threads that contribute to less
 than 0.5 percent in each time interval will be aggregated together into category '-- Others --' as shown in the figure</li>
 <li>Time range &gt; 2 days: interval =  1 hour; Other percent = 1, similarly, individual portion less than 1 percent will be aggregated 
 into category '-- Others -- '</li>
 </ul>
-</li>
+</div>
+<ul>
 <li>SQL with Most Thread Sample: SQL hash and text with all threads, sometimes even if the thread state is not 'Running',
-  there is still a chance that this thread is busy with CPU</li>
+  there is still a chance that this thread is busy with CPU. Click the button 'Only SQL' will show 
+  threads only with SQL statement hash available</li>
 <li>Application Source with Most Running Thread: Click on the center of the 'Sunburst' figure would focus only on that 
   application source and show the distribution of SQL related to this source</li>
 <li>NUMA Load: shows the distribution of thread samples related to each NUMA load</li>
@@ -1472,12 +1485,17 @@ into category '-- Others -- '</li>
 <h4 id="thread-sample">Thread Sample<a class="headerlink" href="#thread-sample" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Thread State and Lock Name: information from SAP Note 1999998 is shown below the figure
-  to show detailed information</li>
+  to show detailed information. Click the button 'Only Unusual Lock' will show threads only 
+  with unusual lock name</li>
 <li>Thread Type and Thread Method: information from SAP Note 2114710 is shown below the figure
-  to show detailed information</li>
+  to show detailed information. Click the button 'Only Unusual Method' will show threads only 
+  with unusual thread method</li>
+<li>SQL and Thread State: top SQL and its thread state is shown.</li>
 <li>SQL and Lock Name: top SQL and its waiting lock type is shown. If the lock type is '?', it means the
     SQL is likely to be busy on CPU</li>
 <li>SQL and Thread Method: top SQL and its thread method is shown.</li>
+<li>SQL and Application Name: top SQL and its application name is shown. Sometimes the info is not
+  reliable to identify the application location </li>
 <li>SQL and Passport Action: top SQL and the passport action is shown. Normally passport action shows
   meaningful application context of the SQL.</li>
 <li>SQL Hierarchy: the figure shows the SQL Hierarchy where SQL HASH is different from the Root HASH.
@@ -1745,8 +1763,11 @@ shown are not accurate. Customer should apply Note 910897 so that the data in ea
 </ul>
 <h3 id="read-hsic-data">Read HSIC Data<a class="headerlink" href="#read-hsic-data" title="Permanent link">&para;</a></h3>
 <p>Select either the HSIC (HANA HotSpots Information Collector) file (normally in <code>tar.gz</code> format) or 
-raw data from old General Report folder.
-A General Report can be generated via such offline data.</p>
+raw data from old report folder.
+A new report can be generated via such offline data. 
+It is also possible to change the option when generating the new report, e.g. the old report contains
+all the sections, by changing the 'Selected Sections' from the option menu, it is now convenient
+to generate a new report with only subset of all the sections.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Only General Report folder as of v2.2 is supported because file <code>hsmeta.json</code> is required.</p>
