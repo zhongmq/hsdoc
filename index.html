@@ -243,8 +243,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-select-topic" class="md-nav__link">
-    2. Select Topic
+  <a href="#2-select-function" class="md-nav__link">
+    2. Select Function
   </a>
   
 </li>
@@ -572,15 +572,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#read-hsic-data" class="md-nav__link">
     Read HSIC Data
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -711,8 +711,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-select-topic" class="md-nav__link">
-    2. Select Topic
+  <a href="#2-select-function" class="md-nav__link">
+    2. Select Function
   </a>
   
 </li>
@@ -1040,15 +1040,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#read-hsic-data" class="md-nav__link">
     Read HSIC Data
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1081,13 +1081,16 @@ so that all stake holders (Support, System Administrator, etc) can understand th
 <li>HANA HotSpots (i.e the GUI version) is released on Windows as of v1.0</li>
 </ul>
 <p><strong>hscmd</strong> (HANA HotSpots CMD) is the command line version of the same tool. To understand how to use it please run </p>
-<pre><code>hscmd -h
+<pre><code>hscmd --help
 </code></pre>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <ul>
 <li>hscmd on Windows is released as of v1.3</li>
 <li>hscmd on Mac is released as of v1.8</li>
 <li>hscmd on Linux is released as of v1.9</li>
 </ul>
+</div>
 <p><strong>HANA HotSpots Cloud</strong> is available via this <a href="https://mcs-prod-hana-hotspots-ui5-approuter.cfapps.eu10.hana.ondemand.com/index.html" target="_blank">link</a>. 
 It can be used to analyze HANA Cloud system hosted on BTP. </p>
 <div class="admonition tip">
@@ -1112,7 +1115,7 @@ generated daily and weekly.</p>
 <li><a href="usage.html" target="_blank">Usage Statistics</a></li>
 </ul>
 <h2 id="how-to-use-the-tool">How to use the tool?<a class="headerlink" href="#how-to-use-the-tool" title="Permanent link">&para;</a></h2>
-<p>The user interface (see above) is straightforward  including 3 steps:</p>
+<p>The <a href="#outlook">user interface</a> is straightforward including following steps:</p>
 <h3 id="1-connect-to-a-hana-database">1. Connect to a HANA Database<a class="headerlink" href="#1-connect-to-a-hana-database" title="Permanent link">&para;</a></h3>
 <p>There are 4 ways to connect to a HANA database:</p>
 <div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Custom System via SAP Proxy</label><div class="tabbed-content">
@@ -1182,17 +1185,22 @@ Otherwise please ask the customer for the permission to change them. All these p
 <p class="admonition-title">Warning</p>
 <p>Please note that when using SAPGUI connection, the tool needs to access clipboard often, therefore please <strong>do not make "copy/paste" operation in parallel</strong> as otherwise the conflict may cause the tool to fail.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>SAPGUI connection is only supported on windows (including GUI and CMD version). If you want to use SAPGUI connection on MAC, please use 
-<a href="https://access.co.sap.com/AccessPortal" target="_blank">WTS</a> </p>
-</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
+<ul>
+<li>SAPGUI connection is only supported on Windows (including GUI and CMD version). </li>
+<li>
 <p>Sometimes the SAPGUI connection is not working as the tool can not find the valid SAPGUI session. 
-This can happen due to various reasons, e.g. connecting through firefighter, firewall configured, etc. 
-Please test to use <a href="https://access.co.sap.com/AccessPortal" target="_blank">WTS</a> 
-to see if the SAPGUI connection can be used. </p>
+  This can happen due to various reasons:</p>
+<ul>
+<li>The above mentioned prerequisites are not met -&gt; please correct them accordingly.</li>
+<li>Connecting through Firefighter (<code>/VIRSA/VFAT</code> or <code>GRAC_EAM</code>) -&gt; make sure to close the Firefighter window
+  after the connection to the target system is opened.</li>
+</ul>
+</li>
+</ul>
+<p>If issue persists, please test the <a href="https://access.co.sap.com/AccessPortal" target="_blank">WTS</a> 
+  to see if the SAPGUI connection can be used. </p>
 </div>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Self Defined System</label><div class="tabbed-content">
@@ -1205,38 +1213,38 @@ to see if the SAPGUI connection can be used. </p>
 <hr />
 <p>Furthermore, if SSO check box is flagged, the password can be omitted to connect to HANA system via Single-Sign-On.
 If SSL check box is flagged, the secure connection will be used to connect to HANA system. (e.g. should be used when connecting to HANA Cloud System)</p>
-<h3 id="2-select-topic">2. Select Topic<a class="headerlink" href="#2-select-topic" title="Permanent link">&para;</a></h3>
-<p>Once the database connection is successful, select a <strong>Topic</strong> to start the analysis. Topic is a collection of <strong>Checks</strong> that is 
-   focusing on one particular area. Currently, following Topics are provided:</p>
-<div class="tabbed-set" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">General Report</label><div class="tabbed-content">
+<h3 id="2-select-function">2. Select Function<a class="headerlink" href="#2-select-function" title="Permanent link">&para;</a></h3>
+<p>Select a <strong>Function</strong> to use the tool. Currently the tool can generate different reports and 
+   read HSIC (HANA HotSpots Informcation Collector) data:</p>
+<div class="tabbed-set" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">General</label><div class="tabbed-content">
 <p>Focusing on most important HANA KPIs such as CPU, Memory, Thread Samples, 
 Main Activities, etc. The analysis output would immediately show the <strong>HotSpots</strong> (i.e. When and what was the most significant bottleneck) 
 of the HANA Database. At the beginning of the report, a summary section is provided to automatically detect the most critical issues (if any) 
 identified on the HANA database.</p>
 <p>Please see the <a href="#general-report">General Report</a> for further details.</p>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Top SQL Report</label><div class="tabbed-content">
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Top SQL</label><div class="tabbed-content">
 <p>Focusing on most expensive SQL statements based on several criteria: <strong>Total Elapsed Time</strong>, <strong>Number of Thread Samples</strong>, 
 <strong>Average memory consumption</strong>, etc. The analysis output would show the overview and detailed information of all these top SQL statements including 
 SQL text, heatmap, KPI history, etc.</p>
 <p>Please see the <a href="#top-sql-report">Top SQL Report</a> for further details.</p>
 </div>
-<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Single SQL Report</label><div class="tabbed-content">
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Single SQL</label><div class="tabbed-content">
 <p>Most important information of one SQL statement is shown: KPI history, all objects accessed, etc.</p>
 <p>Please see the <a href="#single-sql-report">Single SQL Report</a> for further details.</p>
 </div>
-<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Comparison Report</label><div class="tabbed-content">
+<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Comparison</label><div class="tabbed-content">
 <p>Show the difference of most important HANA KPIs between two time frame selected.
 It is especially helpful to identify why HANA database behaviour suddenly changes.</p>
 <p>Please see the <a href="#comparison-report">Comparison Report</a> for further details.</p>
 </div>
-<input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">SAP Workload Report</label><div class="tabbed-content">
+<input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">SAP Workload</label><div class="tabbed-content">
 <p>Show the KPI on SAP appliation servers. e.g. KPI History from ST03 and /SDF/SMON</p>
 <p>Please see the <a href="#sap-workload-report">SAP Workload Report</a> for further details.</p>
 </div>
 <input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><label for="__tabbed_2_6">Read HSIC Data</label><div class="tabbed-content">
-<p>Read data collected by HSIC (HANA HotSpots Information Collector) or from old general report
-raw data and generate a report.     </p>
+<p>Read data collected by HSIC (HANA HotSpots Information Collector) or from old report
+raw data and generate a new report.     </p>
 <p>Please see the <a href="#read-hsic-data">Read HSIC Data</a> for further details.</p>
 </div>
 </div>
@@ -1269,7 +1277,7 @@ for comparison report</strong>.</p>
 </div>
 <input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">SAP Workload Report</label><div class="tabbed-content">
 <p>Because the retention time is different on each system, therefore the <strong>time frame selection is ignored</strong>.
-The tool will fetch all the available data to generate the report.</p>
+The tool will use the <a href="#options">SAP Workload Report Options</a> to determine which data to collect.</p>
 </div>
 </div>
 <hr />
@@ -1325,7 +1333,10 @@ multiple check is carried out on the same system with different time frames.</p>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>"General Report Options" are also used for "Read HSIC Data"</p>
+<p><strong>When working on a scale-out system with large time frame</strong>, the generated HTML report size will be <strong>big</strong> (e.g. &gt; 50MB).
+It takes a lot of time to render and load the report in browser, sometimes even time out error will be 
+encountered. In such case, it is recommended to seperate the report into sections: i.e. generate several reports
+with same time frame and each report contains only one section (e.g. report 1 with section 'CPU', report 2 with section 'Memory', etc)</p>
 </div>
 </div>
 <input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">Comparison Report Options</label><div class="tabbed-content">
@@ -1359,7 +1370,7 @@ restored automatically next time it starts.</p>
 </ul>
 </li>
 </ul>
-<p>There are 3 types of reports that can be generated, they are explained in detail below:</p>
+<p>There are a few types of reports that can be generated, they are explained in detail below:</p>
 <h3 id="general-report">General Report<a class="headerlink" href="#general-report" title="Permanent link">&para;</a></h3>
 <p>General report consists of following sections and sub-sections: (One sample 'General Report'
  can be seen <a href="GeneralReport.html" target="_blank">here</a>)</p>
@@ -1372,8 +1383,8 @@ restored automatically next time it starts.</p>
 <li>Description: describe the issue, if option "Complete Summary" is checked, then 'No issues Detected' will be shown
 here</li>
 <li>Host: on which host the issue occurs</li>
-<li>Time: The critical timestamp when the issue occurs</li>
-<li>Section: Link to the section </li>
+<li>Time: the critical timestamp when the issue occurs</li>
+<li>Section: link to the section </li>
 </ul>
 </li>
 <li>Top SQL: shows top SQL statements with different critiria, hovering over the SQL Hash will show
@@ -1525,6 +1536,7 @@ into category '-- Others -- '</li>
 <ul>
 <li>Disk Configuration: host, usage type, path, file system type, total size and used size are shown</li>
 <li>Disk Size: the history usage of disk size is sampled once per day</li>
+<li>IO Load History: the busy percentage of I/O operations are shown</li>
 <li>DATA Volume Read</li>
 <li>DATA Volume Write</li>
 <li>LOG Volume Write</li>
@@ -1761,7 +1773,7 @@ shown are not accurate. Customer should apply Note 910897 so that the data in ea
 <li>Users - All AS: shows the logins/session of all SAP AS</li>
 <li>Users - Each AS: shows the logins/session of each SAP AS</li>
 </ul>
-<h3 id="read-hsic-data">Read HSIC Data<a class="headerlink" href="#read-hsic-data" title="Permanent link">&para;</a></h3>
+<h2 id="read-hsic-data">Read HSIC Data<a class="headerlink" href="#read-hsic-data" title="Permanent link">&para;</a></h2>
 <p>Select either the HSIC (HANA HotSpots Information Collector) file (normally in <code>tar.gz</code> format) or 
 raw data from old report folder.
 A new report can be generated via such offline data. 
