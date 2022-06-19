@@ -8,19 +8,19 @@
       
       
       
-      <link rel="icon" href="/logo.png">
+      <link rel="icon" href="../logo.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
-        <title>HANA HotSpots</title>
+        <title>Advanced Topics - HANA HotSpots</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -36,7 +36,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#log-file" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,7 +80,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="/overview" title="HANA HotSpots" class="md-header__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
       
-  <img src="/logo.png" alt="logo">
+  <img src="../logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Advanced Topics
             
           </span>
         </div>
@@ -182,7 +187,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="/overview" title="HANA HotSpots" class="md-nav__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
       
-  <img src="/logo.png" alt="logo">
+  <img src="../logo.png" alt="logo">
 
     </a>
     HANA HotSpots
@@ -196,12 +201,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
@@ -224,7 +231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         HANA HotSpots Overview
       </a>
     </li>
@@ -238,7 +245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/examples/" class="md-nav__link">
+      <a href="../examples/" class="md-nav__link">
         Examples
       </a>
     </li>
@@ -252,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/usage/" class="md-nav__link">
+      <a href="../usage/" class="md-nav__link">
         Usage Statistics
       </a>
     </li>
@@ -266,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howtouse/" class="md-nav__link">
+      <a href="../howtouse/" class="md-nav__link">
         How to Use the Tool?
       </a>
     </li>
@@ -278,11 +285,96 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/advancedtopic/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Advanced Topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Advanced Topics
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#log-file" class="md-nav__link">
+    Log File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-authorization-is-required" class="md-nav__link">
+    Which authorization is required?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-options" class="md-nav__link">
+    General Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-report-options" class="md-nav__link">
+    General Report Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-report-options" class="md-nav__link">
+    Comparison Report Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sap-workload-report-options" class="md-nav__link">
+    SAP Workload Report Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -328,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/report/report_overview/" class="md-nav__link">
+      <a href="../report/report_overview/" class="md-nav__link">
         Report Overview
       </a>
     </li>
@@ -342,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/report/report_general/" class="md-nav__link">
+      <a href="../report/report_general/" class="md-nav__link">
         General Report
       </a>
     </li>
@@ -356,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/report/report_topsql/" class="md-nav__link">
+      <a href="../report/report_topsql/" class="md-nav__link">
         Top SQL Report
       </a>
     </li>
@@ -370,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/report/report_singlesql/" class="md-nav__link">
+      <a href="../report/report_singlesql/" class="md-nav__link">
         Single SQL Report
       </a>
     </li>
@@ -384,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/report/report_comparison/" class="md-nav__link">
+      <a href="../report/report_comparison/" class="md-nav__link">
         Comparison Report
       </a>
     </li>
@@ -398,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/report/report_sapworkload/" class="md-nav__link">
+      <a href="../report/report_sapworkload/" class="md-nav__link">
         SAP Workload Report
       </a>
     </li>
@@ -420,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/hsic/" class="md-nav__link">
+      <a href="../hsic/" class="md-nav__link">
         HANA HotSpots Information Collector (HSIC)
       </a>
     </li>
@@ -435,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/download/" class="md-nav__link">
+      <a href="../download/" class="md-nav__link">
         Download
       </a>
     </li>
@@ -450,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/links/" class="md-nav__link">
+      <a href="../links/" class="md-nav__link">
         Resources
       </a>
     </li>
@@ -465,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/changelog/" class="md-nav__link">
+      <a href="../changelog/" class="md-nav__link">
         Change Log
       </a>
     </li>
@@ -490,6 +582,69 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#log-file" class="md-nav__link">
+    Log File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-authorization-is-required" class="md-nav__link">
+    Which authorization is required?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-options" class="md-nav__link">
+    General Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-report-options" class="md-nav__link">
+    General Report Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-report-options" class="md-nav__link">
+    Comparison Report Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sap-workload-report-options" class="md-nav__link">
+    SAP Workload Report Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -499,8 +654,76 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
 
+
+  <h1>Advanced Topics</h1>
+
+<h3 id="log-file">Log File<a class="headerlink" href="#log-file" title="Permanent link">&para;</a></h3>
+<p>A log file with name <code>hsgui.log</code> or <code>hscmd.log</code> (depending on the version) is generated under the same
+   directory where the tool is located. If error occurs, more information can be seen in the log file.</p>
+<h3 id="which-authorization-is-required">Which authorization is required?<a class="headerlink" href="#which-authorization-is-required" title="Permanent link">&para;</a></h3>
+<p>The tool basically needs to access HANA monitoring views (<code>M_*</code>) and statistics server views (<code>_SYS_STATISTICS.HOST_*</code>).
+   Therefore the HANA database user used in the tool need the privilege to access these views. i.e. the user
+   should have the standard catalog role <code>MONITORING</code> granted.</p>
+<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
+<p>The option menu will show options for different functions:</p>
+<h4 id="general-options">General Options<a class="headerlink" href="#general-options" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Choose Output Folder</strong>: select the output folder where the generated report is saved</li>
+<li>
+<p><strong>Output Folder Naming Convention</strong>: the output folder can have 2 naming conventions:</p>
+<ul>
+<li>Current Time: e.g. <code>PRD_PRD_GeneralReport_2021.01.01_08.00</code>, where <mark>2021/01/01 08:00</mark> is the
+  current timestamp when the report is generated.</li>
+<li>Analaysis Time Frame: e.g. <code>PRD_PRD_GeneralReport_2021.01.01_08.00_2021.01.02_08.00</code>, where
+  <mark>2021/01/01 08:00 - 2021/01/02 08:00</mark> is the analysis time frame.</li>
+</ul>
+</li>
+<li>
+<p><strong>Save Raw Data</strong>: if not ticked, no raw data (i.e. *.txt/csv) will be saved during report generation</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use 'Analysis Time Frame' as the output folder naming convention is helpful when
+multiple check is carried out on the same system with different time frames.</p>
+</div>
+<h4 id="general-report-options">General Report Options<a class="headerlink" href="#general-report-options" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Include Parameter Check</strong>: if checked, any topic including HANA parameter check will be carried out, 
+  otherwise it will be skipped to save time.</li>
+<li><strong>Top Issue</strong>: if checked, the General Report will include a summary section at the 
+  beginning to show automatically detected top issues on the HANA database.</li>
+<li><strong>Complete Summary</strong>: if checked, the summary section will show information of one area 
+  even if no issue has been detected.</li>
+<li><strong>Include Static Info</strong>: if checked, <strong>static</strong> information is included in the general report, 
+  e.g. largest tables on the system. 
+  In the future more static information that does not change often along time line will be included.</li>
+<li><strong>Include Link to Raw Data</strong>: if checked, link to the raw data will be included above each figure.</li>
+<li><strong>Select Sections</strong>: it is possible to choose which section would be included in the generated General Report.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>When working on a scale-out system with large time frame</strong>, the generated HTML report size will be <strong>big</strong> (e.g. &gt; 50MB).
+It takes a lot of time to render and load the report in browser, sometimes even time out error will be 
+encountered. In such case, it is recommended to seperate the report into sections: i.e. generate several reports
+with same time frame and each report contains only one section (e.g. report 1 with section 'CPU', report 2 with section 'Memory', etc)</p>
+</div>
+<h4 id="comparison-report-options">Comparison Report Options<a class="headerlink" href="#comparison-report-options" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Select Sections</strong>: it is possible to choose which section would be included in the 
+generated Comparison Report.</li>
+</ul>
+<h4 id="sap-workload-report-options">SAP Workload Report Options<a class="headerlink" href="#sap-workload-report-options" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The check box decides if the section is included in the report</li>
+<li><strong>Number of days</strong> determines how many days in the history from now will be included in the report</li>
+</ul>
+<p>When the tool is closed, the option will be saved as configuration file <code>hs.&lt;version&gt;.ini</code> and 
+restored automatically next time it starts.</p>
+
+              
             </article>
             
           </div>
@@ -514,6 +737,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../howtouse/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to Use the Tool?" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              How to Use the Tool?
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../report/report_overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Report Overview" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Report Overview
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -535,10 +794,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top", "navigation.tracking", "navigation.expand", "navigation.instant"], "search": "/assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.tracking", "navigation.expand", "navigation.instant"], "search": "../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.a877e258.min.js"></script>
+      <script src="../assets/javascripts/bundle.a877e258.min.js"></script>
       
     
   </body>

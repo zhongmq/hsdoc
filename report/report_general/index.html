@@ -1,0 +1,1049 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../logo.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
+    
+    
+      
+        <title>General Report - HANA HotSpots</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#summary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/overview" title="HANA HotSpots" class="md-header__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HANA HotSpots
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              General Report
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/overview" title="HANA HotSpots" class="md-nav__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    HANA HotSpots
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Getting started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        HANA HotSpots Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/" class="md-nav__link">
+        Usage Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howtouse/" class="md-nav__link">
+        How to Use the Tool?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advancedtopic/" class="md-nav__link">
+        Advanced Topics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Reports
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reports" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Reports
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../report_overview/" class="md-nav__link">
+        Report Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          General Report
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        General Report
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    Memory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity" class="md-nav__link">
+    Activity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsh-thread-sample-history" class="md-nav__link">
+    TSH (Thread Sample History)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#space" class="md-nav__link">
+    Space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk" class="md-nav__link">
+    Disk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    Backup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gc-garbage-collection" class="md-nav__link">
+    GC (Garbage Collection)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock-application-lock" class="md-nav__link">
+    Lock (Application Lock)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hsr-hana-system-replication" class="md-nav__link">
+    HSR (HANA System Replication)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trace" class="md-nav__link">
+    Trace
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../report_topsql/" class="md-nav__link">
+        Top SQL Report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../report_singlesql/" class="md-nav__link">
+        Single SQL Report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../report_comparison/" class="md-nav__link">
+        Comparison Report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../report_sapworkload/" class="md-nav__link">
+        SAP Workload Report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hsic/" class="md-nav__link">
+        HANA HotSpots Information Collector (HSIC)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../download/" class="md-nav__link">
+        Download
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../links/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        Change Log
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    Memory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity" class="md-nav__link">
+    Activity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsh-thread-sample-history" class="md-nav__link">
+    TSH (Thread Sample History)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#space" class="md-nav__link">
+    Space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk" class="md-nav__link">
+    Disk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    Backup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gc-garbage-collection" class="md-nav__link">
+    GC (Garbage Collection)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock-application-lock" class="md-nav__link">
+    Lock (Application Lock)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hsr-hana-system-replication" class="md-nav__link">
+    HSR (HANA System Replication)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trace" class="md-nav__link">
+    Trace
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>General Report</h1>
+
+<p>General report consists of following sections and sub-sections: (One sample 'General Report'
+ can be seen <a href="/reportsamples/GeneralReport.html" target="_blank">here</a>)</p>
+<h4 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Top Issues: most critical issues identified are shown in a table. The columns of the summary tables have the following
+  meaning<ul>
+<li>Area: area of the issue</li>
+<li>Priority: Very High / High / Medium / Info</li>
+<li>Description: describe the issue, if option "Complete Summary" is checked, then 'No issues Detected' will be shown
+here</li>
+<li>Host: on which host the issue occurs</li>
+<li>Time: the critical timestamp when the issue occurs</li>
+<li>Section: link to the section </li>
+</ul>
+</li>
+<li>Top SQL: shows top SQL statements with different criteria, hovering over the SQL Hash will show
+    SQL text that can be copied to the clipboard<ul>
+<li>Most Running Thread: shows the top 5 SQL with most threads in status 'Running', i.e. consuming CPU</li>
+<li>Most Thread Sample: shows the top 5 SQL with most thread samples</li>
+<li>Most Avg Memory Allocation: shows the top 5 SQL with most average memory allocation based on 
+sql plan cache history</li>
+<li>Expensive SQL with Most Used Memory: shows the top 5 SQL with most used memory based on 
+expensive SQL trace</li>
+<li>Most Elapsed Time: shows the top 5 SQL with most total elapsed time based on sql plan cache history</li>
+<li>Expensive SQL with Most Elapsed Time: shows the top 5 SQL with most total elapsed time based on
+expensive SQL trace</li>
+</ul>
+</li>
+</ul>
+<h4 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Host Configuration: shows the host type, host role, hardware model, etc</li>
+<li>HANA Revision History: shows the complete history of HANA revisions</li>
+</ul>
+<h4 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Check Result: if option "Include Parameter Check" is checked, the HANA parameter check result is shown.</li>
+<li>Change History: parameter change history is shown (available as of HANA 2.00.030)</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>HANA parameter check is not yet available for HANA Cloud</p>
+</div>
+<h4 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
+<ul>
+<li>CPU Configuration: CPU type, Number of CPU, etc are shown
+  Detailed NUMA info is shown as of HANA 2.00.010</li>
+<li>CPU vs. Threads: CPU load aggregated by MAX and AVG are shown.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The time interval depends on the time range selected:</p>
+<ul>
+<li>Time range &gt;= 6 hours: interval = 10 mins</li>
+<li>Time range &lt; 6 hour: interval = 2 mins</li>
+</ul>
+</div>
+<ul>
+<li>Thread Workload: Workload related parameters are shown. If workload class are defined, they will be shown.
+  In the graph, 'session number' stands for the number of sessions connected to HANA, i.e. number of active 
+  work processes on SAP Application Servers</li>
+<li>SQL with Most Running Thread: SQL hash and text with thread state = 'Running' are shown. 
+    Click the button 'Only SQL' will show threads only with SQL statement hash available</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The data filter based on thread sample history depends on the time range selected, the below rule 
+apply to all figures involving thread sample history:</p>
+<ul>
+<li>Time range &lt;= 6 hours: interval = 2 mins; Others percent = 0: i.e. all thread sample will be shown</li>
+<li>6 hours &lt; Time range &lt;= 2 days: interval = 10 mins; Others percent = 0.5: i.e. all threads that contribute to less
+than 0.5 percent in each time interval will be aggregated together into category '-- Others --' as shown in the figure</li>
+<li>Time range &gt; 2 days: interval =  1 hour; Other percent = 1, similarly, individual portion less than 1 percent will be aggregated 
+into category '-- Others -- '</li>
+</ul>
+</div>
+<ul>
+<li>SQL with Most Thread Sample: SQL hash and text with all threads, sometimes even if the thread state is not 'Running',
+  there is still a chance that this thread is busy with CPU. Click the button 'Only SQL' will show 
+  threads only with SQL statement hash available</li>
+<li>Application Source with Most Running Thread: Click in the center of the 'Sunburst' figure would focus only on that 
+  application source and show the distribution of SQL related to this source</li>
+<li>NUMA Load: shows the distribution of thread samples related to each NUMA load</li>
+</ul>
+<h4 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Memory Configuration: memory configuration</li>
+<li>Memory and Unloads: memory consumption from <code>HOST_RESOURCE_UTILIZATION_STATISTICS</code> and <code>HOST_LOAD_HISTORY_SERVICE</code></li>
+<li>Top Consumer by Component: memory consumption from HOST_SERVICE_COMPONENT_MEMORY</li>
+<li>Top Consumer by Area / Subarea / Objects: memory consumption from script <code>HANA_Memory_TopConsumers</code>, aggregated by
+  different granularity</li>
+<li>Top Consumer of Heap Area: top consumer of Heap Areas, information from SAP Note 1999997 is shown below the figure
+  to show detailed information of the top heap areas</li>
+<li>Service Memory:  memory consumption from <code>HOST_SERVICE_MEMORY</code></li>
+<li>Expensive SQL with Top Used Memory: SQL with most memory consumption from expensive SQL trace are shown.</li>
+<li>SQL with Top Avg Memory Allocation: SQL with most allocated memory from SQL plan cache is shown, note that these
+  figures are the allocated memory, not the peak memory foot print. Use it as reference only and it is not reliable to
+  decide SQL with most memory consumption in this figure</li>
+</ul>
+<h4 id="activity">Activity<a class="headerlink" href="#activity" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Important Activities: activities that last longer than 1 minute are shown: Indexserver down / Backup / Merge / 
+  Consistency Check / Savepoint</li>
+<li>Tables with High Merge Time: all table/partitions with merge running time longer than 1 minute are shown</li>
+<li>Savepoint Duration and Throughput: Savepoints that last longer than 1 minute are shown</li>
+<li>ConsistentChangeLock Holder - SQL Hash: if block time of any savepoint is longer than 10 sec, than the SQL 
+    that is holding the CCL is shown</li>
+<li>ConsistentChangeLock Holder - Thread State and Lock Name: similarly, if the lock holder of CCL is waiting for another
+    lock, such lock information is shown</li>
+</ul>
+<h4 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Sessions and SQL Executed per Second</li>
+<li>SQL Workload</li>
+<li>SQL Cache Overview: if the SQL cache is undersized, the figure will show the issue</li>
+<li>SQL Avg Request Time</li>
+<li>SQL with Top Elapsed Time: SQL with most total elapsed time is shown, the mouse hover information will also show
+    the elapsed time per execution, elapsed time per row, etc.</li>
+<li>Expensive SQL with Top Elapsed Time: since the retention time of Expensive SQL trace depends on the system workload,
+    it is normal that majority part of the history information is empty</li>
+</ul>
+<h4 id="tsh-thread-sample-history">TSH (Thread Sample History)<a class="headerlink" href="#tsh-thread-sample-history" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Thread State and Lock Name: information from SAP Note 1999998 is shown below the figure
+  to show detailed information. Click the button 'Only Unusual Lock' will show threads only 
+  with unusual lock name</li>
+<li>Thread Type and Thread Method: information from SAP Note 2114710 is shown below the figure
+  to show detailed information. Click the button 'Only Unusual Method' will show threads only 
+  with unusual thread method</li>
+<li>SQL and Thread State: top SQL and its thread state is shown.</li>
+<li>SQL and Lock Name: top SQL and its waiting lock type is shown. If the lock type is '?', it means the
+    SQL is likely to be busy on CPU</li>
+<li>SQL and Thread Method: top SQL and its thread method is shown.</li>
+<li>SQL and Application Name: top SQL and its application name is shown. Sometimes the info is not
+  reliable to identify the application location </li>
+<li>SQL and Passport Action: top SQL and the passport action is shown. Normally passport action shows
+  meaningful application context of the SQL.</li>
+<li>SQL Hierarchy: the figure shows the SQL Hierarchy where SQL HASH is different from the Root HASH.
+    Such graph will show e.g. which individual SQL triggered by a procedure call is dominant.</li>
+<li>DB User</li>
+<li>Application User</li>
+<li>Client Host</li>
+<li>Callstack History: shows the historical distribution of dominant call stacks (maximum depth = 17)</li>
+</ul>
+<h4 id="space">Space<a class="headerlink" href="#space" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Volume, Backup and Memory Size</li>
+<li>Log Volume and Merge: the figure shows the hourly generated log size in comparison with the tables 
+    with most merged rows, these top tables are in general responsible for most of the log volumes</li>
+<li>Table with Largest Disk Size: the history information is recorded every 6 hours, so it is normal if
+    the result is empty when the analysis time range is less than 6 hours. Both column table and 
+    row table are considered</li>
+<li>Column Table with Largest Memory Size: the result is aggregated by table</li>
+<li>Column Table with Most Rows: the result is aggregated by partition</li>
+<li>Column Table with Most Read Count</li>
+<li>Column Table with Most Write Count</li>
+<li>Row Table with Largest Memory Size</li>
+<li>Row Table with Largest Fragmented Size</li>
+<li>Row Table with Most Rows</li>
+</ul>
+<h4 id="disk">Disk<a class="headerlink" href="#disk" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Disk Configuration: host, usage type, path, file system type, total size and used size are shown</li>
+<li>Disk Size: the history usage of disk size is sampled once per day</li>
+<li>IO Load History: the busy percentage of I/O operations are shown</li>
+<li>DATA Volume Read</li>
+<li>DATA Volume Write</li>
+<li>LOG Volume Write</li>
+<li>Commit Frequency and Latency</li>
+</ul>
+<h4 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Data Backup History: the backup status can be seen with mouse hover</li>
+<li>Log Backup History</li>
+</ul>
+<h4 id="gc-garbage-collection">GC (Garbage Collection)<a class="headerlink" href="#gc-garbage-collection" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Versions and Commit Range</li>
+<li>Garbage Collection Blocker History: the information shown is only for reference and might not be reliable</li>
+</ul>
+<h4 id="lock-application-lock">Lock (Application Lock)<a class="headerlink" href="#lock-application-lock" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Transactions and Blocked Transactions</li>
+<li>Waiting SQL HASH: top SQL waiting for application lock</li>
+<li>Waiting Table: top tables on which SQL is waiting for application lock</li>
+<li>Lock Holder Application Source: top application source holding the lock</li>
+<li>Waiting SQL / Waiting Table / Lock Holder Status: shows the lock holder status that blocks the waiting SQL/Table, 
+    Status = 'ACTIVE' means the lock holder is busy with another SQL; Status = 'IDLE' means the lock holder is busy
+    on the SAP side</li>
+<li>Waiting SQL / Waiting Table / Lock Holder SQL: if the lock holder status is 'ACTIVE', this figure shows these 
+    SQLs that is holding the lock</li>
+<li>Waiting SQL / Waiting Table / Lock Holder Source: shows the lock holder application source that holds the lock</li>
+</ul>
+<h4 id="hsr-hana-system-replication">HSR (HANA System Replication)<a class="headerlink" href="#hsr-hana-system-replication" title="Permanent link">&para;</a></h4>
+<ul>
+<li>HSR Configuration: shows the HANA System Replication configuration</li>
+<li>Log Shipping Throughput and Latency</li>
+<li>Log Shipping Delay and Backlog</li>
+<li>Log Replay Delay and Backlog</li>
+<li>Log Shipping Buffer</li>
+</ul>
+<h4 id="trace">Trace<a class="headerlink" href="#trace" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Trace Configuration: shows trace settings that are explicitly activated or modified</li>
+<li>Trace Overview: shows the most important HANA Database traces generated within the analysis time frame</li>
+<li>Trace Content: shows the summary (in Pie and Sunburst format) and the detailed distribution of 
+    'Component -&gt; Source File -&gt; Error Pattern' in HANA Database Traces</li>
+</ul>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../report_overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Report Overview" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Report Overview
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../report_topsql/" class="md-footer__link md-footer__link--next" aria-label="Next: Top SQL Report" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Top SQL Report
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tracking", "navigation.expand", "navigation.instant"], "search": "../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a877e258.min.js"></script>
+      
+    
+  </body>
+</html>
