@@ -825,13 +825,14 @@
 
 <p>The <a href="..#user-interface">user interface</a> is straightforward including following steps:</p>
 <h3 id="1-connect-to-a-hana-database">1. Connect to a HANA Database<a class="headerlink" href="#1-connect-to-a-hana-database" title="Permanent link">&para;</a></h3>
-<p>There are 4 ways to connect to a HANA database:</p>
+<p>There are 4 ways to connect to a HANA database (it is possible to use the key shortcuts 
+to choose the method): </p>
 <h4 id="1-custom-system-via-sap-proxy">1) Custom System via SAP Proxy<a class="headerlink" href="#1-custom-system-via-sap-proxy" title="Permanent link">&para;</a></h4>
-<ul>
-<li>If SAP HANA Database connection is open from the customer side, it is possible to connect to "localhost" after saptcpproxy is started.
-  Please make sure that the port used is matching the saptcpproxy port, the default port is 5000.</li>
-</ul>
+<p>Key Shortcut: <span class="keys"><kbd class="key-1">1</kbd></span></p>
+<p>If SAP HANA Database connection is open from the customer side, it is possible to connect to "localhost" after saptcpproxy is started.
+ Please make sure that the port used is matching the saptcpproxy port, the default port is 5000.</p>
 <h4 id="2-sapgui-connection">2) SAPGUI Connection<a class="headerlink" href="#2-sapgui-connection" title="Permanent link">&para;</a></h4>
+<p>Key Shortcut: <span class="keys"><kbd class="key-2">2</kbd></span></p>
 <p>To connect to HANA Database via SAPGUI, following prerequisites should be fulfilled:</p>
 <ul>
 <li>Transaction ST04 -&gt; Diagnostics -&gt; SQL Editor has been started on an SAP system 
@@ -888,8 +889,11 @@
   then it means SAPGUI scripting is allowed. 
   Otherwise please ask the customer for the permission to change them. All these parameters can be changed online.</p>
 <ul>
-<li>The SAP BASIS version should be higher or equal to 7.02 SP16 / 7.30 SP12 / 7.31 SP12 / 7.40 SP07 </li>
+<li>The SAP BASIS version should be higher or equal to 7.02 SP16 / 7.30 SP12 / 7.31 SP12 / 7.40 SP07.</li>
+<li>Due to different issues introduced by SAPGUI themes (e.g. Belize), to be on the safe side please 
+  use the SAPGUI 'Classic Theme' for best stability.</li>
 </ul>
+<p><img src="../pic/sapguitheme.png"></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please note that when using SAPGUI connection, the tool needs to access clipboard often, 
@@ -914,8 +918,10 @@ may cause the tool to fail.</p>
   to see if the SAPGUI connection can be used. </p>
 </div>
 <h4 id="3-self-defined-system">3) Self Defined System<a class="headerlink" href="#3-self-defined-system" title="Permanent link">&para;</a></h4>
+<p>Key Shortcut: <span class="keys"><kbd class="key-3">3</kbd></span></p>
 <p>Define the Host/Port of any HANA system on the network for direct access.</p>
 <h4 id="4-use-hdbuserstore-key">4) Use hdbuserstore Key<a class="headerlink" href="#4-use-hdbuserstore-key" title="Permanent link">&para;</a></h4>
+<p>Key Shortcut: <span class="keys"><kbd class="key-4">4</kbd></span></p>
 <p>If key is generated and stored via hdbuserstore, it is also possible to connect to HANA system via the key.</p>
 <p>Furthermore, if SSO check box is flagged, the password can be omitted to connect to HANA system via Single-Sign-On.
 If SSL check box is flagged, the secure connection will be used to connect to HANA system. (e.g. should be used when connecting to HANA Cloud System)</p>
