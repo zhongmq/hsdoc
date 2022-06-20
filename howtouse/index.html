@@ -307,6 +307,40 @@
     1. Connect to a HANA Database
   </a>
   
+    <nav class="md-nav" aria-label="1. Connect to a HANA Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-custom-system-via-sap-proxy" class="md-nav__link">
+    1) Custom System via SAP Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sapgui-connection" class="md-nav__link">
+    2) SAPGUI Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-self-defined-system" class="md-nav__link">
+    3) Self Defined System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-use-hdbuserstore-key" class="md-nav__link">
+    4) Use hdbuserstore Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -368,6 +402,33 @@
   <a href="#3-select-time-frame" class="md-nav__link">
     3. Select Time Frame
   </a>
+  
+    <nav class="md-nav" aria-label="3. Select Time Frame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-top-sql-single-sql-report" class="md-nav__link">
+    General / Top SQL / Single SQL Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-report_1" class="md-nav__link">
+    Comparison Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sap-workload-report_1" class="md-nav__link">
+    SAP Workload Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -614,6 +675,40 @@
     1. Connect to a HANA Database
   </a>
   
+    <nav class="md-nav" aria-label="1. Connect to a HANA Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-custom-system-via-sap-proxy" class="md-nav__link">
+    1) Custom System via SAP Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sapgui-connection" class="md-nav__link">
+    2) SAPGUI Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-self-defined-system" class="md-nav__link">
+    3) Self Defined System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-use-hdbuserstore-key" class="md-nav__link">
+    4) Use hdbuserstore Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -676,6 +771,33 @@
     3. Select Time Frame
   </a>
   
+    <nav class="md-nav" aria-label="3. Select Time Frame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-top-sql-single-sql-report" class="md-nav__link">
+    General / Top SQL / Single SQL Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-report_1" class="md-nav__link">
+    Comparison Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sap-workload-report_1" class="md-nav__link">
+    SAP Workload Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -704,71 +826,69 @@
 <p>The <a href="..#user-interface">user interface</a> is straightforward including following steps:</p>
 <h3 id="1-connect-to-a-hana-database">1. Connect to a HANA Database<a class="headerlink" href="#1-connect-to-a-hana-database" title="Permanent link">&para;</a></h3>
 <p>There are 4 ways to connect to a HANA database:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Custom System via SAP Proxy</label><label for="__tabbed_1_2">SAPGUI Connection</label><label for="__tabbed_1_3">Self Defined System</label><label for="__tabbed_1_4">Use hdbuserstore Key</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<h4 id="1-custom-system-via-sap-proxy">1) Custom System via SAP Proxy<a class="headerlink" href="#1-custom-system-via-sap-proxy" title="Permanent link">&para;</a></h4>
 <ul>
 <li>If SAP HANA Database connection is open from the customer side, it is possible to connect to "localhost" after saptcpproxy is started.
   Please make sure that the port used is matching the saptcpproxy port, the default port is 5000.</li>
 </ul>
-</div>
-<div class="tabbed-block">
-<p>As of V1.4 Windows version, it is possible to connect to HANA database through SAPGUI. The prerequisite is as following:</p>
+<h4 id="2-sapgui-connection">2) SAPGUI Connection<a class="headerlink" href="#2-sapgui-connection" title="Permanent link">&para;</a></h4>
+<p>To connect to HANA Database via SAPGUI, following prerequisites should be fulfilled:</p>
 <ul>
-<li>Transaction ST04 -&gt; Diagnostics -&gt; SQL Editor has been started on an SAP system running on HANA. (Not required as of V2.2)</li>
-<li>HANA HotSpots will always try to connect to the last valid SAPGUI session.</li>
+<li>Transaction ST04 -&gt; Diagnostics -&gt; SQL Editor has been started on an SAP system 
+  running on HANA. (Not required as of V2.2)</li>
+<li>HANA HotSpots always tries to connect to the last valid SAPGUI session.</li>
 <li>
 <p>SAPGUI scripting is enabled in the SAPGUI options as below, it is important to <strong>uncheck</strong> the two "Notify"
-   sub-options to suppress the annoying warning message.
-   <br/><br/>
-   <img src="../pic/sapguiconfig.png"></p>
+ sub-options to suppress the annoying warning message.
+ <br/><br/>
+ <img src="../pic/sapguiconfig.png"></p>
 </li>
 <li>
 <p>Following ABAP parameters should be set to the <strong>Required Value</strong></p>
+</li>
+</ul>
 <table>
 <thead>
 <tr>
 <th>Parameter Name</th>
 <th>Default Value</th>
-<th>Required Value</th>
+<th><mark>Required Value</mark></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>sapgui/user_scripting</code></td>
 <td>FALSE</td>
-<td>TRUE</td>
+<td><mark>TRUE</mark></td>
 </tr>
 <tr>
 <td><code>sapgui/user_scripting_disable_recording</code></td>
 <td>FALSE</td>
-<td>FALSE</td>
+<td><mark>FALSE</mark></td>
 </tr>
 <tr>
 <td><code>sapgui/user_scripting_force_notification</code></td>
 <td>FALSE</td>
-<td>FALSE</td>
+<td><mark>FALSE</mark></td>
 </tr>
 <tr>
 <td><code>sapgui/user_scripting_per_user</code></td>
 <td>FALSE</td>
-<td>FALSE</td>
+<td><mark>FALSE</mark></td>
 </tr>
 <tr>
 <td><code>sapgui/user_scripting_set_readonly</code></td>
 <td>FALSE</td>
-<td>FALSE</td>
+<td><mark>FALSE</mark></td>
 </tr>
 </tbody>
 </table>
 <p>Please check this <a href="https://help.sap.com/viewer/8ecea00c1f854fd0a433c4aef5da1ea2/Cloud/en-US/001675913cc54719930aa8197478dcde.html" target="_blank">link</a> for detailed 
-instructions. If the highlighted icon in the SAPGUI status bar <img src="../pic/scriptactive.png"> is visible, 
-then it means SAPGUI scripting is allowed. 
-Otherwise please ask the customer for the permission to change them. All these parameters can be changed online.</p>
-</li>
-<li>
-<p>The SAP BASIS version should be higher or equal to 7.02 SP16 / 7.30 SP12 / 7.31 SP12 / 7.40 SP07 </p>
-</li>
+  instructions. If the highlighted icon in the SAPGUI status bar <img src="../pic/scriptactive.png"> is visible, 
+  then it means SAPGUI scripting is allowed. 
+  Otherwise please ask the customer for the permission to change them. All these parameters can be changed online.</p>
+<ul>
+<li>The SAP BASIS version should be higher or equal to 7.02 SP16 / 7.30 SP12 / 7.31 SP12 / 7.40 SP07 </li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -793,16 +913,10 @@ may cause the tool to fail.</p>
 <p>If issue persists, please test the <a href="https://access.co.sap.com/AccessPortal" target="_blank">WTS</a> 
   to see if the SAPGUI connection can be used. </p>
 </div>
-</div>
-<div class="tabbed-block">
+<h4 id="3-self-defined-system">3) Self Defined System<a class="headerlink" href="#3-self-defined-system" title="Permanent link">&para;</a></h4>
 <p>Define the Host/Port of any HANA system on the network for direct access.</p>
-</div>
-<div class="tabbed-block">
+<h4 id="4-use-hdbuserstore-key">4) Use hdbuserstore Key<a class="headerlink" href="#4-use-hdbuserstore-key" title="Permanent link">&para;</a></h4>
 <p>If key is generated and stored via hdbuserstore, it is also possible to connect to HANA system via the key.</p>
-</div>
-</div>
-</div>
-<hr />
 <p>Furthermore, if SSO check box is flagged, the password can be omitted to connect to HANA system via Single-Sign-On.
 If SSL check box is flagged, the secure connection will be used to connect to HANA system. (e.g. should be used when connecting to HANA Cloud System)</p>
 <h3 id="2-select-function">2. Select Function<a class="headerlink" href="#2-select-function" title="Permanent link">&para;</a></h3>
@@ -828,13 +942,15 @@ It is especially helpful to identify why HANA database behaviour suddenly change
 <p>Read data collected by HSIC (HANA HotSpots Information Collector) or from old report
 raw data and generate a new report.     </p>
 <h3 id="3-select-time-frame">3. Select Time Frame<a class="headerlink" href="#3-select-time-frame" title="Permanent link">&para;</a></h3>
-<p>The next step is to select the <strong>Time Frame</strong> of the analysis. The time frame selection is the same
-for all reports except 'Comparison Report' and 'SAP Workload Report':</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">General Report</label><label for="__tabbed_2_2">Comparison Report</label><label for="__tabbed_2_3">SAP Workload Report</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<p>The next step is to select the <strong>Time Frame</strong> of the analysis. The time frame selection is different
+for different report types:</p>
+<h4 id="general-top-sql-single-sql-report">General / Top SQL / Single SQL Report<a class="headerlink" href="#general-top-sql-single-sql-report" title="Permanent link">&para;</a></h4>
+<div class="admonition info inline">
+<p class="admonition-title">Info</p>
+<p>The HANA server time will be used automatically, therefore do not be surprised if the 
+appearing time is not the same as your local desktop time.</p>
+</div>
 <p>By default, the analysis is focusing on the last 24 hours. 
-The HANA server time will be used automatically, therefore do not be surprised if the appearing time is not the same as the local time.
 Some shortcuts are provided in the interface so that it is easier to select the "Start Time" and "End Time " 
 of the analysis.</p>
 <p>e.g. the combo box beside the Start Time label can be used to choose the baseline of the start time:</p>
@@ -848,20 +964,14 @@ of the analysis.</p>
 <p>The "+" and "-" button together with the 'Hour'/'6 Hour' radio button can be used to quickly change the
 start/end time.
 The "0" button will set the time to zero, i.e. the midnight of the date.</p>
-</div>
-<div class="tabbed-block">
+<h4 id="comparison-report_1">Comparison Report<a class="headerlink" href="#comparison-report_1" title="Permanent link">&para;</a></h4>
 <p>Both Time Frame 1 and Time Frame 2 need to be filled.
 If the time length of time frame 1 equals the length of time frame 2, the 'Analysis Time Range' 
 label will be shown in green to imply that it is <strong>recommended to analyze with same time length
 for comparison report</strong>.</p>
-</div>
-<div class="tabbed-block">
+<h4 id="sap-workload-report_1">SAP Workload Report<a class="headerlink" href="#sap-workload-report_1" title="Permanent link">&para;</a></h4>
 <p>Because the retention time is different on each system, therefore the <strong>time frame selection is ignored</strong>.
 The tool will use the <a href="/advancedtopic/#options">SAP Workload Report Options</a> to determine which data to collect.</p>
-</div>
-</div>
-</div>
-<hr />
 <h3 id="4-start-analysis">4. Start Analysis<a class="headerlink" href="#4-start-analysis" title="Permanent link">&para;</a></h3>
 <p>After the Function and Timeframe are selected, click the "Start Analysis" button to launch the analysis. 
    Depending on the workload of the system and the timeframe length selected, 
