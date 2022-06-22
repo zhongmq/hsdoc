@@ -369,6 +369,26 @@
     Introduction
   </a>
   
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-general-functions" class="md-nav__link">
+    Report General Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-general-information" class="md-nav__link">
+    Report General Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -593,6 +613,26 @@
     Introduction
   </a>
   
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-general-functions" class="md-nav__link">
+    Report General Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-general-information" class="md-nav__link">
+    Report General Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -660,8 +700,9 @@
   <h1>Report Overview</h1>
 
 <h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
-<p>All the reports are single HTML file with interactive figures embedded.
-Below general functions can be used on all the figures:</p>
+<p>All the reports are single HTML files with interactive figures embedded.</p>
+<h4 id="report-general-functions">Report General Functions<a class="headerlink" href="#report-general-functions" title="Permanent link">&para;</a></h4>
+<p>Below general functions can be used on all the figures:</p>
 <ul>
 <li>Use the menu to jump to each section and sub-section (e.g. [CPU] -&gt; ‘Thread Workload’)</li>
 <li>All the figures are interactive: <ul>
@@ -674,6 +715,24 @@ Below general functions can be used on all the figures:</p>
 <li>Click on 'camera' icon can download the figure as png file.</li>
 </ul>
 </li>
+</ul>
+<h4 id="report-general-information">Report General Information<a class="headerlink" href="#report-general-information" title="Permanent link">&para;</a></h4>
+<p>When hovering the mouse on the left top corner title 'HANA HotSpots', the general
+information of the report will be shown with following information:</p>
+<ul>
+<li>Report Type</li>
+<li>SAP SID (Only for SAP Workload Report)</li>
+<li>Database ID</li>
+<li>System ID</li>
+<li>HANA Version</li>
+<li>MDC: <code>Yes</code> if the HANA DB is using Multitenant Database Containers</li>
+<li>Scale-out: <code>Yes</code> if the HANA DB is a Scale-out system</li>
+<li>System Replication: <code>Yes</code> if the HANA DB is using HSR</li>
+<li>Analysis Time Frame: The time frame of the analysis</li>
+<li>Analysis Time Frame (1/2): If the report type is 'Comparison Report', two time frames
+  are shown</li>
+<li>Report Time: When is the report generated. If the report is generated based on 
+  <a href="../../hsic/">HSIC</a> or old data, then the report time is the timestamp when the raw data was collected</li>
 </ul>
 <h3 id="report-types">Report Types<a class="headerlink" href="#report-types" title="Permanent link">&para;</a></h3>
 <p>Following different types of reports can be generated: (Click on the link to see detailed information)</p>

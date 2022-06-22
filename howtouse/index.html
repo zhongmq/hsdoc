@@ -950,14 +950,20 @@ raw data and generate a new report.     </p>
 <h3 id="3-select-time-frame">3. Select Time Frame<a class="headerlink" href="#3-select-time-frame" title="Permanent link">&para;</a></h3>
 <p>The next step is to select the <strong>Time Frame</strong> of the analysis. The time frame selection is different
 for different report types:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Due to the fact that many HANA history information are collected once per hour, 
+normally it makes no sense to select a very short time frame. </p>
+<p>A good starting point would be at least 4 hours.</p>
+</div>
 <h4 id="general-top-sql-single-sql-report">General / Top SQL / Single SQL Report<a class="headerlink" href="#general-top-sql-single-sql-report" title="Permanent link">&para;</a></h4>
-<div class="admonition info inline">
+<p>By default, the analysis is focusing on the last 24 hours. </p>
+<div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The HANA server time will be used automatically, therefore do not be surprised if the 
 appearing time is not the same as your local desktop time.</p>
 </div>
-<p>By default, the analysis is focusing on the last 24 hours. 
-Some shortcuts are provided in the interface so that it is easier to select the "Start Time" and "End Time " 
+<p>Some shortcuts are provided in the interface so that it is easier to select the "Start Time" and "End Time " 
 of the analysis.</p>
 <p>e.g. the combo box beside the Start Time label can be used to choose the baseline of the start time:</p>
 <ul>
