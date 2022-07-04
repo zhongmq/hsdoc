@@ -13,7 +13,7 @@
     
     
       
-        <title>Single SQL Report - HANA HotSpots</title>
+        <title>Overview Report - HANA HotSpots</title>
       
     
     
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Single SQL Report
+              Overview Report
             
           </span>
         </div>
@@ -347,11 +347,55 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../report_overview1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview Report
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Overview Report
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -389,76 +433,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Single SQL Report
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../report_singlesql/" class="md-nav__link">
         Single SQL Report
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
-    General Information
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kpi" class="md-nav__link">
-    KPI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objects" class="md-nav__link">
-    Objects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optimization-helper" class="md-nav__link">
-    Optimization Helper
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -590,29 +569,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
-    General Information
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kpi" class="md-nav__link">
-    KPI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objects" class="md-nav__link">
-    Objects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optimization-helper" class="md-nav__link">
-    Optimization Helper
+  <a href="#general" class="md-nav__link">
+    General
   </a>
   
 </li>
@@ -631,83 +589,21 @@
                 
 
 
-  <h1>Single SQL Report</h1>
+  <h1>Overview Report</h1>
 
 <h4 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h4>
-<p>Single SQL report is designed to show detailed information of one particular SQL statement based
-on its statement hash. </p>
-<p>The report consists of following sections/sub-sections:
-(One sample 'Single SQL Report' can be seen <a href="../../reportsamples/SingleSQLReport/SingleSQLReport.html" target="_blank">here</a>)</p>
-<h4 id="general-information">General Information<a class="headerlink" href="#general-information" title="Permanent link">&para;</a></h4>
+<p>Overview report (not released yet) is designed to quickly check the KPI history of HANA database to detect
+potential timeframe with bottlenecks. </p>
+<p>It should normally be used first when starting to analyze a HANA database before a more detailed
+analysis that can be carried out through the <a href="../report_general/">General Report</a></p>
+<p>The report consists of following sections and sub-sections: (One sample 'Overvew Report'
+ can be seen <a href="../../reportsamples/OverviewReport.html" target="_blank">here</a>)</p>
+<h4 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h4>
 <ul>
-<li>SQL HASH and Text</li>
-<li>Bind Value: top 10 bind values in the expensive statement trace will be shown</li>
-<li>Execution Plan: execution plan with existing plan_id is shown, different plan levels are 
-    shown with different colors</li>
+<li>Host Configuration: shows the host type, host role, etc</li>
+<li>Hardware Configuration: shows the hardware type, CPU number, Memory size, etc</li>
+<li>HANA Revision History: shows the complete history of HANA revisions</li>
 </ul>
-<h4 id="kpi">KPI<a class="headerlink" href="#kpi" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Summary: most important KPI of the SQL statement is shown</li>
-<li>SQL Cache History: average run time of different plan_id are shown with different colors</li>
-<li>SQL Cache History Heatmap: the figure shows the KPI distribution in terms of day of the
-    week and hour of the day based on 4 different criteria: total elapsed time/total number of execution/
-    average time per execution/average row per execution</li>
-<li>Thread Workload: the figure shows the parallel degree history of the SQL statement</li>
-<li>Merge: table merge history is shown together with SQL average run time </li>
-<li>TSH (Thread State/Lock): thread sample history aggregated by thread state and lock name</li>
-<li>TSH (Thread Type/Method/Detail): thread sample history aggregated by thread type, thread method
-    and thread detail</li>
-<li>TSH (DB User/App Name/Client IP): thread sample history aggregated by database user, application
-    name and client IP</li>
-<li>TSH (App User/App Source): thread sample history aggregated by application user and application
-    source</li>
-<li>Expensive SQL: KPI from expensive statement trace is shown</li>
-<li>SQL Hierarchy (as Parent): all child SQL with root statement hash equals the current SQL is shown,
-    this figure helps to identify the dominant contributor if the SQL in question has child</li>
-<li>Application Lock (as Holder): the figure shows the lock waiter SQL / lock waiter table / 
-    lock waiter application source distribution that is blocked by the current SQL statement</li>
-</ul>
-<h4 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Accessed Objects: the table shows all objects accessed by the SQL statement, click on the
-    object name will jump to the detailed information of that object</li>
-<li>Object Hierarchy: if the SQL statement is accessing e.g. a procedure, the hierarchy of the
-    accessed objects including sub procedures, functions, views, etc is shown. Different 
-    hierarchy levels are shown with different colors. Click on the object name will jump to the 
-    detailed information of the object</li>
-<li>View Definitions: all the normal view (i.e. excluding Calculation View, OLAP View, etc) 
-    definition is shown. Calculation View definition will be shown in a separate file</li>
-<li>Translation Table: if a join is performed, the translation table is shown</li>
-<li>Table Overview: first a table list with all involved tables are shown.<ul>
-<li>click on the 'table name' will jump to the 'Table Detail' sub-section of the table</li>
-<li>click on the '#column' will jump to the 'Column Info' sub-section of the table</li>
-<li>click on the '#partition' or 'partition type' will jump to the 'Partition Definition'
-  sub-section of the table</li>
-<li>click on the '#records' will jump to sub-section 'Table Size History (Row Number)'</li>
-<li>click on the '#index' will jump to the 'Index List' sub-section of the table </li>
-<li>click on the '#lob' will jump to the 'LOB Info' sub-section of the table</li>
-<li>click on the '#trigger' will jump to the 'Trigger Info' sub-section of the table </li>
-<li>click on the 'Total Memory Size(GB)' will jump to sub-section 'Table Size History (Memory)'</li>
-<li>click on the 'Disk Size(GB)' will jump to sub-section 'Table Size History (Disk)'</li>
-<li>click on the 'Last Merge Time' will jump to sub-section KPI -&gt; 'Merge'</li>
-<li>click on '<table_name> - Table Detail' will jump to the table overview</li>
-<li>click on '<table_name> - Index List' or any other detailed info sub-section title will jump back to the 
-  'Table Detail' sub-section</li>
-</ul>
-</li>
-<li>Table Size History (Memory): table memory size history is shown together with the SQL average run time</li>
-<li>Table Size History (Row Number): table row size history is shown together with the SQL average run time</li>
-<li>Table Size History (Disk): table disk size history is shown together with the SQL average run time</li>
-</ul>
-<h4 id="optimization-helper">Optimization Helper<a class="headerlink" href="#optimization-helper" title="Permanent link">&para;</a></h4>
-<ul>
-<li>SQL Text with Bind Value: SQL texts with bind variable replaced by bind value is shown</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The SQL text with bind value is used for further troubleshooting. It does <strong>NOT</strong> mean
-that the SQL text with bind value is better than the original SQL with ? in terms of performance</p>
-</div>
 
               
             </article>
@@ -728,7 +624,7 @@ that the SQL text with bind value is better than the original SQL with ? in term
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../report_topsql/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Top SQL Report" rel="prev">
+        <a href="../report_overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Report Overview" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -737,20 +633,20 @@ that the SQL text with bind value is better than the original SQL with ? in term
               <span class="md-footer__direction">
                 Previous
               </span>
-              Top SQL Report
+              Report Overview
             </div>
           </div>
         </a>
       
       
         
-        <a href="../report_comparison/" class="md-footer__link md-footer__link--next" aria-label="Next: Comparison Report" rel="next">
+        <a href="../report_general/" class="md-footer__link md-footer__link--next" aria-label="Next: General Report" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Comparison Report
+              General Report
             </div>
           </div>
           <div class="md-footer__button md-icon">
