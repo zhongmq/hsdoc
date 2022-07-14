@@ -836,8 +836,8 @@ expensive SQL trace</li>
 <h4 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
 <ul>
 <li>CPU Configuration: CPU type, Number of CPU, etc are shown
-  Detailed NUMA info is shown as of HANA 2.00.010</li>
-<li>CPU vs. Threads: CPU load aggregated by MAX and AVG are shown.</li>
+Detailed NUMA info is shown as of HANA 2.00.010</li>
+<li>CPU and Threads: CPU and thread load aggregated by MAX and AVG are shown.</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -849,10 +849,10 @@ expensive SQL trace</li>
 </div>
 <ul>
 <li>Thread Workload: Workload related parameters are shown. If workload class are defined, they will be shown.
-  In the graph, 'session number' stands for the number of sessions connected to HANA, i.e. number of active 
-  work processes on SAP Application Servers</li>
+In the graph, 'session number' stands for the number of sessions connected to HANA, i.e. number of active 
+work processes on SAP Application Servers</li>
 <li>SQL with Most Running Thread: SQL hash and text with thread state = 'Running' are shown. 
-    Click the button 'Only SQL' will show threads only with SQL statement hash available</li>
+  Click the button 'Only SQL' will show threads only with SQL statement hash available</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -868,11 +868,16 @@ into category '-- Others -- '</li>
 </div>
 <ul>
 <li>SQL with Most Thread Sample: SQL hash and text with all threads, sometimes even if the thread state is not 'Running',
-  there is still a chance that this thread is busy with CPU. Click the button 'Only SQL' will show 
-  threads only with SQL statement hash available</li>
-<li>Application Source with Most Running Thread: Click in the center of the 'Sunburst' figure would focus only on that 
-  application source and show the distribution of SQL related to this source</li>
-<li>NUMA Load: shows the distribution of thread samples related to each NUMA load</li>
+there is still a chance that this thread is busy with CPU. Click the button 'Only SQL' will show 
+threads only with SQL statement hash available</li>
+<li>
+<p>Application Source with Most Running Thread: Click in the center of the 'Sunburst' figure would focus only on that 
+application source and show the distribution of SQL related to this source.
+The button 'Pie with only App' shows only meaningful application source.</p>
+</li>
+<li>
+<p>NUMA Load: shows the distribution of thread samples related to each NUMA load</p>
+</li>
 </ul>
 <h4 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h4>
 <ul>
@@ -913,22 +918,39 @@ into category '-- Others -- '</li>
 </ul>
 <h4 id="tsh-thread-sample-history">TSH (Thread Sample History)<a class="headerlink" href="#tsh-thread-sample-history" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Thread State and Lock Name: information from SAP Note 1999998 is shown below the figure
-  to show detailed information. Click the button 'Only Unusual Lock' will show threads only 
-  with unusual lock name</li>
-<li>Thread Type and Thread Method: information from SAP Note 2114710 is shown below the figure
-  to show detailed information. Click the button 'Only Unusual Method' will show threads only 
-  with unusual thread method</li>
-<li>SQL and Thread State: top SQL and its thread state is shown.</li>
-<li>SQL and Lock Name: top SQL and its waiting lock type is shown. If the lock type is '?', it means the
-    SQL is likely to be busy on CPU</li>
-<li>SQL and Thread Method: top SQL and its thread method is shown.</li>
-<li>SQL and Application Name: top SQL and its application name is shown. Sometimes the info is not
-  reliable to identify the application location </li>
-<li>SQL and Passport Action: top SQL and the passport action is shown. Normally passport action shows
-  meaningful application context of the SQL.</li>
-<li>SQL Hierarchy: the figure shows the SQL Hierarchy where SQL HASH is different from the Root HASH.
-    Such graph will show e.g. which individual SQL triggered by a procedure call is dominant.</li>
+<li>
+<p>Thread State and Lock Name: information from SAP Note 1999998 is shown below the figure
+to show detailed information. Click the button 'Only Unusual Lock' will show threads only 
+with unusual lock name</p>
+</li>
+<li>
+<p>Thread Type and Thread Method: information from SAP Note 2114710 is shown below the figure
+to show detailed information. Click the button 'Only Unusual Method' will show threads only 
+with unusual thread method</p>
+</li>
+<li>
+<p>SQL and Thread State / Lock Name: top SQL and its thread state / lock name is shown.
+The output is aggregated first by SQL HASH and then by the combination of thread state and 
+lock name. The goal is to show the distribution of thread state / lock name
+among top SQL statements.</p>
+</li>
+<li>
+<p>SQL and Thread Type / Method: top SQL and its thread type / method is shown.
+The output is aggregated first by SQL HASH and then by the combination of thread type and thread
+method. The goal is to show the distribution of thread type / method among top SQL statements.</p>
+</li>
+<li>
+<p>SQL and Application Name: top SQL and its application name is shown. Sometimes the info is not
+reliable to identify the application location </p>
+</li>
+<li>
+<p>SQL and Passport Action: top SQL and the passport action is shown. Normally passport action shows
+meaningful application context of the SQL.</p>
+</li>
+<li>
+<p>SQL Hierarchy: the figure shows the SQL Hierarchy where SQL HASH is different from the Root HASH.
+  Such graph will show e.g. which individual SQL triggered by a procedure call is dominant.</p>
+</li>
 <li>DB User</li>
 <li>Application User</li>
 <li>Client Host</li>

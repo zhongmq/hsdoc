@@ -392,6 +392,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    Load
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -575,6 +582,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    Load
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -603,6 +617,20 @@ analysis that can be carried out through the <a href="../report_general/">Genera
 <li>Host Configuration: shows the host type, host role, etc</li>
 <li>Hardware Configuration: shows the hardware type, CPU number, Memory size, etc</li>
 <li>HANA Revision History: shows the complete history of HANA revisions</li>
+</ul>
+<h4 id="load">Load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h4>
+<p>If bottleneck is detected in following subsections, the critical time frame will be listed
+above the figure and highlighted in the figure with color "Light Salmon".</p>
+<ul>
+<li>CPU and Threads: CPU and thread load aggregated by MAX and AVG are shown.
+If there is an issue, please run <a href="../report_general/#cpu">"General Report" -&gt; "CPU"</a> for detailed analysis.</li>
+<li>Memory and Unloads: Memory consumption and table unloads are shown.
+If there is an issue, please run <a href="../report_general/#memory">"General Report" -&gt; "Memory"</a> for detailed analysis.</li>
+<li>Sessions and SQL Executed per Second</li>
+<li>Transactions and Blocked Transactions
+If there is an issue, please run <a href="../report_general/#lock-application-lock">"General Report" -&gt; "Lock"</a> for detailed analysis.</li>
+<li>IO Load: the busy percentage of I/O operations are shown
+If there is an issue, please run <a href="../report_general/#disk">"General Report" -&gt; "Disk"</a> for detailed analysis.</li>
 </ul>
 
               

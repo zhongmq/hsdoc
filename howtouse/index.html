@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-connect-to-a-hana-database" class="md-skip">
+        <a href="#1-choose-data-source" class="md-skip">
           Skip to content
         </a>
       
@@ -303,11 +303,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-connect-to-a-hana-database" class="md-nav__link">
-    1. Connect to a HANA Database
+  <a href="#1-choose-data-source" class="md-nav__link">
+    1. Choose Data Source
   </a>
   
-    <nav class="md-nav" aria-label="1. Connect to a HANA Database">
+    <nav class="md-nav" aria-label="1. Choose Data Source">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -338,6 +338,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#5-read-local-data-eg-hsic-data" class="md-nav__link">
+    5) Read local data (e.g. HSIC data)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -350,6 +357,13 @@
   
     <nav class="md-nav" aria-label="2. Select Function">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-report" class="md-nav__link">
+    Overview Report
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#general-report" class="md-nav__link">
@@ -386,13 +400,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#read-hsic-data" class="md-nav__link">
-    Read HSIC Data
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -407,8 +414,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general-top-sql-single-sql-report" class="md-nav__link">
-    General / Top SQL / Single SQL Report
+  <a href="#overview-general-top-sql-single-sql-report" class="md-nav__link">
+    Overview / General / Top SQL / Single SQL Report
   </a>
   
 </li>
@@ -705,11 +712,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-connect-to-a-hana-database" class="md-nav__link">
-    1. Connect to a HANA Database
+  <a href="#1-choose-data-source" class="md-nav__link">
+    1. Choose Data Source
   </a>
   
-    <nav class="md-nav" aria-label="1. Connect to a HANA Database">
+    <nav class="md-nav" aria-label="1. Choose Data Source">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -740,6 +747,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#5-read-local-data-eg-hsic-data" class="md-nav__link">
+    5) Read local data (e.g. HSIC data)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -752,6 +766,13 @@
   
     <nav class="md-nav" aria-label="2. Select Function">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-report" class="md-nav__link">
+    Overview Report
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#general-report" class="md-nav__link">
@@ -788,13 +809,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#read-hsic-data" class="md-nav__link">
-    Read HSIC Data
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -809,8 +823,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general-top-sql-single-sql-report" class="md-nav__link">
-    General / Top SQL / Single SQL Report
+  <a href="#overview-general-top-sql-single-sql-report" class="md-nav__link">
+    Overview / General / Top SQL / Single SQL Report
   </a>
   
 </li>
@@ -878,7 +892,9 @@
   <h1>How to Use the Tool?</h1>
 
 <p>The <a href="..#user-interface">user interface</a> is straightforward including following steps:</p>
-<h3 id="1-connect-to-a-hana-database">1. Connect to a HANA Database<a class="headerlink" href="#1-connect-to-a-hana-database" title="Permanent link">&para;</a></h3>
+<h3 id="1-choose-data-source">1. Choose Data Source<a class="headerlink" href="#1-choose-data-source" title="Permanent link">&para;</a></h3>
+<p>The input data can be from a live HANA database or from local disk (e.g offline
+<a href="../hsic/">HSIC data</a>)</p>
 <p>There are 4 ways to connect to a HANA database (it is possible to use the key shortcuts 
 to choose the method): </p>
 <h4 id="1-custom-system-via-sap-proxy">1) Custom System via SAP Proxy<a class="headerlink" href="#1-custom-system-via-sap-proxy" title="Permanent link">&para;</a></h4>
@@ -979,14 +995,27 @@ may cause the tool to fail.</p>
 <p>If key is generated and stored via hdbuserstore, it is also possible to connect to HANA system via the key.</p>
 <p>Furthermore, if SSO check box is flagged, the password can be omitted to connect to HANA system via Single-Sign-On.
 If SSL check box is flagged, the secure connection will be used to connect to HANA system. (e.g. should be used when connecting to HANA Cloud System)</p>
+<h4 id="5-read-local-data-eg-hsic-data">5) Read local data (e.g. HSIC data)<a class="headerlink" href="#5-read-local-data-eg-hsic-data" title="Permanent link">&para;</a></h4>
+<p>Key Shortcut: <span class="keys"><kbd class="key-5">5</kbd></span></p>
+<p>Choose a folder or a zip file from local file system as the data source.
+This means, it is now possible to first collect the data (e.g. by the check box 
+in <a href="../advancedtopic/#general-options">'General Options' -&gt; 'Collect Data Only'</a>).
+Afterwards, generate the report with more options.</p>
+<p>If customer has provided the <a href="../hsic/">HSIC (HANA HotSpots Information Collector) data</a>, 
+the report can be generated by this function.</p>
 <h3 id="2-select-function">2. Select Function<a class="headerlink" href="#2-select-function" title="Permanent link">&para;</a></h3>
 <p>Select a <strong>Function</strong> to use the tool. Following functions are supported: (Click on the title will jump to the
 detailed introduction)</p>
+<h4 id="overview-report"><a href="../report/report_overview1/">Overview Report</a><a class="headerlink" href="#overview-report" title="Permanent link">&para;</a></h4>
+<p>Quickly check the HANA DB and show the most important load history.
+This report is much faster and lighter than the "General Report", it is recommended
+to always first use this report to get an overview before making detailed analysis 
+through the "General Report".</p>
 <h4 id="general-report"><a href="../report/report_general/">General Report</a><a class="headerlink" href="#general-report" title="Permanent link">&para;</a></h4>
-<p>Focusing on most important HANA KPIs such as CPU, Memory, Thread Samples, 
- Main Activities, etc. The analysis output would immediately show the <strong>HotSpots</strong> (i.e. When and what was the most significant bottleneck) 
- of the HANA Database. At the beginning of the report, a summary section is provided to automatically detect the most critical issues (if any) 
- identified on the HANA database.</p>
+<p>Focusing on important HANA KPIs such as CPU, Memory, Thread Samples, 
+Main Activities, etc. The analysis output would immediately show the <strong>HotSpots</strong> (i.e. When and what was the most significant bottleneck) 
+of the HANA Database. At the beginning of the report, a summary section is provided to automatically detect the most critical issues (if any) 
+identified on the HANA database.</p>
 <h4 id="top-sql-report"><a href="../report/report_topsql/">Top SQL Report</a><a class="headerlink" href="#top-sql-report" title="Permanent link">&para;</a></h4>
 <p>Focusing on most expensive SQL statements based on several criteria: <strong>Total Elapsed Time</strong>, <strong>Number of Thread Samples</strong>, 
 <strong>Average memory consumption</strong>, etc. The analysis output would show the overview and detailed information of all these top SQL statements including 
@@ -998,9 +1027,6 @@ SQL text, heatmap, KPI history, etc.</p>
 It is especially helpful to identify why HANA database behaviour suddenly changes.</p>
 <h4 id="sap-workload-report"><a href="../report/report_sapworkload/">SAP Workload Report</a><a class="headerlink" href="#sap-workload-report" title="Permanent link">&para;</a></h4>
 <p>Show the KPI on SAP appliation servers. e.g. KPI History from ST03 and /SDF/SMON</p>
-<h4 id="read-hsic-data"><a href="../hsic/">Read HSIC Data</a><a class="headerlink" href="#read-hsic-data" title="Permanent link">&para;</a></h4>
-<p>Read data collected by HSIC (HANA HotSpots Information Collector) or from old report
-raw data and generate a new report.     </p>
 <h3 id="3-select-time-frame">3. Select Time Frame<a class="headerlink" href="#3-select-time-frame" title="Permanent link">&para;</a></h3>
 <p>The next step is to select the <strong>Time Frame</strong> of the analysis. The time frame selection is different
 for different report types:</p>
@@ -1010,26 +1036,32 @@ for different report types:</p>
 normally it makes no sense to select a very short time frame. </p>
 <p>A good starting point would be at least 4 hours.</p>
 </div>
-<h4 id="general-top-sql-single-sql-report">General / Top SQL / Single SQL Report<a class="headerlink" href="#general-top-sql-single-sql-report" title="Permanent link">&para;</a></h4>
+<h4 id="overview-general-top-sql-single-sql-report">Overview / General / Top SQL / Single SQL Report<a class="headerlink" href="#overview-general-top-sql-single-sql-report" title="Permanent link">&para;</a></h4>
 <p>By default, the analysis is focusing on the last 24 hours. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The HANA server time will be used automatically, therefore do not be surprised if the 
 appearing time is not the same as your local desktop time.</p>
 </div>
-<p>Some shortcuts are provided in the interface so that it is easier to select the "Start Time" and "End Time " 
-of the analysis.</p>
-<p>e.g. the combo box beside the Start Time label can be used to choose the baseline of the start time:</p>
+<p>Some shortcuts are provided in the interface so that it is easier to select 
+the "Begin Time" and "End Time" of the analysis.</p>
+<p>The combo box beside the Begin Time label can be used to choose the baseline of the begin time:</p>
 <ul>
-<li>Current time -&gt; set the start time to the current HANA server time.</li>
-<li>End time -&gt; set the start time to be the same as the End Time.</li>
-<li>Start of M_SERVICE_THREAD_SAMPLES -&gt; set the start time to the beginning of M_SERVICE_THREAD_SAMPLES,
+<li>End time -&gt; set the Begin Time to be the same as the End Time.</li>
+<li>Current time -&gt; set the Begin Time to the current HANA server time.</li>
+<li>Start of M_SERVICE_THREAD_SAMPLES -&gt; set the Begin Time to the beginning of M_SERVICE_THREAD_SAMPLES,
   when this is selected, the analysis will focus on the recent thread sample history that has a higher granularity.</li>
-<li>Most recent HANA startup time -&gt; set the start time to the last HANA startup time.</li>
+<li>Most recent HANA startup time -&gt; set the Begin Time to the last HANA startup time.</li>
 </ul>
-<p>The "+" and "-" button together with the 'Hour'/'6 Hour' radio button can be used to quickly change the
-start/end time.
-The "0" button will set the time to zero, i.e. the midnight of the date.</p>
+<p>The combo box beside the End Time label can be used to choose the baseline of the end time:</p>
+<ul>
+<li>Begin time -&gt; set the End time to be the same as the Begin Time.</li>
+<li>Current time -&gt; set the End time to the current HANA server time.</li>
+</ul>
+<p>"H0" button will set the time to be the midnight of that date. i.e. 00:00</p>
+<p>"M0" button will set the minute to zero. e.g. 12:34 -&gt; 12:00</p>
+<p>The "+" and "-" button together with the '1H'/'6H'/'1D' radio buttons can be used to 
+quickly change the time by a step of 1 hour, 6 hours and 1 day respectively.</p>
 <h4 id="comparison-report_1">Comparison Report<a class="headerlink" href="#comparison-report_1" title="Permanent link">&para;</a></h4>
 <p>Both Time Frame 1 and Time Frame 2 need to be filled.
 If the time length of time frame 1 equals the length of time frame 2, the 'Analysis Time Range' 

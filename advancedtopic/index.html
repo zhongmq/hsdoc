@@ -684,7 +684,7 @@
 <p>The option menu will show options for different functions:</p>
 <h4 id="general-options">General Options<a class="headerlink" href="#general-options" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Choose Output Folder</strong>: select the output folder where the generated report is saved</li>
+<li><strong>Choose Output Folder</strong>: select the output folder where the generated report is saved.</li>
 <li>
 <p><strong>Output Folder Naming Convention</strong>: the output folder can have 2 naming conventions:</p>
 <ul>
@@ -693,16 +693,26 @@
 <li>Analysis Time Frame: e.g. <code>PRD_PRD_GeneralReport_2021.01.01_08.00_2021.01.02_08.00</code>, where
   <mark>2021/01/01 08:00 - 2021/01/02 08:00</mark> is the analysis time frame.</li>
 </ul>
-</li>
-<li>
-<p><strong>Save Raw Data</strong>: if not ticked, no raw data (i.e. *.txt/csv) will be saved during report generation</p>
-</li>
-</ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Use 'Analysis Time Frame' as the output folder naming convention is helpful when
 multiple check is carried out on the same system with different time frames.</p>
 </div>
+</li>
+<li>
+<p><strong>Save Raw Data</strong>: if not checked, no raw data (i.e. *.txt/csv) will be saved 
+during report generation.</p>
+</li>
+<li>
+<p><strong>Collect Data Only</strong>: if checked, only raw data will be collected and no report will be
+generated.</p>
+</li>
+<li>
+<p><strong>Include Secondary System (HSR)</strong>: As of HANA 2.00.060, history info of secondary site in 
+HSR system is also collected, this checkbox can be used to control if information from secondary
+site is included in the report or not.</p>
+</li>
+</ul>
 <h4 id="general-report-options">General Report Options<a class="headerlink" href="#general-report-options" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Include Parameter Check</strong>: if checked, any topic including HANA parameter check will be carried out, 
