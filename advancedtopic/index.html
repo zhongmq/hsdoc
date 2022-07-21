@@ -704,7 +704,7 @@ multiple check is carried out on the same system with different time frames.</p>
 during report generation.</p>
 </li>
 <li>
-<p><strong>Include Secondary System (HSR)</strong>: As of HANA 2.00.060, history info of secondary site in 
+<p><strong>Include Secondary System (HSR)</strong>: As of HANA 2.00.060, history information of secondary site in 
 HSR system is also collected, this checkbox can be used to control if information from secondary
 site is included in the report or not.</p>
 </li>
@@ -730,6 +730,14 @@ It takes a lot of time to render and load the report in browser, sometimes even 
 encountered. In such case, it is recommended to seperate the report into sections: i.e. generate several reports
 with same time frame and each report contains only one section (e.g. report 1 with section 'CPU', report 2 with section 'Memory', etc)</p>
 </div>
+<ul>
+<li>
+<p><strong>Minimal Thread Sample Number</strong>: for very busy system the number of thread sample can be very large, in such case
+set the minimal thread sample number would be helpful to limit the size of the data collected while still keeping
+the most important parts.</p>
+<p>For test systems, however, setting this value too high would return empty result. The default value is "2". </p>
+</li>
+</ul>
 <h4 id="comparison-report-options">Comparison Report Options<a class="headerlink" href="#comparison-report-options" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Select Sections</strong>: it is possible to choose which section would be included in the 
@@ -740,7 +748,7 @@ generated Comparison Report.</li>
 <li>The check box decides if the section is included in the report</li>
 <li><strong>Number of days</strong> determines how many days in the history from now will be included in the report</li>
 </ul>
-<p>When the tool is closed, the option will be saved as configuration file <code>hs.&lt;version&gt;.ini</code> and 
+<p>When the tool is closed, the option will be saved as configuration file <code>hs.&lt;version&gt;.yaml</code> and 
 restored automatically next time it starts.</p>
 
               

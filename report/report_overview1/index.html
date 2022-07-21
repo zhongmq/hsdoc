@@ -393,8 +393,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#load" class="md-nav__link">
-    Load
+  <a href="#cpu" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    Memory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock" class="md-nav__link">
+    Lock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gc" class="md-nav__link">
+    GC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk" class="md-nav__link">
+    Disk
   </a>
   
 </li>
@@ -583,8 +618,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#load" class="md-nav__link">
-    Load
+  <a href="#cpu" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    Memory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock" class="md-nav__link">
+    Lock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gc" class="md-nav__link">
+    GC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk" class="md-nav__link">
+    Disk
   </a>
   
 </li>
@@ -610,25 +680,47 @@
 potential timeframe with bottlenecks. </p>
 <p>It should normally be used first when starting to analyze a HANA database before a more detailed
 analysis that can be carried out through the <a href="../report_general/">General Report</a></p>
-<p>The report consists of following sections and sub-sections: (One sample 'Overvew Report'
+<p>The report consists of following sections and sub-sections: (One sample 'Overview Report'
  can be seen <a href="../../reportsamples/OverviewReport.html" target="_blank">here</a>)</p>
 <h4 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Host Configuration: shows the host type, host role, etc</li>
 <li>Hardware Configuration: shows the hardware type, CPU number, Memory size, etc</li>
 <li>HANA Revision History: shows the complete history of HANA revisions</li>
+<li>Parameter Change History: shows the HANA parameter change history in the last 30 days</li>
+<li>Database History: shows the most important KPI in one figure</li>
 </ul>
-<h4 id="load">Load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h4>
 <p>If bottleneck is detected in following subsections, the critical time frame will be listed
 above the figure and highlighted in the figure with color "Light Salmon".</p>
+<h4 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
 <ul>
 <li>CPU and Threads: CPU and thread load aggregated by MAX and AVG are shown.
 If there is an issue, please run <a href="../report_general/#cpu">"General Report" -&gt; "CPU"</a> for detailed analysis.</li>
+</ul>
+<h4 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h4>
+<ul>
 <li>Memory and Unloads: Memory consumption and table unloads are shown.
 If there is an issue, please run <a href="../report_general/#memory">"General Report" -&gt; "Memory"</a> for detailed analysis.</li>
-<li>Sessions and SQL Executed per Second</li>
+</ul>
+<h4 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SQL Avg Request Time: shows the average SQL request time.</li>
+<li>Sessions and SQL Executed per Second.
+If there is an issue, please run <a href="../report_general/#sql">"General Report" -&gt; "SQL"</a> for detailed analysis.</li>
+</ul>
+<h4 id="lock">Lock<a class="headerlink" href="#lock" title="Permanent link">&para;</a></h4>
+<ul>
 <li>Transactions and Blocked Transactions
 If there is an issue, please run <a href="../report_general/#lock-application-lock">"General Report" -&gt; "Lock"</a> for detailed analysis.</li>
+</ul>
+<h4 id="gc">GC<a class="headerlink" href="#gc" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Versions and Commit Range
+If there is an issue, please run 
+<a href="../report_general/#gc-garbage-collection">"General Report" -&gt; "GC (Garbage Collection)"</a> for detailed analysis.</li>
+</ul>
+<h4 id="disk">Disk<a class="headerlink" href="#disk" title="Permanent link">&para;</a></h4>
+<ul>
 <li>IO Load: the busy percentage of I/O operations are shown
 If there is an issue, please run <a href="../report_general/#disk">"General Report" -&gt; "Disk"</a> for detailed analysis.</li>
 </ul>
