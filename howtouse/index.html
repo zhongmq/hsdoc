@@ -462,6 +462,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#host-selection" class="md-nav__link">
+    Host Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#show-result" class="md-nav__link">
     Show Result
   </a>
@@ -878,6 +885,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#host-selection" class="md-nav__link">
+    Host Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#show-result" class="md-nav__link">
     Show Result
   </a>
@@ -1092,11 +1106,19 @@ e.g. If the prefix is set to "<mark>Customer_123</mark>", the report folder name
 <p>Note that only letters, numbers and underscore are allowed for the prefix name.</p>
 <h4 id="collect-data-only">Collect Data Only<a class="headerlink" href="#collect-data-only" title="Permanent link">&para;</a></h4>
 <p>If checked, only raw data will be collected and no report will be generated.</p>
+<h4 id="host-selection">Host Selection<a class="headerlink" href="#host-selection" title="Permanent link">&para;</a></h4>
+<p>When reading local data, if a scale-out system is detected, this button 'Host Selection' will appear.</p>
+<p>Clicking on the button will open a dialog window with check boxes for all detected host names and roles.
+Check each individual host to include it in the final report. If not checked, the host related info will 
+be excluded from the report.</p>
+<p>If "All Hosts Combined" is checked, the report will show aggregated data for all hosts but will not show
+detailed information for each host.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>This option is useful when dealing with a scale out system with many hosts. 
+<p>Option "Collect Data Only" and "Host Selection" are useful when dealing with a scale out system with many hosts. 
 First collect all the data and then use 
-<a href="../howtouse/#5-read-local-data-eg-hsic-data">"Read Local Data"</a> to generate a tailored report.</p>
+<a href="../howtouse/#5-read-local-data-eg-hsic-data">"Read Local Data"</a> to generate a tailored report 
+with selected sections and selected HANA host(s)</p>
 </div>
 <h4 id="show-result">Show Result<a class="headerlink" href="#show-result" title="Permanent link">&para;</a></h4>
 <p>Finally "Show Result" button would open <a href="../report/report_overview/">the report</a> in your default browser. 
