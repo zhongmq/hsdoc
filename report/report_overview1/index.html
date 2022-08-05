@@ -688,7 +688,11 @@ analysis that can be carried out through the <a href="../report_general/">Genera
 <li>Hardware Configuration: shows the hardware type, CPU number, Memory size, etc</li>
 <li>HANA Revision History: shows the complete history of HANA revisions</li>
 <li>Parameter Change History: shows the HANA parameter change history in the last 30 days</li>
-<li>Database History: shows the most important KPI in one figure</li>
+<li>HANA Downtime: shows when the HANA is down</li>
+<li>Workload Parameters: shows the workload related HANA parameters</li>
+<li>Database History: shows the most important KPI in one figure.
+The most important events such as parameter change, HANA upgrade, HANA downtime will also be
+shown in this figure</li>
 </ul>
 <p>If bottleneck is detected in following subsections, the critical time frame will be listed
 above the figure and highlighted in the figure with color "Light Salmon".</p>
@@ -710,18 +714,18 @@ If there is an issue, please run <a href="../report_general/#sql">"General Repor
 </ul>
 <h4 id="lock">Lock<a class="headerlink" href="#lock" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Transactions and Blocked Transactions
+<li>Transactions and Blocked Transactions.
 If there is an issue, please run <a href="../report_general/#lock-application-lock">"General Report" -&gt; "Lock"</a> for detailed analysis.</li>
 </ul>
 <h4 id="gc">GC<a class="headerlink" href="#gc" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Versions and Commit Range
+<li>Versions and Commit Range.
 If there is an issue, please run 
 <a href="../report_general/#gc-garbage-collection">"General Report" -&gt; "GC (Garbage Collection)"</a> for detailed analysis.</li>
 </ul>
 <h4 id="disk">Disk<a class="headerlink" href="#disk" title="Permanent link">&para;</a></h4>
 <ul>
-<li>IO Load: the busy percentage of I/O operations are shown
+<li>IO Load: the busy percentage of I/O operations are shown.
 If there is an issue, please run <a href="../report_general/#disk">"General Report" -&gt; "Disk"</a> for detailed analysis.</li>
 </ul>
 

@@ -371,6 +371,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    Configuration File
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -657,6 +664,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    Configuration File
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -675,11 +689,11 @@
 
 <h3 id="log-file">Log File<a class="headerlink" href="#log-file" title="Permanent link">&para;</a></h3>
 <p>A log file with name <code>hsgui.log</code> or <code>hscmd.log</code> (depending on the version) is generated under the same
-   directory where the tool is located. If error occurs, more information can be seen in the log file.</p>
+directory where the tool is located. If error occurs, more information can be seen in the log file.</p>
 <h3 id="which-authorization-is-required">Which authorization is required?<a class="headerlink" href="#which-authorization-is-required" title="Permanent link">&para;</a></h3>
 <p>The tool basically needs to access HANA monitoring views (<code>M_*</code>) and statistics server views (<code>_SYS_STATISTICS.HOST_*</code>).
-   Therefore the HANA database user used in the tool need the privilege to access these views. i.e. the user
-   should have the standard catalog role <code>MONITORING</code> granted.</p>
+Therefore the HANA database user used in the tool need the privilege to access these views. i.e. the user
+should have the standard catalog role <code>MONITORING</code> granted.</p>
 <h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
 <p>The option menu will show options for different functions:</p>
 <h4 id="general-options">General Options<a class="headerlink" href="#general-options" title="Permanent link">&para;</a></h4>
@@ -750,6 +764,56 @@ generated Comparison Report.</li>
 </ul>
 <p>When the tool is closed, the option will be saved as configuration file <code>hs.&lt;version&gt;.yaml</code> and 
 restored automatically next time it starts.</p>
+<h3 id="configuration-file">Configuration File<a class="headerlink" href="#configuration-file" title="Permanent link">&para;</a></h3>
+<p>The selected options will be saved as a configuration file with name <code>hs.&lt;version&gt;.yaml</code>.
+Below is an example of this configuration file:
+<div class="highlight"><span class="filename">hs.2.3.yaml</span><pre><span></span><code><span class="nt">General Option</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Report Folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C:/Users/ABC/Downloads/hsreport</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Report Folder Pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnalysisTime</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Raw Data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Include Secondary Host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="nt">General Report</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Include Parameter Check</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Top Issue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Complete Summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Include Static Info</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Include Link to Raw Data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Minimal TS Number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Section Selection</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">CPU</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Activity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">SQL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Thread Sample</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Space</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Disk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Backup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Garbage Collection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Application Lock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">System Replication</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Trace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="nt">Comparison Report</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Section Selection</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">CPU</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Activity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">SQL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Thread Sample</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Space</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Disk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Application Lock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">System Replication</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="nt">SAP Workload Report</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">ST03</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Day Number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span><span class="w"></span>
+<span class="w">  </span><span class="nt">SDFSMON</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Day Number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Section Selection</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">ST03</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">/SDF/SMON</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+</code></pre></div></p>
+<p>This configuration file is shared with <a href="../#hscmd">hscmd</a>.</p>
 
               
             </article>
