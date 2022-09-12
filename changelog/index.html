@@ -771,16 +771,34 @@ the <a href="../howtouse/#5-read-local-data-eg-hsic-data">data source selection<
 to control if information from HSR secondary system is shown in the report</li>
 <li>+ <a href="../advancedtopic/#general-report-options">General Report Option -&gt; 'Minimal Thread Sample Number'</a> added
 to control the minimal thread sample number used when collecting TSH data</li>
-<li># [General Report] 'TSH' -&gt; 'SQL and Thread Method' is changed 
-to <a href="../report/report_general/#tsh-thread-sample-history">'SQL and Thread Type / Method'</a> and grouped by SQL</li>
-<li># [General Report] 'TSH' -&gt; 'SQL and Thread State' and 'SQL and Lock Name' are 
-combined into <a href="../report/report_general/#tsh-thread-sample-history">'SQL and Thread State / Lock Name'</a> and
-grouped by SQL</li>
-<li># [General Report] <a href="../report/report_general/#cpu">'CPU' -&gt; 'Application Source with Most Running Thread'</a>
-reworked to be grouped by the application source</li>
-<li># [General Report] <a href="../report/report_general/#lock-application-lock">'Lock' -&gt; 'Top Waiting SQL (Table) - *'</a>
-reworked to group by the top waiting SQL and table first</li>
-<li># <a href="../advancedtopic/#configuration-file">Configuration file</a> is changed to 'yaml' format</li>
+<li>
+<p><strong># [General Report]: In the following sections, data are shown with two levels of aggregation:</strong></p>
+<ul>
+<li>
+<p>'TSH' -&gt; 'SQL and Thread Method' is changed 
+  to <a href="../report/report_general/#tsh-thread-sample-history">'SQL and Thread Type / Method'</a> and grouped by SQL
+  first and then grouped by the combination of 'Thread Type' and 'Thread Method', in such a way it is now
+  more clear to see what is the dominant SQL and what is the dominant 'Thread Type / Method' for each SQL</p>
+</li>
+<li>
+<p>'TSH' -&gt; 'SQL and Thread State' and 'SQL and Lock Name' are 
+  combined into <a href="../report/report_general/#tsh-thread-sample-history">'SQL and Thread State / Lock Name'</a> and
+  grouped by SQL first and then grouped by the combination of 'Thread State' and 'Lock Name'</p>
+</li>
+<li>
+<p><a href="../report/report_general/#cpu">'CPU' -&gt; 'Application Source with Most Running Thread'</a>
+  reworked to be grouped by the application source first and then the SQL Hash</p>
+</li>
+<li>
+<p><a href="../report/report_general/#lock-application-lock">'Lock' -&gt; 'Top Waiting SQL (Table) - *'</a>
+  reworked to be grouped by the top waiting SQL and table first and then the lock holder 
+  status/SQL/application source</p>
+</li>
+</ul>
+</li>
+<li>
+<p># <a href="../advancedtopic/#configuration-file">Configuration file</a> is changed to 'yaml' format</p>
+</li>
 <li>+ Host Number information is added to the GUI when the target system is a scale out system</li>
 <li>- bug fix: CPU_ALL is now shown instead of CPU_USER in many figure</li>
 <li>- bug fix: [General Report] 'SQL' -&gt; 'SQL Cache Overview': Number of eviction per hour is 

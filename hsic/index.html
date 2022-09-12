@@ -596,7 +596,8 @@ a HANA database. </p>
 <p>At the same time, if the raw data was already collected during old report generation, it is also
 possible to let HANA HotSpots generate a new report based on such old raw data.</p>
 <h3 id="instruction">Instruction<a class="headerlink" href="#instruction" title="Permanent link">&para;</a></h3>
-<p>From the function combo box, choose 'Read HSIC Data' and select:</p>
+<p>From the data source combo box, choose '5. Read Local Data', click on the button 'Read Data' and then 
+select:</p>
 <ul>
 <li>The HSIC file (normally in <code>tar.gz</code> format)</li>
 </ul>
@@ -604,13 +605,15 @@ possible to let HANA HotSpots generate a new report based on such old raw data.<
 <ul>
 <li>An old report folder that contains raw data</li>
 </ul>
-<p>Then click the 'Start Analysis' button to generate a new report via the selected raw data. </p>
-<p>It is also possible to change the option when generating the new report, e.g. the old report contains
+<p>It is possible to change the option when generating the new report, e.g. the old report contains
 all the sections, by changing the 'Selected Sections' from the option menu, it is now convenient
 to generate a new report with only subset of all the sections.</p>
+<p>Besides, it is also possible to re-select the <a href="../howtouse/#read-local-data">time range</a> and 
+<a href="../howtouse/#host-selection">hosts</a> when generating a new report.</p>
+<p>Finally, click the 'Start Analysis' button to generate a new report via the selected raw data. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Only report folder as of v2.2 is supported because file <code>hsmeta.json</code> is required.</p>
+<p>Only report folder as of v2.3 is supported because file <code>hsmeta.json</code> is required.</p>
 </div>
 
               
