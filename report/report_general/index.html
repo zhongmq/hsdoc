@@ -998,12 +998,12 @@ meaningful application context of the SQL</p>
 <li>Top Waiting SQL HASH: top SQL waiting for application lock</li>
 <li>Top Waiting Table: top tables on which SQL is waiting for application lock</li>
 <li>Top Lock Holder Application Source: top application source holding the lock</li>
-<li>Top Waiting SQL (Table) / Lock Holder Status: shows the lock holder status that blocks the waiting SQL/Table, 
-    Status = 'ACTIVE' means the lock holder is busy with another SQL; Status = 'IDLE' means the lock holder is busy
-    on the SAP side</li>
-<li>Top Waiting SQL (Table) / Lock Holder SQL: if the lock holder status is 'ACTIVE', this figure shows these 
-    SQLs that are holding the lock</li>
-<li>Top Waiting SQL (Table) / Lock Holder Application Source: shows the lock holder application source that holds the lock</li>
+<li>Top Waiting SQL (Table) / Lock Holder SQL: shows the lock holder activity that blocks the waiting SQL/Table,
+    if the lock holder is 'IDLE', it means the lock holder is busy on the client side, i.e. hold the lock
+    on the waiting table without commit fast enough. If the lock holder is busy on HANA, its active SQL Hash 
+    is shown</li>
+<li>Top Waiting SQL (Table) / Lock Holder Application Source: shows the lock holder application source that 
+    holds the lock</li>
 </ul>
 <h4 id="hsr-hana-system-replication">HSR (HANA System Replication)<a class="headerlink" href="#hsr-hana-system-replication" title="Permanent link">&para;</a></h4>
 <ul>
