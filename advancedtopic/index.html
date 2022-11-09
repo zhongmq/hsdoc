@@ -735,8 +735,8 @@ site is included in the report or not.</p>
   e.g. largest tables on the system. 
   In the future more static information that does not change often along time line will be included.</li>
 <li><strong>Include Link to Raw Data</strong>: if checked, link to the raw data will be included above each figure.</li>
-<li><strong>Select Sections</strong>: it is possible to choose which section would be included in the generated General Report.</li>
-</ul>
+<li>
+<p><strong>Select Sections</strong>: it is possible to choose which section would be included in the generated General Report.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>When working on a scale-out system with large time frame</strong>, the generated HTML report size will be <strong>big</strong> (e.g. &gt; 50MB).
@@ -744,12 +744,21 @@ It takes a lot of time to render and load the report in browser, sometimes even 
 encountered. In such case, it is recommended to seperate the report into sections: i.e. generate several reports
 with same time frame and each report contains only one section (e.g. report 1 with section 'CPU', report 2 with section 'Memory', etc)</p>
 </div>
-<ul>
+</li>
 <li>
 <p><strong>Minimal Thread Sample Number</strong>: for very busy system the number of thread sample can be very large, in such case
 set the minimal thread sample number would be helpful to limit the size of the data collected while still keeping
-the most important parts.</p>
-<p>For test systems, however, setting this value too high would return empty result. The default value is "2". </p>
+the most important parts. The default value is "2".</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This option can also be used when reading local data to generate a new report. e.g. When the TSH from the
+raw data is very large, it would be helpful to use a larger value to filter out non-important samples to 
+reduce the size of the generated report.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For test systems, however, setting this value too high would return empty result. </p>
+</div>
 </li>
 </ul>
 <h4 id="comparison-report-options">Comparison Report Options<a class="headerlink" href="#comparison-report-options" title="Permanent link">&para;</a></h4>

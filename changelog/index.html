@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#20220928-v23" class="md-skip">
+        <a href="#future-v24" class="md-skip">
           Skip to content
         </a>
       
@@ -514,6 +514,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#future-v24" class="md-nav__link">
+    Future: V2.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#20220928-v23" class="md-nav__link">
     2022/09/28: V2.3
   </a>
@@ -644,6 +651,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#future-v24" class="md-nav__link">
+    Future: V2.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#20220928-v23" class="md-nav__link">
     2022/09/28: V2.3
   </a>
@@ -757,6 +771,26 @@
 
   <h1>Change Log</h1>
 
+<h4 id="future-v24">Future: V2.4<a class="headerlink" href="#future-v24" title="Permanent link">&para;</a></h4>
+<ul>
+<li>+ Window title shows DBID when connected to the database</li>
+<li>+ [General Report] <a href="../report/report_general/#tsh-thread-sample-history">'TSH' -&gt; 'Unusual Thread Method / SQL' and 'Unusual Lock Name / SQL'</a>
+  added to show top unusual thread method/lock name and which SQLs are responsible</li>
+<li># [General Report] 'Lock' -&gt; 'Top Waiting SQL HASH' and 'Top Waiting Table' are combined
+  into 'Top Waiting Table / SQL' with two levels of aggregation</li>
+<li>+ [General Report] 'Lock' -&gt; <a href="../report/report_general/#lock-application-lock">'Top Lock Holder SQL / Waiting SQL (Table)'</a>
+  added to show the top lock holder SQL and which SQL suffers most from it</li>
+<li># [General Report] 'Lock' -&gt; <a href="../report/report_general/#lock-application-lock">'Top Lock Holder Application Source / Waiting SQL (Table)'</a>
+  added to show the top lock holder application source and which SQL suffers most from it</li>
+<li>+ General Report Option -&gt; Minimal Thread Sample Number also applies when reading local data</li>
+<li># [General report] -&gt; Space -&gt; table row limit considers history instead of the current value</li>
+<li>+ <code>hscmd</code>: option <code>--latestdir</code> / <code>-ld</code> added to quickly select the input path</li>
+<li>- bug fix: when the history data contains host name that is not available in the current configuration,
+  the report terminates</li>
+<li>- bug fix: overview report terminates when no HANA indexserver down happens</li>
+<li>- bug fix: HANA Info not correct on some revisions</li>
+<li>- bug fix: if statement_concurrency_limit = 0, section cpu -&gt; thread workload fails</li>
+</ul>
 <h4 id="20220928-v23">2022/09/28: V2.3<a class="headerlink" href="#20220928-v23" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="../report/report_overview1/"><strong>[Overview Report]</strong></a> added to quickly show the KPI history</li>

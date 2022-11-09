@@ -935,9 +935,15 @@ lock name. The goal is to show the distribution of thread state / lock name
 among top SQL statements</p>
 </li>
 <li>
+<p>Unusual Lock Name / SQL: top unusual lock name and which SQLs are responsible.</p>
+</li>
+<li>
 <p>SQL and Thread Type / Method: top SQL and its thread type / method is shown.
 The output is aggregated first by SQL HASH and then by the combination of thread type and thread
 method. The goal is to show the distribution of thread type / method among top SQL statements</p>
+</li>
+<li>
+<p>Unusual Thread Method / SQL: top unusual thread method and which SQLs are responsible.</p>
 </li>
 <li>
 <p>SQL and Application Name: top SQL and its application name is shown. Sometimes the info is not
@@ -995,15 +1001,17 @@ meaningful application context of the SQL</p>
 <h4 id="lock-application-lock">Lock (Application Lock)<a class="headerlink" href="#lock-application-lock" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Transactions and Blocked Transactions</li>
-<li>Top Waiting SQL HASH: top SQL waiting for application lock</li>
-<li>Top Waiting Table: top tables on which SQL is waiting for application lock</li>
-<li>Top Lock Holder Application Source: top application source holding the lock</li>
+<li>Top Waiting Table / SQL: tables/SQLs that suffer most from application lock time are shown</li>
 <li>Top Waiting SQL (Table) / Lock Holder SQL: shows the lock holder activity that blocks the waiting SQL/Table,
     if the lock holder is 'IDLE', it means the lock holder is busy on the client side, i.e. hold the lock
     on the waiting table without commit fast enough. If the lock holder is busy on HANA, its active SQL Hash 
     is shown</li>
-<li>Top Waiting SQL (Table) / Lock Holder Application Source: shows the lock holder application source that 
-    holds the lock</li>
+<li>Top Waiting SQL (Table) / Lock Holder Application Source: shows the top waiting SQL hash (table) and 
+    which lock holder application sources block it</li>
+<li>Top Lock Holder SQL / Waiting SQL (Table): shows the top lock holder SQL and 
+    its most blocked SQL hash (table)</li>
+<li>Top Lock Holder Application Source / Waiting SQL (Table): shows the top application source and
+    its most blocked SQL hash (table)</li>
 </ul>
 <h4 id="hsr-hana-system-replication">HSR (HANA System Replication)<a class="headerlink" href="#hsr-hana-system-replication" title="Permanent link">&para;</a></h4>
 <ul>
