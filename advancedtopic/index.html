@@ -722,6 +722,15 @@ during report generation.</p>
 HSR system is also collected, this checkbox can be used to control if information from secondary
 site is included in the report or not.</p>
 </li>
+<li>
+<p><strong>Parallel Degree (1-4)</strong>: Defines the number of threads used to connect to HANA DB and generate report.
+The maximum allowed parallel degree is 4 so that the tool does not introduce too much workload on the
+target HANA DB.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Multithreads only supports HANA DB connection at the moment; SAPGUI connection is not yet supported.</p>
+</div>
+</li>
 </ul>
 <h4 id="general-report-options">General Report Options<a class="headerlink" href="#general-report-options" title="Permanent link">&para;</a></h4>
 <ul>

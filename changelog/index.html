@@ -773,6 +773,9 @@
 
 <h4 id="future-v24">Future: V2.4<a class="headerlink" href="#future-v24" title="Permanent link">&para;</a></h4>
 <ul>
+<li>+ <strong>Parallel Degree</strong> added to <a href="../advancedtopic/#general-options">General Options</a>, multiple threads are triggered to fetch data from
+  HANA DB and generate report to improve performance</li>
+<li># [General Report] 'Summary' -&gt; 'Top SQL' also shows application source of the SQL if available</li>
 <li>+ Window title shows DBID when connected to the database</li>
 <li>+ [General Report] <a href="../report/report_general/#tsh-thread-sample-history">'TSH' -&gt; 'Unusual Thread Method / SQL' and 'Unusual Lock Name / SQL'</a>
   added to show top unusual thread method/lock name and which SQLs are responsible</li>
@@ -788,8 +791,9 @@
 <li>- bug fix: when the history data contains host name that is not available in the current configuration,
   the report terminates</li>
 <li>- bug fix: overview report terminates when no HANA indexserver down happens</li>
-<li>- bug fix: HANA Info not correct on some revisions</li>
+<li>- bug fix: HANA Info is not correct on some revisions</li>
 <li>- bug fix: if statement_concurrency_limit = 0, section cpu -&gt; thread workload fails</li>
+<li>- bug fix: Application lock holder statement hash is not shown under some situations</li>
 </ul>
 <h4 id="20220928-v23">2022/09/28: V2.3<a class="headerlink" href="#20220928-v23" title="Permanent link">&para;</a></h4>
 <ul>
