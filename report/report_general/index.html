@@ -13,7 +13,7 @@
     
     
       
-        <title>General Report - HANA HotSpots</title>
+        <title>General Report - SAP HANA HotSpots</title>
       
     
     
@@ -78,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="HANA HotSpots" class="md-header__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+    <a href="../.." title="SAP HANA HotSpots" class="md-header__button md-logo" aria-label="SAP HANA HotSpots" data-md-component="logo">
       
   <img src="../../logo.png" alt="logo">
 
@@ -90,7 +90,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            HANA HotSpots
+            SAP HANA HotSpots
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -185,12 +185,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HANA HotSpots" class="md-nav__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+    <a href="../.." title="SAP HANA HotSpots" class="md-nav__button md-logo" aria-label="SAP HANA HotSpots" data-md-component="logo">
       
   <img src="../../logo.png" alt="logo">
 
     </a>
-    HANA HotSpots
+    SAP HANA HotSpots
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -230,7 +230,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        HANA HotSpots Overview
+        SAP HANA HotSpots Overview
       </a>
     </li>
   
@@ -396,6 +396,33 @@
   <a href="#overview" class="md-nav__link">
     Overview
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-in-the-general-report" class="md-nav__link">
+    Color in the General Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Color in the General Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-of-sql-statements" class="md-nav__link">
+    Color of SQL Statements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-of-typical-thread-state-and-lock-name" class="md-nav__link">
+    Color of Typical Thread State and Lock Name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -584,7 +611,7 @@
   
     <li class="md-nav__item">
       <a href="../../hsic/" class="md-nav__link">
-        HANA HotSpots Information Collector (HSIC)
+        SAP HANA HotSpots Information Collector (HSIC)
       </a>
     </li>
   
@@ -663,6 +690,33 @@
   <a href="#overview" class="md-nav__link">
     Overview
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-in-the-general-report" class="md-nav__link">
+    Color in the General Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Color in the General Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-of-sql-statements" class="md-nav__link">
+    Color of SQL Statements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-of-typical-thread-state-and-lock-name" class="md-nav__link">
+    Color of Typical Thread State and Lock Name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -790,6 +844,22 @@
 <h4 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h4>
 <p>General report is designed to show detailed KPI history of HANA Database from 
 different angles and detect potential issues.</p>
+<h4 id="color-in-the-general-report">Color in the General Report<a class="headerlink" href="#color-in-the-general-report" title="Permanent link">&para;</a></h4>
+<p>Different colors are used in the General Report to visualize the data in a better way:</p>
+<h5 id="color-of-sql-statements">Color of SQL Statements<a class="headerlink" href="#color-of-sql-statements" title="Permanent link">&para;</a></h5>
+<p>SQL statement in the general report with same <code>STATEMENT HASH</code> gets a same color in all the figures.
+This helps to identify the SQL statement across the whole report with ease.</p>
+<h5 id="color-of-typical-thread-state-and-lock-name">Color of Typical Thread State and Lock Name<a class="headerlink" href="#color-of-typical-thread-state-and-lock-name" title="Permanent link">&para;</a></h5>
+<p>Following are example colors used to show typical thread state and lock name combination:</p>
+<ul>
+<li><span style="background-color: #1F77B4; color:white">&nbsp;Running / ?&nbsp;</span> -&gt; CPU (Blue)</li>
+<li><span style="background-color: #FFD700; color:black">
+&nbsp;Semaphore Wait / TransactionLockWaitSmpStat&nbsp;</span> -&gt; Application Lock (Yellow)</li>
+<li><span style="background-color: #9370DB; color:white">
+&nbsp;Semaphore Wait / hex_WorkerJob_Sleep_Sem&nbsp;</span> -&gt; SQL Execution (Purple)</li>
+<li><span style="background-color: #00FE35; color:black">&nbsp;IO Wait / ?&nbsp;</span> -&gt; IO (Green)</li>
+<li><span style="background-color: #FF9616; color:black">&nbsp;Network Poll / ?&nbsp;</span> -&gt; Network (Orange)</li>
+</ul>
 <p>The report consists of following sections and sub-sections: (One sample 'General Report'
  can be seen <a href="../../reportsamples/GeneralReport.html" target="_blank">here</a>)</p>
 <h4 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>

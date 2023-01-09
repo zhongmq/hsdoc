@@ -13,7 +13,7 @@
     
     
       
-        <title>Advanced Topics - HANA HotSpots</title>
+        <title>Advanced Topics - SAP HANA HotSpots</title>
       
     
     
@@ -78,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="HANA HotSpots" class="md-header__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+    <a href=".." title="SAP HANA HotSpots" class="md-header__button md-logo" aria-label="SAP HANA HotSpots" data-md-component="logo">
       
   <img src="../logo.png" alt="logo">
 
@@ -90,7 +90,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            HANA HotSpots
+            SAP HANA HotSpots
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -185,12 +185,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="HANA HotSpots" class="md-nav__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+    <a href=".." title="SAP HANA HotSpots" class="md-nav__button md-logo" aria-label="SAP HANA HotSpots" data-md-component="logo">
       
   <img src="../logo.png" alt="logo">
 
     </a>
-    HANA HotSpots
+    SAP HANA HotSpots
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -232,7 +232,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        HANA HotSpots Overview
+        SAP HANA HotSpots Overview
       </a>
     </li>
   
@@ -534,7 +534,7 @@
   
     <li class="md-nav__item">
       <a href="../hsic/" class="md-nav__link">
-        HANA HotSpots Information Collector (HSIC)
+        SAP HANA HotSpots Information Collector (HSIC)
       </a>
     </li>
   
@@ -724,12 +724,8 @@ site is included in the report or not.</p>
 </li>
 <li>
 <p><strong>Parallel Degree (1-4)</strong>: Defines the number of threads used to connect to HANA DB and generate report.
-The maximum allowed parallel degree is 4 so that the tool does not introduce too much workload on the
-target HANA DB.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Multithreads only supports HANA DB connection at the moment; SAPGUI connection is not yet supported.</p>
-</div>
+The maximum allowed DOP (Degree of Parallel) is 4 so that the tool does not introduce too much workload on the
+target HANA DB. If SAPGUI connection is used, up to DOP SAPGUI sessions will be created to fetch data.</p>
 </li>
 </ul>
 <h4 id="general-report-options">General Report Options<a class="headerlink" href="#general-report-options" title="Permanent link">&para;</a></h4>
@@ -785,18 +781,19 @@ restored automatically next time it starts.</p>
 <h3 id="configuration-file">Configuration File<a class="headerlink" href="#configuration-file" title="Permanent link">&para;</a></h3>
 <p>The selected options will be saved as a configuration file with name <code>hs.&lt;version&gt;.yaml</code>.
 Below is an example of this configuration file:
-<div class="highlight"><span class="filename">hs.2.3.yaml</span><pre><span></span><code><span class="nt">General Option</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><span class="filename">hs.2.4.yaml</span><pre><span></span><code><span class="nt">General Option</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Report Folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C:/Users/ABC/Downloads/hsreport</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Report Folder Pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnalysisTime</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Raw Data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Include Secondary Host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Parallel Degree</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w"></span>
 <span class="nt">General Report</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Include Parameter Check</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Top Issue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Complete Summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Include Static Info</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Include Link to Raw Data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">  </span><span class="nt">Minimal TS Number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Minimal TS Number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
 <span class="w">  </span><span class="nt">Section Selection</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">Parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 <span class="w">    </span><span class="nt">CPU</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>

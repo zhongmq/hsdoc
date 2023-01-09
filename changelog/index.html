@@ -13,7 +13,7 @@
     
     
       
-        <title>Change Log - HANA HotSpots</title>
+        <title>Change Log - SAP HANA HotSpots</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#future-v24" class="md-skip">
+        <a href="#20230109-v24" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="HANA HotSpots" class="md-header__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+    <a href=".." title="SAP HANA HotSpots" class="md-header__button md-logo" aria-label="SAP HANA HotSpots" data-md-component="logo">
       
   <img src="../logo.png" alt="logo">
 
@@ -90,7 +90,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            HANA HotSpots
+            SAP HANA HotSpots
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -185,12 +185,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="HANA HotSpots" class="md-nav__button md-logo" aria-label="HANA HotSpots" data-md-component="logo">
+    <a href=".." title="SAP HANA HotSpots" class="md-nav__button md-logo" aria-label="SAP HANA HotSpots" data-md-component="logo">
       
   <img src="../logo.png" alt="logo">
 
     </a>
-    HANA HotSpots
+    SAP HANA HotSpots
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -230,7 +230,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        HANA HotSpots Overview
+        SAP HANA HotSpots Overview
       </a>
     </li>
   
@@ -440,7 +440,7 @@
   
     <li class="md-nav__item">
       <a href="../hsic/" class="md-nav__link">
-        HANA HotSpots Information Collector (HSIC)
+        SAP HANA HotSpots Information Collector (HSIC)
       </a>
     </li>
   
@@ -514,8 +514,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#future-v24" class="md-nav__link">
-    Future: V2.4
+  <a href="#20230109-v24" class="md-nav__link">
+    2023/01/09: V2.4
   </a>
   
 </li>
@@ -651,8 +651,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#future-v24" class="md-nav__link">
-    Future: V2.4
+  <a href="#20230109-v24" class="md-nav__link">
+    2023/01/09: V2.4
   </a>
   
 </li>
@@ -771,10 +771,13 @@
 
   <h1>Change Log</h1>
 
-<h4 id="future-v24">Future: V2.4<a class="headerlink" href="#future-v24" title="Permanent link">&para;</a></h4>
+<h4 id="20230109-v24">2023/01/09: V2.4<a class="headerlink" href="#20230109-v24" title="Permanent link">&para;</a></h4>
 <ul>
 <li>+ <strong>Parallel Degree</strong> added to <a href="../advancedtopic/#general-options">General Options</a>, multiple threads are triggered to fetch data from
   HANA DB and generate report to improve performance</li>
+<li># <strong><a href="../report/report_general/#color-in-the-general-report">Color Palette</a></strong> redesigned to visualize the information better</li>
+<li># Clipboard is no longer used when fetching data via <a href="../howtouse/#sapgui-connection">SAPGUI</a>, instead the data is saved 
+under <code>%TEMP%</code> directory, therefore there will be no conflict to clipboard operations when SAPGUI is used</li>
 <li># [General Report] 'Summary' -&gt; 'Top SQL' also shows application source of the SQL if available</li>
 <li>+ Window title shows DBID when connected to the database</li>
 <li>+ [General Report] <a href="../report/report_general/#tsh-thread-sample-history">'TSH' -&gt; 'Unusual Thread Method / SQL' and 'Unusual Lock Name / SQL'</a>
@@ -787,6 +790,9 @@
   added to show the top lock holder application source and which SQL suffers most from it</li>
 <li>+ General Report Option -&gt; Minimal Thread Sample Number also applies when reading local data</li>
 <li># [General report] -&gt; Space -&gt; table row limit considers history instead of the current value</li>
+<li># <em>'account.sap.com'</em> is chosen automatically to logon <a href="https://mcs-prod-hana-hotspots-ui5-approuter.cfapps.eu10.hana.ondemand.com/index.html">SAP HANA HotSpots Cloud</a></li>
+<li>+ <code>hscmd</code>: option <code>-p</code> added to support multiple threads</li>
+<li># <code>hscmd</code>: <strong>sub command <code>hsic</code> is renamed to <code>read</code></strong></li>
 <li>+ <code>hscmd</code>: option <code>--latestdir</code> / <code>-ld</code> added to quickly select the input path</li>
 <li>- bug fix: when the history data contains host name that is not available in the current configuration,
   the report terminates</li>
@@ -794,6 +800,7 @@
 <li>- bug fix: HANA Info is not correct on some revisions</li>
 <li>- bug fix: if statement_concurrency_limit = 0, section cpu -&gt; thread workload fails</li>
 <li>- bug fix: Application lock holder statement hash is not shown under some situations</li>
+<li>- bug fix: If SQL text contains HTML tags, the whole report will be messed up</li>
 </ul>
 <h4 id="20220928-v23">2022/09/28: V2.3<a class="headerlink" href="#20220928-v23" title="Permanent link">&para;</a></h4>
 <ul>
@@ -846,7 +853,7 @@ showing with wrong y-axis</li>
 <ul>
 <li>+ <a href="../report/report_sapworkload/"><strong>[SAP Workload Report]</strong></a> added to show SAP workload KPI history, it only works with SAPGUI connection.
      It also supports non-HANA DB systems</li>
-<li>+ <a href="../hsic/"><strong>[Read HSIC Data]</strong></a> added to read HANA HotSpots Information Collector (HSIC) data.
+<li>+ <a href="../hsic/"><strong>[Read HSIC Data]</strong></a> added to read SAP HANA HotSpots Information Collector (HSIC) data.
      It is also possible to read offline raw data to generate a new report</li>
 <li># Menu Option is reworked, now that all options are put into one window </li>
 <li># [General Report] 'CPU' -&gt; 'CPU with Most Running Thread' and 'SQL with Most Thread Sample'
@@ -863,7 +870,7 @@ showing with wrong y-axis</li>
 <li>+ Report run time and size are shown in the user interface and the log files</li>
 <li>+ The analysis can be terminated if click on the 'Disconnect' button</li>
 <li>- Topic [Minicheck] is removed because it does not make much sense to just execute 
-     some scripts via the HANA HotSpots tool.</li>
+     some scripts via the SAP HANA HotSpots tool.</li>
 <li>- bug fix: GAL is not correctly calculated if license memory is smaller than physical memory</li>
 </ul>
 <h4 id="20211223-v21">2021/12/23: V2.1<a class="headerlink" href="#20211223-v21" title="Permanent link">&para;</a></h4>
@@ -1003,7 +1010,7 @@ general report to highlight the HotSpots on the system</li>
 </ul>
 <h4 id="20200718-v13">2020/07/18: V1.3<a class="headerlink" href="#20200718-v13" title="Permanent link">&para;</a></h4>
 <ul>
-<li>+ <strong>hscmd (HANA HotSpots CMD) command line version released with V1.3</strong></li>
+<li>+ <strong>hscmd (SAP HANA HotSpots CMD) command line version released with V1.3</strong></li>
 <li>+ hdbuserstore key is supported to connect</li>
 <li>+ SSO is supported to connect</li>
 <li>+ [General Report] Parameter change history</li>
