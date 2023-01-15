@@ -440,7 +440,7 @@
   
     <li class="md-nav__item">
       <a href="../hsic/" class="md-nav__link">
-        SAP HANA HotSpots Information Collector (HSIC)
+        SAP HANA KPI Collector
       </a>
     </li>
   
@@ -787,11 +787,14 @@
 
 <h4 id="future-v25">Future: V2.5<a class="headerlink" href="#future-v25" title="Permanent link">&para;</a></h4>
 <ul>
+<li>+ <a href="../advancedtopic/#include-host-name-in-folder-name">General Option -&gt; "Include Host Name in Folder Name"</a> added</li>
+<li># [General Report] 'CPU' -&gt; 'NUMA Load' changes from bar figure to scatter figure to show 
+if any NUMA node is overloaded</li>
 <li>- bug fix: Single SQL Report Explain Plan shows irrelevant execution plan</li>
 </ul>
 <h4 id="20230109-v24">2023/01/09: V2.4<a class="headerlink" href="#20230109-v24" title="Permanent link">&para;</a></h4>
 <ul>
-<li>+ <strong>Parallel Degree</strong> added to <a href="../advancedtopic/#general-options">General Options</a>, multiple threads are triggered to fetch data from
+<li>+ <strong>Parallel Degree</strong> added to <a href="../advancedtopic/#parallel-degree-1-4">General Options</a>, multiple threads are triggered to fetch data from
   HANA DB and generate report to improve performance</li>
 <li># <strong><a href="../report/report_general/#color-in-the-general-report">Color Palette</a></strong> redesigned to visualize the information better</li>
 <li># Clipboard is no longer used when fetching data via <a href="../howtouse/#sapgui-connection">SAPGUI</a>, instead the data is saved 
@@ -831,13 +834,13 @@ a <a href="../howtouse/#3-select-time-frame">document link</a> is provided</li>
 <li>+ <a href="../howtouse/#folder-prefix">'Folder Prefix'</a> can be used to prefix the output folder</li>
 <li>+ <a href="../howtouse/#show-result">'Collect Data Only'</a> added to only collect data without generating report</li>
 <li>+ <a href="../howtouse/#host-selection">'Host Selection'</a> button added to filter HANA hosts on scale-out systems</li>
-<li>+ <a href="../howtouse/#5-read-local-data-eg-hsic-data">Read Local Data</a> added as data source together with
-the previous database connections to read offline data including HSIC data</li>
-<li># 'Read HSIC Data' is moved from the function lists to 
-the <a href="../howtouse/#5-read-local-data-eg-hsic-data">data source selection</a>.</li>
-<li>+ <a href="../advancedtopic/#general-options">General Option -&gt; 'Include Secondary System (HSR)'</a> added
+<li>+ <a href="../howtouse/#5-read-local-data">Read Local Data</a> added as data source together with
+the previous database connections to read offline data including SAP HANA KPI Collector data</li>
+<li># 'Read Local Data' is moved from the function lists to 
+the <a href="../howtouse/#5-read-local-data">data source selection</a>.</li>
+<li>+ <a href="../advancedtopic/#include-secondary-system-hsr">General Option -&gt; 'Include Secondary System (HSR)'</a> added
 to control if information from HSR secondary system is shown in the report</li>
-<li>+ <a href="../advancedtopic/#general-report-options">General Report Option -&gt; 'Minimal Thread Sample Number'</a> added
+<li>+ <a href="../advancedtopic/#minimal-thread-sample-number">General Report Option -&gt; 'Minimal Thread Sample Number'</a> added
 to control the minimal thread sample number used when collecting TSH data</li>
 <li>
 <p><strong># [General Report]: In the following sections, data are shown with two levels of aggregation:</strong></p>
@@ -876,7 +879,7 @@ showing with wrong y-axis</li>
 <ul>
 <li>+ <a href="../report/report_sapworkload/"><strong>[SAP Workload Report]</strong></a> added to show SAP workload KPI history, it only works with SAPGUI connection.
      It also supports non-HANA DB systems</li>
-<li>+ <a href="../hsic/"><strong>[Read HSIC Data]</strong></a> added to read SAP HANA HotSpots Information Collector (HSIC) data.
+<li>+ <a href="../hsic/"><strong>[Read Local Data]</strong></a> added to read SAP HANA KPI Collector data.
      It is also possible to read offline raw data to generate a new report</li>
 <li># Menu Option is reworked, now that all options are put into one window </li>
 <li># [General Report] 'CPU' -&gt; 'CPU with Most Running Thread' and 'SQL with Most Thread Sample'

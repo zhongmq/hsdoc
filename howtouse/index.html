@@ -657,7 +657,7 @@
   
     <li class="md-nav__item">
       <a href="../hsic/" class="md-nav__link">
-        SAP HANA HotSpots Information Collector (HSIC)
+        SAP HANA KPI Collector
       </a>
     </li>
   
@@ -935,8 +935,7 @@
 
 <p>The <a href="..#user-interface">user interface</a> is straightforward including following steps:</p>
 <h3 id="1-choose-data-source">1. Choose Data Source<a class="headerlink" href="#1-choose-data-source" title="Permanent link">&para;</a></h3>
-<p>The input data can be from a live HANA database or from local disk (e.g offline
-<a href="../hsic/">HSIC data</a>)</p>
+<p>The input data can be from a live HANA database or from local disk (e.g <a href="../hsic/">SAP HANA KPI Collector Data</a>)</p>
 <p>There are 4 ways to connect to a HANA database (it is possible to use the key shortcuts 
 to choose the method): </p>
 <h4 id="1-custom-system-via-sap-proxy">1) Custom System via SAP Proxy<a class="headerlink" href="#1-custom-system-via-sap-proxy" title="Permanent link">&para;</a></h4>
@@ -1127,9 +1126,10 @@ the <strong>analysis time</strong> may vary between less than one minute to more
 Especially when connecting via SAPGUI, the run time can be even longer.
 (Please have some patience : ) )</p>
 <h4 id="folder-prefix">Folder Prefix<a class="headerlink" href="#folder-prefix" title="Permanent link">&para;</a></h4>
-<p>The created folder name will be prefixed by the text entered in the 'Folder Prefix' line editor.
-e.g. If the prefix is set to "<mark>Customer_123</mark>", the report folder name will be "<mark>Customer_123</mark>_DBID_SID_GeneralReport_Time".</p>
-<p>Note that only letters, numbers and underscore are allowed for the prefix name.</p>
+<p>The created folder name will be prefixed by the text entered in the 'Folder Prefix' line editor.</p>
+<p>e.g. If the prefix is set to <pre markdown><mark>Customer_123</mark></pre>
+the report folder name will be <pre markdown><mark>Customer_123</mark>_DBID_SID_GeneralReport_Time</pre>
+Note that only letters, numbers and underscore are allowed for the prefix name.</p>
 <h4 id="collect-data-only">Collect Data Only<a class="headerlink" href="#collect-data-only" title="Permanent link">&para;</a></h4>
 <p>If checked, only raw data will be collected and no report will be generated. The generated folder
 will be prefixed by <code>DataOnly</code>.</p>
@@ -1145,8 +1145,8 @@ detailed information for each host.</p>
 <p>Option "Collect Data Only" and "Host Selection" are useful when dealing with a scale out system 
 with many hosts. In the past such report was too large and sometimes could not be loaded properly by 
 the browser.</p>
-<p>In such case pleaee first collect all the data and then use 
-<a href="../howtouse/#5-read-local-data-eg-hsic-data">"Read Local Data"</a> to generate a tailored report 
+<p>In such case please first collect all the data and then use 
+<a href="../howtouse/#5-read-local-data">"Read Local Data"</a> to generate a tailored report 
 with selected sections, selected HANA host(s) and selected time frame.</p>
 </div>
 <h4 id="show-result">Show Result<a class="headerlink" href="#show-result" title="Permanent link">&para;</a></h4>
