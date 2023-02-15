@@ -52,7 +52,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
   
     
     
@@ -107,7 +107,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -116,7 +116,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -244,7 +244,7 @@
   
     <li class="md-nav__item">
       <a href="../../examples/" class="md-nav__link">
-        Examples
+        Example Reports
       </a>
     </li>
   
@@ -414,8 +414,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#elapsed-time" class="md-nav__link">
-    Elapsed Time
+  <a href="#time" class="md-nav__link">
+    Time
   </a>
   
 </li>
@@ -590,8 +590,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#elapsed-time" class="md-nav__link">
-    Elapsed Time
+  <a href="#time" class="md-nav__link">
+    Time
   </a>
   
 </li>
@@ -633,41 +633,51 @@
 
   <h1>Top SQL Report</h1>
 
-<h4 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h4>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Top SQL report shows the top 10 most expensive SQL statements from different criteria. </p>
 <p>The report consists of following sections/sub-sections: 
 (One sample 'Top SQL Report' can be seen <a href="../../reportsamples/TopSQLReport.html" target="_blank">here</a>)</p>
-<h4 id="elapsed-time">Elapsed Time<a class="headerlink" href="#elapsed-time" title="Permanent link">&para;</a></h4>
+<h2 id="time">Time<a class="headerlink" href="#time" title="Permanent link">&para;</a></h2>
 <ul>
-<li>SQL Cache - Highest Total Elapsed Time: shows top 10 SQL statements with longest total elapsed time from SQL cache.
+<li>SQL with Most Elapsed Time: shows top 10 SQL statements with longest total elapsed time from SQL cache.
     If 'Y' is shown in the column 'Known', this SQL statement is documented in SAP Note 2000002</li>
-<li>Expensive SQL - Highest Total Elapsed Time: shows the top 10 SQL statements with longest total elapsed time from
+<li>Expensive SQL with Most Elapsed Time: shows the top 10 SQL statements with longest total elapsed time from
     'Expensive SQL Trace'</li>
 </ul>
-<h4 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
+<h2 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h2>
 <ul>
 <li>SQL with Most Thread Samples: shows top 10 SQL statements with most thread samples </li>
 </ul>
-<h4 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h4>
+<h2 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Expensive SQL - Highest Memory Consumption: shows top 10 SQL statements with highest memory consumption from
+<li>Expensive SQL with Most Used Memory: shows top 10 SQL statements with highest memory consumption from
     'Expensive SQL Trace'</li>
 <li>SQL causing OOM: show all SQL statements causing OOM</li>
 </ul>
-<h4 id="sql-detail">SQL Detail<a class="headerlink" href="#sql-detail" title="Permanent link">&para;</a></h4>
-<p>The detailed information of all the above most expensive SQL statements are shown in this section with following sub-sections:</p>
+<h2 id="sql-detail">SQL Detail<a class="headerlink" href="#sql-detail" title="Permanent link">&para;</a></h2>
+<p>The detailed information of all the above most expensive SQL statements are shown 
+in this section with following sub-sections:</p>
+<ul>
+<li>SQL Summary: shows the KPI and link to other sub-sections.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the section title is a link and the section is a summary, click it will jump to the child section.
+Similarly, click on the child section title will jump back to the summary section.</p>
+</div>
 <ul>
 <li>SQL Text</li>
-<li>If the SQL is already documentes, the related information from SAP Note 2000002 will be shown here</li>
+<li>If the SQL is already documented, the related information from SAP Note 2000002 will be shown here</li>
 <li>SQL KPI History: shows the history KPI of the SQL statement including number of execution, rows per execution,
     average elapsed time per exeuction plan id, average elapsed time per row</li>
 <li>SQL Heatmap: the figure shows the KPI distribution in terms of day of the
-    week and hour of the day based on total elapsed time</li>
+week and hour of the day based on different criteria</li>
 <li>SQL Thread Sample History: shows the thread sample history aggregated by following combinations:<ul>
 <li>Thread State and Lock Name</li>
 <li>Thread Type and Thread Method</li>
 <li>DB User and Application Name</li>
-<li>Application User and Application Source</li>
+<li>Application Source and Application User </li>
+<li>Passport Action and Application User </li>
 </ul>
 </li>
 </ul>

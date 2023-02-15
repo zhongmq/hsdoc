@@ -52,7 +52,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
   
     
     
@@ -107,7 +107,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -116,7 +116,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -244,7 +244,7 @@
   
     <li class="md-nav__item">
       <a href="../../examples/" class="md-nav__link">
-        Examples
+        Example Reports
       </a>
     </li>
   
@@ -431,6 +431,26 @@
     Summary
   </a>
   
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-issues" class="md-nav__link">
+    Top Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-sql" class="md-nav__link">
+    Top SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -452,12 +472,129 @@
     CPU
   </a>
   
+    <nav class="md-nav" aria-label="CPU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu-configuration" class="md-nav__link">
+    CPU Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-and-threads" class="md-nav__link">
+    CPU and Threads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-workload" class="md-nav__link">
+    Thread Workload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admission-control" class="md-nav__link">
+    Admission Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-with-most-thread-sample" class="md-nav__link">
+    SQL with Most Thread Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-source-with-most-running-thread" class="md-nav__link">
+    Application Source with Most Running Thread
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numa-load" class="md-nav__link">
+    NUMA Load
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#memory" class="md-nav__link">
     Memory
   </a>
+  
+    <nav class="md-nav" aria-label="Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-configuration" class="md-nav__link">
+    Memory Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-and-unloads" class="md-nav__link">
+    Memory and Unloads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-consumer-by-component" class="md-nav__link">
+    Top Consumer by Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-consumer-by-area-subarea-objects" class="md-nav__link">
+    Top Consumer by Area / Subarea / Objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-consumer-of-heap-area" class="md-nav__link">
+    Top Consumer of Heap Area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-memory" class="md-nav__link">
+    Service Memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expensive-sql-with-top-used-memory" class="md-nav__link">
+    Expensive SQL with Top Used Memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-with-top-avg-memory-allocation" class="md-nav__link">
+    SQL with Top Avg Memory Allocation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -466,12 +603,108 @@
     Activity
   </a>
   
+    <nav class="md-nav" aria-label="Activity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-activities" class="md-nav__link">
+    Important Activities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables-with-high-merge-time" class="md-nav__link">
+    Tables with High Merge Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savepoint-duration-and-throughput" class="md-nav__link">
+    Savepoint Duration and Throughput
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistentchangelock-holder-sql-hash" class="md-nav__link">
+    ConsistentChangeLock Holder - SQL Hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistentchangelock-holder-thread-state-and-lock-name" class="md-nav__link">
+    ConsistentChangeLock Holder - Thread State and Lock Name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#sql" class="md-nav__link">
     SQL
   </a>
+  
+    <nav class="md-nav" aria-label="SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sessions-and-sql-executed-per-second" class="md-nav__link">
+    Sessions and SQL Executed per Second
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-workload" class="md-nav__link">
+    SQL Workload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-cache-overview" class="md-nav__link">
+    SQL Cache Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-avg-request-time" class="md-nav__link">
+    SQL Avg Request Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-with-top-elapsed-time" class="md-nav__link">
+    SQL with Top Elapsed Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expensive-sql-with-top-elapsed-time" class="md-nav__link">
+    Expensive SQL with Top Elapsed Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-with-plan-change" class="md-nav__link">
+    SQL with Plan Change
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -480,12 +713,185 @@
     TSH (Thread Sample History)
   </a>
   
+    <nav class="md-nav" aria-label="TSH (Thread Sample History)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thread-state-and-lock-name" class="md-nav__link">
+    Thread State and Lock Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-type-and-thread-method" class="md-nav__link">
+    Thread Type and Thread Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-and-thread-state-lock-name" class="md-nav__link">
+    SQL and Thread State / Lock Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unusual-lock-name-sql" class="md-nav__link">
+    Unusual Lock Name / SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-and-thread-type-method" class="md-nav__link">
+    SQL and Thread Type / Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unusual-thread-method-sql" class="md-nav__link">
+    Unusual Thread Method / SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-and-application-name" class="md-nav__link">
+    SQL and Application Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-and-passport-action" class="md-nav__link">
+    SQL and Passport Action
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-hierarchy" class="md-nav__link">
+    SQL Hierarchy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db-user" class="md-nav__link">
+    DB User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-user" class="md-nav__link">
+    Application User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-host" class="md-nav__link">
+    Client Host
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callstack-history" class="md-nav__link">
+    Callstack History
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#space" class="md-nav__link">
     Space
   </a>
+  
+    <nav class="md-nav" aria-label="Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volume-backup-and-memory-size" class="md-nav__link">
+    Volume, Backup and Memory Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-volume-and-merge" class="md-nav__link">
+    Log Volume and Merge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-with-largest-disk-size" class="md-nav__link">
+    Table with Largest Disk Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-table-with-largest-memory-size" class="md-nav__link">
+    Column Table with Largest Memory Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-table-with-most-rows" class="md-nav__link">
+    Column Table with Most Rows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-table-with-most-read-count" class="md-nav__link">
+    Column Table with Most Read Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-table-with-most-write-count" class="md-nav__link">
+    Column Table with Most Write Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#row-table-with-largest-memory-size" class="md-nav__link">
+    Row Table with Largest Memory Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#row-table-with-largest-fragmented-size" class="md-nav__link">
+    Row Table with Largest Fragmented Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#row-table-with-most-rows" class="md-nav__link">
+    Row Table with Most Rows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -494,12 +900,87 @@
     Disk
   </a>
   
+    <nav class="md-nav" aria-label="Disk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disk-configuration" class="md-nav__link">
+    Disk Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-size" class="md-nav__link">
+    Disk Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#io-load-history" class="md-nav__link">
+    IO Load History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-volume-read" class="md-nav__link">
+    DATA Volume Read
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-volume-write" class="md-nav__link">
+    DATA Volume Write
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-volume-write" class="md-nav__link">
+    LOG Volume Write
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-frequency-and-latency" class="md-nav__link">
+    Commit Frequency and Latency
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#backup" class="md-nav__link">
     Backup
   </a>
+  
+    <nav class="md-nav" aria-label="Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-backup-history" class="md-nav__link">
+    Data Backup History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-backup-history" class="md-nav__link">
+    Log Backup History
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -508,12 +989,80 @@
     GC (Garbage Collection)
   </a>
   
+    <nav class="md-nav" aria-label="GC (Garbage Collection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versions-and-commit-range" class="md-nav__link">
+    Versions and Commit Range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#garbage-collection-blocker-history" class="md-nav__link">
+    Garbage Collection Blocker History
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#lock-application-lock" class="md-nav__link">
     Lock (Application Lock)
   </a>
+  
+    <nav class="md-nav" aria-label="Lock (Application Lock)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transactions-and-blocked-transactions" class="md-nav__link">
+    Transactions and Blocked Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-waiting-table-sql" class="md-nav__link">
+    Top Waiting Table / SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-waiting-sql-table-lock-holder-sql" class="md-nav__link">
+    Top Waiting SQL (Table) / Lock Holder SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-waiting-sql-table-lock-holder-application-source" class="md-nav__link">
+    Top Waiting SQL (Table) / Lock Holder Application Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-lock-holder-sql-waiting-sql-table" class="md-nav__link">
+    Top Lock Holder SQL / Waiting SQL (Table)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-lock-holder-application-source-waiting-sql-table" class="md-nav__link">
+    Top Lock Holder Application Source / Waiting SQL (Table)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -522,12 +1071,80 @@
     HSR (HANA System Replication)
   </a>
   
+    <nav class="md-nav" aria-label="HSR (HANA System Replication)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hsr-configuration" class="md-nav__link">
+    HSR Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-shipping-throughput-and-latency" class="md-nav__link">
+    Log Shipping Throughput and Latency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-shipping-delay-and-backlog" class="md-nav__link">
+    Log Shipping Delay and Backlog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-replay-delay-and-backlog" class="md-nav__link">
+    Log Replay Delay and Backlog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-shipping-buffer" class="md-nav__link">
+    Log Shipping Buffer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#trace" class="md-nav__link">
     Trace
   </a>
+  
+    <nav class="md-nav" aria-label="Trace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trace-configuration" class="md-nav__link">
+    Trace Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-overview" class="md-nav__link">
+    Trace Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-content" class="md-nav__link">
+    Trace Content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -725,6 +1342,26 @@
     Summary
   </a>
   
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-issues" class="md-nav__link">
+    Top Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-sql" class="md-nav__link">
+    Top SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -746,12 +1383,129 @@
     CPU
   </a>
   
+    <nav class="md-nav" aria-label="CPU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu-configuration" class="md-nav__link">
+    CPU Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-and-threads" class="md-nav__link">
+    CPU and Threads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-workload" class="md-nav__link">
+    Thread Workload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admission-control" class="md-nav__link">
+    Admission Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-with-most-thread-sample" class="md-nav__link">
+    SQL with Most Thread Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-source-with-most-running-thread" class="md-nav__link">
+    Application Source with Most Running Thread
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numa-load" class="md-nav__link">
+    NUMA Load
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#memory" class="md-nav__link">
     Memory
   </a>
+  
+    <nav class="md-nav" aria-label="Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-configuration" class="md-nav__link">
+    Memory Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-and-unloads" class="md-nav__link">
+    Memory and Unloads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-consumer-by-component" class="md-nav__link">
+    Top Consumer by Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-consumer-by-area-subarea-objects" class="md-nav__link">
+    Top Consumer by Area / Subarea / Objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-consumer-of-heap-area" class="md-nav__link">
+    Top Consumer of Heap Area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-memory" class="md-nav__link">
+    Service Memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expensive-sql-with-top-used-memory" class="md-nav__link">
+    Expensive SQL with Top Used Memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-with-top-avg-memory-allocation" class="md-nav__link">
+    SQL with Top Avg Memory Allocation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -760,12 +1514,108 @@
     Activity
   </a>
   
+    <nav class="md-nav" aria-label="Activity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-activities" class="md-nav__link">
+    Important Activities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables-with-high-merge-time" class="md-nav__link">
+    Tables with High Merge Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savepoint-duration-and-throughput" class="md-nav__link">
+    Savepoint Duration and Throughput
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistentchangelock-holder-sql-hash" class="md-nav__link">
+    ConsistentChangeLock Holder - SQL Hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistentchangelock-holder-thread-state-and-lock-name" class="md-nav__link">
+    ConsistentChangeLock Holder - Thread State and Lock Name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#sql" class="md-nav__link">
     SQL
   </a>
+  
+    <nav class="md-nav" aria-label="SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sessions-and-sql-executed-per-second" class="md-nav__link">
+    Sessions and SQL Executed per Second
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-workload" class="md-nav__link">
+    SQL Workload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-cache-overview" class="md-nav__link">
+    SQL Cache Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-avg-request-time" class="md-nav__link">
+    SQL Avg Request Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-with-top-elapsed-time" class="md-nav__link">
+    SQL with Top Elapsed Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expensive-sql-with-top-elapsed-time" class="md-nav__link">
+    Expensive SQL with Top Elapsed Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-with-plan-change" class="md-nav__link">
+    SQL with Plan Change
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -774,12 +1624,185 @@
     TSH (Thread Sample History)
   </a>
   
+    <nav class="md-nav" aria-label="TSH (Thread Sample History)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thread-state-and-lock-name" class="md-nav__link">
+    Thread State and Lock Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thread-type-and-thread-method" class="md-nav__link">
+    Thread Type and Thread Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-and-thread-state-lock-name" class="md-nav__link">
+    SQL and Thread State / Lock Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unusual-lock-name-sql" class="md-nav__link">
+    Unusual Lock Name / SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-and-thread-type-method" class="md-nav__link">
+    SQL and Thread Type / Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unusual-thread-method-sql" class="md-nav__link">
+    Unusual Thread Method / SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-and-application-name" class="md-nav__link">
+    SQL and Application Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-and-passport-action" class="md-nav__link">
+    SQL and Passport Action
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-hierarchy" class="md-nav__link">
+    SQL Hierarchy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db-user" class="md-nav__link">
+    DB User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-user" class="md-nav__link">
+    Application User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-host" class="md-nav__link">
+    Client Host
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callstack-history" class="md-nav__link">
+    Callstack History
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#space" class="md-nav__link">
     Space
   </a>
+  
+    <nav class="md-nav" aria-label="Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volume-backup-and-memory-size" class="md-nav__link">
+    Volume, Backup and Memory Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-volume-and-merge" class="md-nav__link">
+    Log Volume and Merge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-with-largest-disk-size" class="md-nav__link">
+    Table with Largest Disk Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-table-with-largest-memory-size" class="md-nav__link">
+    Column Table with Largest Memory Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-table-with-most-rows" class="md-nav__link">
+    Column Table with Most Rows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-table-with-most-read-count" class="md-nav__link">
+    Column Table with Most Read Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-table-with-most-write-count" class="md-nav__link">
+    Column Table with Most Write Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#row-table-with-largest-memory-size" class="md-nav__link">
+    Row Table with Largest Memory Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#row-table-with-largest-fragmented-size" class="md-nav__link">
+    Row Table with Largest Fragmented Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#row-table-with-most-rows" class="md-nav__link">
+    Row Table with Most Rows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -788,12 +1811,87 @@
     Disk
   </a>
   
+    <nav class="md-nav" aria-label="Disk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disk-configuration" class="md-nav__link">
+    Disk Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-size" class="md-nav__link">
+    Disk Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#io-load-history" class="md-nav__link">
+    IO Load History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-volume-read" class="md-nav__link">
+    DATA Volume Read
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-volume-write" class="md-nav__link">
+    DATA Volume Write
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-volume-write" class="md-nav__link">
+    LOG Volume Write
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-frequency-and-latency" class="md-nav__link">
+    Commit Frequency and Latency
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#backup" class="md-nav__link">
     Backup
   </a>
+  
+    <nav class="md-nav" aria-label="Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-backup-history" class="md-nav__link">
+    Data Backup History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-backup-history" class="md-nav__link">
+    Log Backup History
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -802,12 +1900,80 @@
     GC (Garbage Collection)
   </a>
   
+    <nav class="md-nav" aria-label="GC (Garbage Collection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versions-and-commit-range" class="md-nav__link">
+    Versions and Commit Range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#garbage-collection-blocker-history" class="md-nav__link">
+    Garbage Collection Blocker History
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#lock-application-lock" class="md-nav__link">
     Lock (Application Lock)
   </a>
+  
+    <nav class="md-nav" aria-label="Lock (Application Lock)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transactions-and-blocked-transactions" class="md-nav__link">
+    Transactions and Blocked Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-waiting-table-sql" class="md-nav__link">
+    Top Waiting Table / SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-waiting-sql-table-lock-holder-sql" class="md-nav__link">
+    Top Waiting SQL (Table) / Lock Holder SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-waiting-sql-table-lock-holder-application-source" class="md-nav__link">
+    Top Waiting SQL (Table) / Lock Holder Application Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-lock-holder-sql-waiting-sql-table" class="md-nav__link">
+    Top Lock Holder SQL / Waiting SQL (Table)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-lock-holder-application-source-waiting-sql-table" class="md-nav__link">
+    Top Lock Holder Application Source / Waiting SQL (Table)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -816,12 +1982,80 @@
     HSR (HANA System Replication)
   </a>
   
+    <nav class="md-nav" aria-label="HSR (HANA System Replication)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hsr-configuration" class="md-nav__link">
+    HSR Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-shipping-throughput-and-latency" class="md-nav__link">
+    Log Shipping Throughput and Latency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-shipping-delay-and-backlog" class="md-nav__link">
+    Log Shipping Delay and Backlog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-replay-delay-and-backlog" class="md-nav__link">
+    Log Replay Delay and Backlog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-shipping-buffer" class="md-nav__link">
+    Log Shipping Buffer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#trace" class="md-nav__link">
     Trace
   </a>
+  
+    <nav class="md-nav" aria-label="Trace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trace-configuration" class="md-nav__link">
+    Trace Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-overview" class="md-nav__link">
+    Trace Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-content" class="md-nav__link">
+    Trace Content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -841,15 +2075,15 @@
 
   <h1>General Report</h1>
 
-<h4 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h4>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>General report is designed to show detailed KPI history of HANA Database from 
 different angles and detect potential issues.</p>
-<h4 id="color-in-the-general-report">Color in the General Report<a class="headerlink" href="#color-in-the-general-report" title="Permanent link">&para;</a></h4>
+<h2 id="color-in-the-general-report">Color in the General Report<a class="headerlink" href="#color-in-the-general-report" title="Permanent link">&para;</a></h2>
 <p>Different colors are used in the General Report to visualize the data in a better way:</p>
-<h5 id="color-of-sql-statements">Color of SQL Statements<a class="headerlink" href="#color-of-sql-statements" title="Permanent link">&para;</a></h5>
-<p>SQL statement in the general report with same <code>STATEMENT HASH</code> gets a same color in all the figures.
+<h3 id="color-of-sql-statements">Color of SQL Statements<a class="headerlink" href="#color-of-sql-statements" title="Permanent link">&para;</a></h3>
+<p>SQL statement in the general report with same <code>STATEMENT_HASH</code> gets a same color in all the figures.
 This helps to identify the SQL statement across the whole report with ease.</p>
-<h5 id="color-of-typical-thread-state-and-lock-name">Color of Typical Thread State and Lock Name<a class="headerlink" href="#color-of-typical-thread-state-and-lock-name" title="Permanent link">&para;</a></h5>
+<h3 id="color-of-typical-thread-state-and-lock-name">Color of Typical Thread State and Lock Name<a class="headerlink" href="#color-of-typical-thread-state-and-lock-name" title="Permanent link">&para;</a></h3>
 <p>Following are example colors used to show typical thread state and lock name combination:</p>
 <ul>
 <li><span style="background-color: #1F77B4; color:white">&nbsp;Running / ?&nbsp;</span> -&gt; CPU (Blue)</li>
@@ -862,39 +2096,47 @@ This helps to identify the SQL statement across the whole report with ease.</p>
 </ul>
 <p>The report consists of following sections and sub-sections: (One sample 'General Report'
  can be seen <a href="../../reportsamples/GeneralReport.html" target="_blank">here</a>)</p>
-<h4 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h3 id="top-issues">Top Issues<a class="headerlink" href="#top-issues" title="Permanent link">&para;</a></h3>
+<p>Most critical issues identified are shown in a table. The columns of the summary tables have the following meaning</p>
+<pre><code>* Area: area of the issue
+* Priority: Very High / High / Medium / Info
+* Description: describe the issue, if option "Complete Summary" is checked, then 'No issues Detected' will be shown
+here
+* Host: on which host the issue occurs
+* Time: the critical timestamp when the issue occurs
+* Section: link to the section
+</code></pre>
+<h3 id="top-sql">Top SQL<a class="headerlink" href="#top-sql" title="Permanent link">&para;</a></h3>
+<p>Shows top SQL statements with different criteria. The button 'Toggel SQL HASH Color' beside the section
+title can be used to activate/deactivate cell background color of the SQL HASHes in the table.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Hovering over the <code>SQL HASH</code> will show SQL text that can be copied to the clipboard</p>
+</div>
 <ul>
-<li>Top Issues: most critical issues identified are shown in a table. The columns of the summary tables have the following
-  meaning<ul>
-<li>Area: area of the issue</li>
-<li>Priority: Very High / High / Medium / Info</li>
-<li>Description: describe the issue, if option "Complete Summary" is checked, then 'No issues Detected' will be shown
-here</li>
-<li>Host: on which host the issue occurs</li>
-<li>Time: the critical timestamp when the issue occurs</li>
-<li>Section: link to the section </li>
+<li>Most Elapsed Time: shows the top 5 SQL with most total elapsed time based on sql plan cache history </li>
+<li>Most Thread Sample: shows the top 5 SQL with most thread samples<ul>
+<li>Most Running Thread: shows the top 5 SQL with most threads in status 'Running', i.e. consuming CPU</li>
 </ul>
 </li>
-<li>Top SQL: shows top SQL statements with different criteria, hovering over the SQL Hash will show
-    SQL text that can be copied to the clipboard<ul>
-<li>Most Running Thread: shows the top 5 SQL with most threads in status 'Running', i.e. consuming CPU</li>
-<li>Most Thread Sample: shows the top 5 SQL with most thread samples</li>
+<li>Expensive SQL with Most Used Memory: shows the top 5 SQL with most used memory based on expensive SQL trace</li>
+<li>Expensive SQL with Most Elapsed Time: shows the top 5 SQL with most total elapsed time based on
+expensive SQL trace<ul>
 <li>Most Avg Memory Allocation: shows the top 5 SQL with most average memory allocation based on 
 sql plan cache history</li>
-<li>Expensive SQL with Most Used Memory: shows the top 5 SQL with most used memory based on 
-expensive SQL trace</li>
-<li>Most Elapsed Time: shows the top 5 SQL with most total elapsed time based on sql plan cache history</li>
-<li>Expensive SQL with Most Elapsed Time: shows the top 5 SQL with most total elapsed time based on
-expensive SQL trace</li>
 </ul>
 </li>
 </ul>
-<h4 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h4>
+<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Host Configuration: shows the host type, host role, hardware model, etc</li>
 <li>HANA Revision History: shows the complete history of HANA revisions</li>
+<li>Database History: shows the most important KPI in one figure.
+The most important events such as parameter change, HANA upgrade, HANA downtime will also be
+shown in this figure</li>
 </ul>
-<h4 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Permanent link">&para;</a></h4>
+<h2 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Check Result: if option "Include Parameter Check" is checked, the HANA parameter check result is shown.</li>
 <li>Change History: parameter change history is shown (available as of HANA 2.00.030)</li>
@@ -903,12 +2145,12 @@ expensive SQL trace</li>
 <p class="admonition-title">Info</p>
 <p>HANA parameter check is not yet available for HANA Cloud</p>
 </div>
-<h4 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
-<ul>
-<li>CPU Configuration: CPU type, Number of CPU, etc are shown
-Detailed NUMA info is shown as of HANA 2.00.010</li>
-<li>CPU and Threads: CPU and thread load aggregated by MAX and AVG are shown</li>
-</ul>
+<h2 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h2>
+<h3 id="cpu-configuration">CPU Configuration<a class="headerlink" href="#cpu-configuration" title="Permanent link">&para;</a></h3>
+<p>CPU type, Number of CPU, etc are shown
+Detailed NUMA info is shown as of HANA 2.00.010</p>
+<h3 id="cpu-and-threads">CPU and Threads<a class="headerlink" href="#cpu-and-threads" title="Permanent link">&para;</a></h3>
+<p>CPU and thread load aggregated by MAX and AVG are shown</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The time interval depends on the time range selected:</p>
@@ -917,13 +2159,12 @@ Detailed NUMA info is shown as of HANA 2.00.010</li>
 <li>Time range &lt; 6 hour: interval = 2 mins</li>
 </ul>
 </div>
-<ul>
-<li>Thread Workload: Workload related parameters are shown. If workload class are defined, they will be shown.
+<h3 id="thread-workload">Thread Workload<a class="headerlink" href="#thread-workload" title="Permanent link">&para;</a></h3>
+<p>Workload related parameters are shown. If workload class are defined, they will be shown.
 In the graph, 'session number' stands for the number of sessions connected to HANA, i.e. number of active 
-work processes on SAP Application Servers</li>
-<li>SQL with Most Running Thread: SQL hash and text with thread state = 'Running' are shown. 
-  Click the button 'Only SQL' will show threads only with SQL statement hash available</li>
-</ul>
+work processes on SAP Application Servers
+* SQL with Most Running Thread: SQL hash and text with thread state = 'Running' are shown. 
+  Click the button 'Only SQL' will show threads only with SQL statement hash available</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The data filter based on thread sample history depends on the time range selected, the below rule 
@@ -936,169 +2177,171 @@ than 0.5 percent in each time interval will be aggregated together into category
 into category '-- Others -- '</li>
 </ul>
 </div>
-<ul>
-<li>SQL with Most Thread Sample: SQL hash and text with all threads, sometimes even if the thread state is not 'Running',
+<h3 id="admission-control">Admission Control<a class="headerlink" href="#admission-control" title="Permanent link">&para;</a></h3>
+<p>Admission control related KPIs are shown in this section.
+Enqueue count, Dequeue count and Timeout count are only available as of 2.00.060.
+If the queue size is always 0, then this section will not be shown.</p>
+<h3 id="sql-with-most-thread-sample">SQL with Most Thread Sample<a class="headerlink" href="#sql-with-most-thread-sample" title="Permanent link">&para;</a></h3>
+<p>SQL hash and text with all threads, sometimes even if the thread state is not 'Running',
 there is still a chance that this thread is busy with CPU. Click the button 'Only SQL' will show 
-threads only with SQL statement hash available</li>
-<li>
-<p>Application Source with Most Running Thread: Click in the center of the 'Sunburst' figure would focus only on that 
+threads only with SQL statement hash available</p>
+<h3 id="application-source-with-most-running-thread">Application Source with Most Running Thread<a class="headerlink" href="#application-source-with-most-running-thread" title="Permanent link">&para;</a></h3>
+<p>Click in the center of the 'Sunburst' figure would focus only on that 
 application source and show the distribution of SQL related to this source.
 The button 'Pie with only App' shows only meaningful application source</p>
-</li>
-<li>
-<p>NUMA Load: shows the average threads running on each NUMA node so that it is easy to spot if any NUMA node is
-overloaded</p>
-</li>
-</ul>
-<h4 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Memory Configuration: memory configuration</li>
-<li>Memory and Unloads: memory consumption from <code>HOST_RESOURCE_UTILIZATION_STATISTICS</code> and <code>HOST_LOAD_HISTORY_SERVICE</code></li>
-<li>Top Consumer by Component: memory consumption from HOST_SERVICE_COMPONENT_MEMORY</li>
-<li>Top Consumer by Area / Subarea / Objects: memory consumption from script <code>HANA_Memory_TopConsumers</code>, aggregated by
-  different granularity</li>
-<li>Top Consumer of Heap Area: top consumer of Heap Areas, information from SAP Note 1999997 is shown below the figure
-  to show detailed information of the top heap areas</li>
-<li>Service Memory:  memory consumption from <code>HOST_SERVICE_MEMORY</code></li>
-<li>Expensive SQL with Top Used Memory: SQL with most memory consumption from expensive SQL trace are shown.</li>
-<li>SQL with Top Avg Memory Allocation: SQL with most allocated memory from SQL plan cache is shown, note that these
+<h3 id="numa-load">NUMA Load<a class="headerlink" href="#numa-load" title="Permanent link">&para;</a></h3>
+<p>Shows the average threads running on each NUMA node so that it is easy to spot if any NUMA node is overloaded</p>
+<h2 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h2>
+<h3 id="memory-configuration">Memory Configuration<a class="headerlink" href="#memory-configuration" title="Permanent link">&para;</a></h3>
+<p>Shows memory configuration such as physical memory, GAL, etc.</p>
+<h3 id="memory-and-unloads">Memory and Unloads<a class="headerlink" href="#memory-and-unloads" title="Permanent link">&para;</a></h3>
+<p>Memory consumption from <code>HOST_RESOURCE_UTILIZATION_STATISTICS</code> and <code>HOST_LOAD_HISTORY_SERVICE</code></p>
+<h3 id="top-consumer-by-component">Top Consumer by Component<a class="headerlink" href="#top-consumer-by-component" title="Permanent link">&para;</a></h3>
+<p>Memory consumption from HOST_SERVICE_COMPONENT_MEMORY</p>
+<h3 id="top-consumer-by-area-subarea-objects">Top Consumer by Area / Subarea / Objects<a class="headerlink" href="#top-consumer-by-area-subarea-objects" title="Permanent link">&para;</a></h3>
+<p>Memory consumption from script <code>HANA_Memory_TopConsumers</code>, aggregated by different granularity</p>
+<h3 id="top-consumer-of-heap-area">Top Consumer of Heap Area<a class="headerlink" href="#top-consumer-of-heap-area" title="Permanent link">&para;</a></h3>
+<p>Top consumer of Heap Areas, information from SAP Note 1999997 is shown below the figure
+  to show detailed information of the top heap areas</p>
+<h3 id="service-memory">Service Memory<a class="headerlink" href="#service-memory" title="Permanent link">&para;</a></h3>
+<p>Memory consumption from <code>HOST_SERVICE_MEMORY</code></p>
+<h3 id="expensive-sql-with-top-used-memory">Expensive SQL with Top Used Memory<a class="headerlink" href="#expensive-sql-with-top-used-memory" title="Permanent link">&para;</a></h3>
+<p>SQL with most memory consumption from expensive SQL trace are shown.</p>
+<h3 id="sql-with-top-avg-memory-allocation">SQL with Top Avg Memory Allocation<a class="headerlink" href="#sql-with-top-avg-memory-allocation" title="Permanent link">&para;</a></h3>
+<p>SQL with most allocated memory from SQL plan cache is shown, note that these
   figures are the allocated memory, not the peak memory foot print. Use it as reference only and it is not reliable to
-  decide SQL with most memory consumption in this figure</li>
-</ul>
-<h4 id="activity">Activity<a class="headerlink" href="#activity" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Important Activities: activities that last longer than 1 minute are shown: Indexserver down / Backup / Merge / 
-  Consistency Check / Savepoint</li>
-<li>Tables with High Merge Time: all table/partitions with merge running time longer than 1 minute are shown</li>
-<li>Savepoint Duration and Throughput: Savepoints that last longer than 1 minute are shown</li>
-<li>ConsistentChangeLock Holder - SQL Hash: if block time of any savepoint is longer than 10 sec, than the SQL 
-    that is holding the CCL is shown</li>
-<li>ConsistentChangeLock Holder - Thread State and Lock Name: similarly, if the lock holder of CCL is waiting for another
-    lock, such lock information is shown</li>
-</ul>
-<h4 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Sessions and SQL Executed per Second</li>
-<li>SQL Workload</li>
-<li>SQL Cache Overview: if the SQL cache is undersized, the figure will show the issue</li>
-<li>SQL Avg Request Time</li>
-<li>SQL with Top Elapsed Time: SQL with most total elapsed time is shown, the mouse hover information will also show
-    the elapsed time per execution, elapsed time per row, etc.</li>
-<li>Expensive SQL with Top Elapsed Time: since the retention time of Expensive SQL trace depends on the system workload,
-    it is normal that majority part of the history information is empty</li>
-</ul>
-<h4 id="tsh-thread-sample-history">TSH (Thread Sample History)<a class="headerlink" href="#tsh-thread-sample-history" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>Thread State and Lock Name: information from SAP Note 1999998 is shown below the figure
+  decide SQL with most memory consumption in this figure</p>
+<h2 id="activity">Activity<a class="headerlink" href="#activity" title="Permanent link">&para;</a></h2>
+<h3 id="important-activities">Important Activities<a class="headerlink" href="#important-activities" title="Permanent link">&para;</a></h3>
+<p>Activities that last longer than 1 minute are shown: Indexserver down / Backup / Merge / 
+  Consistency Check / Savepoint</p>
+<h3 id="tables-with-high-merge-time">Tables with High Merge Time<a class="headerlink" href="#tables-with-high-merge-time" title="Permanent link">&para;</a></h3>
+<p>All table/partitions with merge running time longer than 1 minute are shown</p>
+<h3 id="savepoint-duration-and-throughput">Savepoint Duration and Throughput<a class="headerlink" href="#savepoint-duration-and-throughput" title="Permanent link">&para;</a></h3>
+<p>Savepoints that last longer than 1 minute are shown</p>
+<h3 id="consistentchangelock-holder-sql-hash">ConsistentChangeLock Holder - SQL Hash<a class="headerlink" href="#consistentchangelock-holder-sql-hash" title="Permanent link">&para;</a></h3>
+<p>If block time of any savepoint is longer than 10 sec, than the SQL that is holding the CCL is shown</p>
+<h3 id="consistentchangelock-holder-thread-state-and-lock-name">ConsistentChangeLock Holder - Thread State and Lock Name<a class="headerlink" href="#consistentchangelock-holder-thread-state-and-lock-name" title="Permanent link">&para;</a></h3>
+<p>Similarly, if the lock holder of CCL is waiting for another lock, such lock information is shown</p>
+<h2 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h2>
+<h3 id="sessions-and-sql-executed-per-second">Sessions and SQL Executed per Second<a class="headerlink" href="#sessions-and-sql-executed-per-second" title="Permanent link">&para;</a></h3>
+<h3 id="sql-workload">SQL Workload<a class="headerlink" href="#sql-workload" title="Permanent link">&para;</a></h3>
+<h3 id="sql-cache-overview">SQL Cache Overview<a class="headerlink" href="#sql-cache-overview" title="Permanent link">&para;</a></h3>
+<p>If the SQL cache is undersized, the figure will show the issue</p>
+<h3 id="sql-avg-request-time">SQL Avg Request Time<a class="headerlink" href="#sql-avg-request-time" title="Permanent link">&para;</a></h3>
+<p>On a system with good performance the average SQL request time should be less than 2ms</p>
+<h3 id="sql-with-top-elapsed-time">SQL with Top Elapsed Time<a class="headerlink" href="#sql-with-top-elapsed-time" title="Permanent link">&para;</a></h3>
+<p>SQL with most total elapsed time is shown, the mouse hover information will also show
+    the elapsed time per execution, elapsed time per row, etc.</p>
+<h3 id="expensive-sql-with-top-elapsed-time">Expensive SQL with Top Elapsed Time<a class="headerlink" href="#expensive-sql-with-top-elapsed-time" title="Permanent link">&para;</a></h3>
+<p>Since the retention time of Expensive SQL trace depends on the system workload,
+    it is normal that majority part of the history information is empty</p>
+<h3 id="sql-with-plan-change">SQL with Plan Change<a class="headerlink" href="#sql-with-plan-change" title="Permanent link">&para;</a></h3>
+<p>The figure shows the SQL with changed plan id and average run time at least doubled.</p>
+<p>By default the best plan (i.e. with lowest average run time) and the worst plan(i.e. with highest average run time)
+for each top SQL with highest total run time are shown.</p>
+<p>If the best plan and the worse plan are using different engine, the best plan is highlighted with * in front.</p>
+<h2 id="tsh-thread-sample-history">TSH (Thread Sample History)<a class="headerlink" href="#tsh-thread-sample-history" title="Permanent link">&para;</a></h2>
+<h3 id="thread-state-and-lock-name">Thread State and Lock Name<a class="headerlink" href="#thread-state-and-lock-name" title="Permanent link">&para;</a></h3>
+<p>Information from SAP Note 1999998 is shown below the figure
 to show detailed information. Click the button 'Only Unusual Lock' will show threads only 
 with unusual lock name</p>
-</li>
-<li>
-<p>Thread Type and Thread Method: information from SAP Note 2114710 is shown below the figure
+<h3 id="thread-type-and-thread-method">Thread Type and Thread Method<a class="headerlink" href="#thread-type-and-thread-method" title="Permanent link">&para;</a></h3>
+<p>Information from SAP Note 2114710 is shown below the figure
 to show detailed information. Click the button 'Only Unusual Method' will show threads only 
 with unusual thread method</p>
-</li>
-<li>
-<p>SQL and Thread State / Lock Name: top SQL and its thread state / lock name is shown.
+<h3 id="sql-and-thread-state-lock-name">SQL and Thread State / Lock Name<a class="headerlink" href="#sql-and-thread-state-lock-name" title="Permanent link">&para;</a></h3>
+<p>Top SQL and its thread state / lock name is shown.
 The output is aggregated first by SQL HASH and then by the combination of thread state and 
 lock name. The goal is to show the distribution of thread state / lock name
 among top SQL statements</p>
-</li>
-<li>
-<p>Unusual Lock Name / SQL: top unusual lock name and which SQLs are responsible.</p>
-</li>
-<li>
-<p>SQL and Thread Type / Method: top SQL and its thread type / method is shown.
+<h3 id="unusual-lock-name-sql">Unusual Lock Name / SQL<a class="headerlink" href="#unusual-lock-name-sql" title="Permanent link">&para;</a></h3>
+<p>Top unusual lock name and which SQLs are responsible</p>
+<h3 id="sql-and-thread-type-method">SQL and Thread Type / Method<a class="headerlink" href="#sql-and-thread-type-method" title="Permanent link">&para;</a></h3>
+<p>Top SQL and its thread type / method is shown.
 The output is aggregated first by SQL HASH and then by the combination of thread type and thread
 method. The goal is to show the distribution of thread type / method among top SQL statements</p>
-</li>
-<li>
-<p>Unusual Thread Method / SQL: top unusual thread method and which SQLs are responsible.</p>
-</li>
-<li>
-<p>SQL and Application Name: top SQL and its application name is shown. Sometimes the info is not
-reliable to identify the application location </p>
-</li>
-<li>
-<p>SQL and Passport Action: top SQL and the passport action is shown. Normally passport action shows
-meaningful application context of the SQL</p>
-</li>
-<li>
-<p>SQL Hierarchy: the figure shows the SQL Hierarchy where SQL HASH is different from the Root HASH.
+<h3 id="unusual-thread-method-sql">Unusual Thread Method / SQL<a class="headerlink" href="#unusual-thread-method-sql" title="Permanent link">&para;</a></h3>
+<p>Top unusual thread method and which SQLs are responsible.</p>
+<h3 id="sql-and-application-name">SQL and Application Name<a class="headerlink" href="#sql-and-application-name" title="Permanent link">&para;</a></h3>
+<p>Top SQL and its application name is shown. Sometimes the info is not reliable to identify the application location </p>
+<h3 id="sql-and-passport-action">SQL and Passport Action<a class="headerlink" href="#sql-and-passport-action" title="Permanent link">&para;</a></h3>
+<p>Top SQL and the passport action is shown. Normally passport action shows meaningful application context of the SQL</p>
+<h3 id="sql-hierarchy">SQL Hierarchy<a class="headerlink" href="#sql-hierarchy" title="Permanent link">&para;</a></h3>
+<p>The figure shows the SQL Hierarchy where SQL HASH is different from the Root HASH.
   Such graph will show e.g. which individual SQL triggered by a procedure call is dominant.</p>
-</li>
-<li>DB User</li>
-<li>Application User</li>
-<li>Client Host</li>
-<li>Callstack History: shows the historical distribution of dominant call stacks (maximum depth = 17)</li>
-</ul>
-<h4 id="space">Space<a class="headerlink" href="#space" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Volume, Backup and Memory Size</li>
-<li>Log Volume and Merge: the figure shows the hourly generated log size in comparison with the tables 
-    with most merged rows, these top tables are in general responsible for most of the log volumes</li>
-<li>Table with Largest Disk Size: the history information is recorded every 6 hours, so it is normal if
+<h3 id="db-user">DB User<a class="headerlink" href="#db-user" title="Permanent link">&para;</a></h3>
+<h3 id="application-user">Application User<a class="headerlink" href="#application-user" title="Permanent link">&para;</a></h3>
+<h3 id="client-host">Client Host<a class="headerlink" href="#client-host" title="Permanent link">&para;</a></h3>
+<h3 id="callstack-history">Callstack History<a class="headerlink" href="#callstack-history" title="Permanent link">&para;</a></h3>
+<p>Shows the historical distribution of dominant call stacks (maximum depth = 17)</p>
+<h2 id="space">Space<a class="headerlink" href="#space" title="Permanent link">&para;</a></h2>
+<h3 id="volume-backup-and-memory-size">Volume, Backup and Memory Size<a class="headerlink" href="#volume-backup-and-memory-size" title="Permanent link">&para;</a></h3>
+<h3 id="log-volume-and-merge">Log Volume and Merge<a class="headerlink" href="#log-volume-and-merge" title="Permanent link">&para;</a></h3>
+<p>The figure shows the hourly generated log size in comparison with the tables 
+    with most merged rows, these top tables are in general responsible for most of the log volumes</p>
+<h3 id="table-with-largest-disk-size">Table with Largest Disk Size<a class="headerlink" href="#table-with-largest-disk-size" title="Permanent link">&para;</a></h3>
+<p>The history information is recorded every 6 hours, so it is normal if
     the result is empty when the analysis time range is less than 6 hours. Both column table and 
-    row table are considered</li>
-<li>Column Table with Largest Memory Size: the result is aggregated by table</li>
-<li>Column Table with Most Rows: the result is aggregated by partition</li>
-<li>Column Table with Most Read Count</li>
-<li>Column Table with Most Write Count</li>
-<li>Row Table with Largest Memory Size</li>
-<li>Row Table with Largest Fragmented Size</li>
-<li>Row Table with Most Rows</li>
-</ul>
-<h4 id="disk">Disk<a class="headerlink" href="#disk" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Disk Configuration: host, usage type, path, file system type, total size and used size are shown</li>
-<li>Disk Size: the history usage of disk size is sampled once per day</li>
-<li>IO Load History: the busy percentage of I/O operations are shown</li>
-<li>DATA Volume Read</li>
-<li>DATA Volume Write</li>
-<li>LOG Volume Write</li>
-<li>Commit Frequency and Latency</li>
-</ul>
-<h4 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Data Backup History: the backup status can be seen with mouse hover</li>
-<li>Log Backup History</li>
-</ul>
-<h4 id="gc-garbage-collection">GC (Garbage Collection)<a class="headerlink" href="#gc-garbage-collection" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Versions and Commit Range</li>
-<li>Garbage Collection Blocker History: the information shown is only for reference and might not be reliable</li>
-</ul>
-<h4 id="lock-application-lock">Lock (Application Lock)<a class="headerlink" href="#lock-application-lock" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Transactions and Blocked Transactions</li>
-<li>Top Waiting Table / SQL: tables/SQLs that suffer most from application lock time are shown</li>
-<li>Top Waiting SQL (Table) / Lock Holder SQL: shows the lock holder activity that blocks the waiting SQL/Table,
+    row table are considered</p>
+<h3 id="column-table-with-largest-memory-size">Column Table with Largest Memory Size<a class="headerlink" href="#column-table-with-largest-memory-size" title="Permanent link">&para;</a></h3>
+<p>The result is aggregated by table</p>
+<h3 id="column-table-with-most-rows">Column Table with Most Rows<a class="headerlink" href="#column-table-with-most-rows" title="Permanent link">&para;</a></h3>
+<p>The result is aggregated by partition</p>
+<h3 id="column-table-with-most-read-count">Column Table with Most Read Count<a class="headerlink" href="#column-table-with-most-read-count" title="Permanent link">&para;</a></h3>
+<h3 id="column-table-with-most-write-count">Column Table with Most Write Count<a class="headerlink" href="#column-table-with-most-write-count" title="Permanent link">&para;</a></h3>
+<h3 id="row-table-with-largest-memory-size">Row Table with Largest Memory Size<a class="headerlink" href="#row-table-with-largest-memory-size" title="Permanent link">&para;</a></h3>
+<h3 id="row-table-with-largest-fragmented-size">Row Table with Largest Fragmented Size<a class="headerlink" href="#row-table-with-largest-fragmented-size" title="Permanent link">&para;</a></h3>
+<h3 id="row-table-with-most-rows">Row Table with Most Rows<a class="headerlink" href="#row-table-with-most-rows" title="Permanent link">&para;</a></h3>
+<h2 id="disk">Disk<a class="headerlink" href="#disk" title="Permanent link">&para;</a></h2>
+<h3 id="disk-configuration">Disk Configuration<a class="headerlink" href="#disk-configuration" title="Permanent link">&para;</a></h3>
+<p>Host, usage type, path, file system type, total size and used size are shown</p>
+<h3 id="disk-size">Disk Size<a class="headerlink" href="#disk-size" title="Permanent link">&para;</a></h3>
+<p>The history usage of disk size is sampled once per day</p>
+<h3 id="io-load-history">IO Load History<a class="headerlink" href="#io-load-history" title="Permanent link">&para;</a></h3>
+<p>The busy percentage of I/O operations are shown</p>
+<h3 id="data-volume-read">DATA Volume Read<a class="headerlink" href="#data-volume-read" title="Permanent link">&para;</a></h3>
+<h3 id="data-volume-write">DATA Volume Write<a class="headerlink" href="#data-volume-write" title="Permanent link">&para;</a></h3>
+<h3 id="log-volume-write">LOG Volume Write<a class="headerlink" href="#log-volume-write" title="Permanent link">&para;</a></h3>
+<h3 id="commit-frequency-and-latency">Commit Frequency and Latency<a class="headerlink" href="#commit-frequency-and-latency" title="Permanent link">&para;</a></h3>
+<h2 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h2>
+<h3 id="data-backup-history">Data Backup History<a class="headerlink" href="#data-backup-history" title="Permanent link">&para;</a></h3>
+<p>The backup status can be seen with mouse hover</p>
+<h3 id="log-backup-history">Log Backup History<a class="headerlink" href="#log-backup-history" title="Permanent link">&para;</a></h3>
+<h2 id="gc-garbage-collection">GC (Garbage Collection)<a class="headerlink" href="#gc-garbage-collection" title="Permanent link">&para;</a></h2>
+<h3 id="versions-and-commit-range">Versions and Commit Range<a class="headerlink" href="#versions-and-commit-range" title="Permanent link">&para;</a></h3>
+<h3 id="garbage-collection-blocker-history">Garbage Collection Blocker History<a class="headerlink" href="#garbage-collection-blocker-history" title="Permanent link">&para;</a></h3>
+<p>The information shown is only for reference and might not be reliable</p>
+<h2 id="lock-application-lock">Lock (Application Lock)<a class="headerlink" href="#lock-application-lock" title="Permanent link">&para;</a></h2>
+<h3 id="transactions-and-blocked-transactions">Transactions and Blocked Transactions<a class="headerlink" href="#transactions-and-blocked-transactions" title="Permanent link">&para;</a></h3>
+<h3 id="top-waiting-table-sql">Top Waiting Table / SQL<a class="headerlink" href="#top-waiting-table-sql" title="Permanent link">&para;</a></h3>
+<p>Tables/SQLs that suffer most from application lock time are shown</p>
+<h3 id="top-waiting-sql-table-lock-holder-sql">Top Waiting SQL (Table) / Lock Holder SQL<a class="headerlink" href="#top-waiting-sql-table-lock-holder-sql" title="Permanent link">&para;</a></h3>
+<p>Shows the lock holder activity that blocks the waiting SQL/Table,
     if the lock holder is 'IDLE', it means the lock holder is busy on the client side, i.e. hold the lock
     on the waiting table without commit fast enough. If the lock holder is busy on HANA, its active SQL Hash 
-    is shown</li>
-<li>Top Waiting SQL (Table) / Lock Holder Application Source: shows the top waiting SQL hash (table) and 
-    which lock holder application sources block it</li>
-<li>Top Lock Holder SQL / Waiting SQL (Table): shows the top lock holder SQL and 
-    its most blocked SQL hash (table)</li>
-<li>Top Lock Holder Application Source / Waiting SQL (Table): shows the top application source and
-    its most blocked SQL hash (table)</li>
-</ul>
-<h4 id="hsr-hana-system-replication">HSR (HANA System Replication)<a class="headerlink" href="#hsr-hana-system-replication" title="Permanent link">&para;</a></h4>
-<ul>
-<li>HSR Configuration: shows the HANA System Replication configuration</li>
-<li>Log Shipping Throughput and Latency</li>
-<li>Log Shipping Delay and Backlog</li>
-<li>Log Replay Delay and Backlog</li>
-<li>Log Shipping Buffer</li>
-</ul>
-<h4 id="trace">Trace<a class="headerlink" href="#trace" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Trace Configuration: shows trace settings that are explicitly activated or modified</li>
-<li>Trace Overview: shows the most important HANA Database traces generated within the analysis time frame</li>
-<li>Trace Content: shows the summary (in Pie and Sunburst format) and the detailed distribution of 
-    'Component -&gt; Source File -&gt; Error Pattern' in HANA Database Traces</li>
-</ul>
+    is shown</p>
+<h3 id="top-waiting-sql-table-lock-holder-application-source">Top Waiting SQL (Table) / Lock Holder Application Source<a class="headerlink" href="#top-waiting-sql-table-lock-holder-application-source" title="Permanent link">&para;</a></h3>
+<p>Shows the top waiting SQL hash (table) and which lock holder application sources block it</p>
+<h3 id="top-lock-holder-sql-waiting-sql-table">Top Lock Holder SQL / Waiting SQL (Table)<a class="headerlink" href="#top-lock-holder-sql-waiting-sql-table" title="Permanent link">&para;</a></h3>
+<p>Shows the top lock holder SQL and its most blocked SQL hash (table)</p>
+<h3 id="top-lock-holder-application-source-waiting-sql-table">Top Lock Holder Application Source / Waiting SQL (Table)<a class="headerlink" href="#top-lock-holder-application-source-waiting-sql-table" title="Permanent link">&para;</a></h3>
+<p>Shows the top application source and its most blocked SQL hash (table)</p>
+<h2 id="hsr-hana-system-replication">HSR (HANA System Replication)<a class="headerlink" href="#hsr-hana-system-replication" title="Permanent link">&para;</a></h2>
+<h3 id="hsr-configuration">HSR Configuration<a class="headerlink" href="#hsr-configuration" title="Permanent link">&para;</a></h3>
+<p>Shows the HANA System Replication configuration</p>
+<h3 id="log-shipping-throughput-and-latency">Log Shipping Throughput and Latency<a class="headerlink" href="#log-shipping-throughput-and-latency" title="Permanent link">&para;</a></h3>
+<h3 id="log-shipping-delay-and-backlog">Log Shipping Delay and Backlog<a class="headerlink" href="#log-shipping-delay-and-backlog" title="Permanent link">&para;</a></h3>
+<h3 id="log-replay-delay-and-backlog">Log Replay Delay and Backlog<a class="headerlink" href="#log-replay-delay-and-backlog" title="Permanent link">&para;</a></h3>
+<h3 id="log-shipping-buffer">Log Shipping Buffer<a class="headerlink" href="#log-shipping-buffer" title="Permanent link">&para;</a></h3>
+<h2 id="trace">Trace<a class="headerlink" href="#trace" title="Permanent link">&para;</a></h2>
+<h3 id="trace-configuration">Trace Configuration<a class="headerlink" href="#trace-configuration" title="Permanent link">&para;</a></h3>
+<p>Shows trace settings that are explicitly activated or modified</p>
+<h3 id="trace-overview">Trace Overview<a class="headerlink" href="#trace-overview" title="Permanent link">&para;</a></h3>
+<p>Shows the most important HANA Database traces generated within the analysis time frame</p>
+<h3 id="trace-content">Trace Content<a class="headerlink" href="#trace-content" title="Permanent link">&para;</a></h3>
+<p>Shows the summary (in Pie and Sunburst format) and the detailed distribution of 
+    'Component -&gt; Source File -&gt; Error Pattern' in HANA Database Traces</p>
 
               
             </article>

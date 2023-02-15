@@ -52,7 +52,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
   
     
     
@@ -107,7 +107,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -116,7 +116,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -244,7 +244,7 @@
   
     <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
-        Examples
+        Example Reports
       </a>
     </li>
   
@@ -787,10 +787,30 @@
 
 <h4 id="future-v25">Future: V2.5<a class="headerlink" href="#future-v25" title="Permanent link">&para;</a></h4>
 <ul>
+<li>+ <a href="../report/report_general/#admission-control">[General Report] 'CPU' -&gt; 'Admission Control'</a> added to 
+show admission control related KPI history</li>
+<li>+ <a href="../report/report_general/#sql-with-plan-change">[General Report] 'SQL' -&gt; 'SQL with Plan Change'</a> added to 
+show top SQL with changed plan id and average run time at least doubled </li>
+<li># Hover text for SQL is redesigned to only show essential information of SQL statements, <strong>such optimization helps
+to reduce report size significantly</strong></li>
+<li># As of V2.3, the [General Report] size has increased due to the introduction of sunburst figure in many sections.
+Optimization has been made to reduce the report size</li>
+<li># <a href="../report/report_topsql/">[Top SQL Report]</a> is reworked to match the style of the [General Report]:
+section "SQL Summary" is added for each top SQL with KPI and link to sub-sections</li>
+<li># [Overview Report] 'General' -&gt; 'Database History' is copied to [General Report] -&gt; 'General'</li>
+<li># When the new version starts, instead of creating a new config file with default setting, now the tool will 
+read content from old configuration file e.g. <code>hs.2.4.yaml</code> so that the <a href="../advancedtopic/#configuration-file">old settings are not lost</a></li>
+<li>+ [General Report] 'Summary' -&gt; 'Top SQL' has a new button <a href="../report/report_general/#top-sql">'Toggle SQL HASH color'</a>
+to activate/deactivate SQL HASH background color in the summary tables</li>
+<li># Sunburst figures with 2 level hierarchy are reworked so that the graph can be shown with parent color or child color</li>
 <li>+ <a href="../advancedtopic/#include-host-name-in-folder-name">General Option -&gt; "Include Host Name in Folder Name"</a> added</li>
 <li># [General Report] 'CPU' -&gt; 'NUMA Load' changes from bar figure to scatter figure to show 
 if any NUMA node is overloaded</li>
+<li>- bug fix: If some results are empty, no report is generated</li>
 <li>- bug fix: Single SQL Report Explain Plan shows irrelevant execution plan</li>
+<li>- bug fix: SAPGUI connection is not working on some systems</li>
+<li>- bug fix: When SSL is used for HANA DB connection, only the main thread uses SSL, other parallel threads do not
+use SSL and leads to partially empty results due to refused connection</li>
 </ul>
 <h4 id="20230109-v24">2023/01/09: V2.4<a class="headerlink" href="#20230109-v24" title="Permanent link">&para;</a></h4>
 <ul>
